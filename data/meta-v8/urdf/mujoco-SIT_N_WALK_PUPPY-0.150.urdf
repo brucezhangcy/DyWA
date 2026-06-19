@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4162293478180541"/>
+            <origin xyz=" 0.0031 0.0078 -0.0259"/>
+            <inertia ixx="0.0021274998062751063" ixy="-0.0003597377429707189" ixz="1.4871343589279192e-05"
+            iyy="0.0007925998415280577" iyz="-0.00014515627759324962" izz="0.002474502376793489"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SIT_N_WALK_PUPPY.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SIT_N_WALK_PUPPY.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

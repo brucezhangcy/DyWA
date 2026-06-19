@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07493700464819913"/>
+            <origin xyz=" 0.0019 0.0062 -0.0091"/>
+            <inertia ixx="0.00010940297137722478" ixy="-4.744826081422854e-06" ixz="-1.143986481898009e-06"
+            iyy="2.8101244192460697e-05" iyz="-6.697243022491507e-06" izz="0.00010356472146778494"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_ZIGCOOPERSTOWN_QUAG.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_ZIGCOOPERSTOWN_QUAG.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

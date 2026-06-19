@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.015900516049764495"/>
+            <origin xyz=" -0.0000 0.0248 0.0000"/>
+            <inertia ixx="1.25376655892472e-05" ixy="3.324627832961582e-10" ixz="-1.1906483566741127e-09"
+            iyy="3.0297477690364363e-06" iyz="2.0194486405276765e-09" izz="1.444894197850537e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_hammer_poisson_013.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_hammer_poisson_013.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

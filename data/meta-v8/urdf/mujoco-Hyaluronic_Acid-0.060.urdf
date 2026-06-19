@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08531199095416346"/>
+            <origin xyz=" 0.0000 -0.0001 -0.0046"/>
+            <inertia ixx="9.101040985369167e-05" ixy="2.6602435493914823e-08" ixz="-4.581358143989001e-07"
+            iyy="9.097322972528851e-05" iyz="6.066106538169429e-07" izz="3.7209919215571745e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hyaluronic_Acid.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hyaluronic_Acid.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

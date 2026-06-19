@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2403142913105503"/>
+            <origin xyz=" -0.0146 -0.0219 0.0145"/>
+            <inertia ixx="0.0004422052782801787" ixy="8.955332352133079e-05" ixz="0.0001853663691324785"
+            iyy="0.0006516410442784418" iyz="-9.413979371881211e-05" izz="0.0005163495930157881"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_Seal.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_Seal.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

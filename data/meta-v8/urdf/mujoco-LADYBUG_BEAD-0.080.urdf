@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.16687437375464417"/>
+            <origin xyz=" 0.0001 -0.0011 -0.0018"/>
+            <inertia ixx="0.00024980744852205956" ixy="-4.308271768682467e-06" ixz="2.6912714917725002e-08"
+            iyy="0.00013423776976213136" iyz="3.491382387996192e-07" izz="0.00030988422217081784"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-LADYBUG_BEAD.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-LADYBUG_BEAD.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

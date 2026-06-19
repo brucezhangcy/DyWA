@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10537670534049262"/>
+            <origin xyz=" 0.0001 0.0010 -0.0140"/>
+            <inertia ixx="0.00013033816051729937" ixy="2.2878254012298332e-08" ixz="6.313021108618763e-07"
+            iyy="0.00015974760092277222" iyz="-6.319285487804589e-06" izz="6.392786373627998e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Dell_Series_9_Color_Ink_Cartridge_MK993_High_Yield.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Dell_Series_9_Color_Ink_Cartridge_MK993_High_Yield.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

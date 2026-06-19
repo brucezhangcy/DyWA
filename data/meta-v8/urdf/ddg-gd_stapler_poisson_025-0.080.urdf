@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.0436408852866666"/>
+            <origin xyz=" 0.0001 0.0009 -0.0016"/>
+            <inertia ixx="7.990941761275591e-05" ixy="6.866471177285497e-08" ixz="-1.1511044819226151e-07"
+            iyy="9.143118934416266e-06" iyz="3.2712516064360444e-06" izz="7.57389523422409e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_stapler_poisson_025.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_stapler_poisson_025.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

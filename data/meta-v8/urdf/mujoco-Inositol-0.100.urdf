@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4124439147217043"/>
+            <origin xyz=" 0.0003 0.0001 -0.0064"/>
+            <inertia ixx="0.0012422571638167888" ixy="-7.008020765382268e-08" ixz="-9.569454482268708e-06"
+            iyy="0.0012426865530764948" iyz="2.0272054106090546e-06" izz="0.0005176257163423593"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Inositol.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Inositol.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

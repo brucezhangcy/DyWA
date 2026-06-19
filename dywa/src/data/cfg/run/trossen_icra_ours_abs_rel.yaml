@@ -1,0 +1,13 @@
+# @package _global_
+
+defaults:
+  - icra_ours_abs_rel
+
+net:
+  state:
+    feature:
+      icp_emb:
+        ctx_dim: 36  # 9 (rel_goal) + 6 (previous_action, Trossen's action dim) + 16 (robot_state, pos_vel6 with gripper) + 5 (phys_params)
+        dim_out: 2084  # 16 query tokens × 128 emb_dim + ctx_dim (Franka uses 2096 = 2048+48; Trossen = 2048+36)
+
+model_name: 'trossen_icra_ours_abs_rel'

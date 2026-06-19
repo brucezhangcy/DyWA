@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.9404004310633927"/>
+            <origin xyz=" -0.0002 0.0000 -0.0036"/>
+            <inertia ixx="0.013677392653626405" ixy="-2.671993563495694e-05" ixz="-6.62437293297945e-05"
+            iyy="0.01364715446684489" iyz="-2.5743824057553e-05" izz="0.008003156068247207"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-IsoRich_Soy.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-IsoRich_Soy.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

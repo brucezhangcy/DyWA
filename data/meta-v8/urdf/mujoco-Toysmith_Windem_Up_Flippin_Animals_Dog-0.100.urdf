@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.22779833464492494"/>
+            <origin xyz=" -0.0042 -0.0046 -0.0098"/>
+            <inertia ixx="0.0004637396606420988" ixy="3.4422642816758e-06" ixz="-6.75455598739311e-06"
+            iyy="0.000441170026847383" iyz="6.68982906619324e-06" izz="0.00023812176425424492"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Toysmith_Windem_Up_Flippin_Animals_Dog.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Toysmith_Windem_Up_Flippin_Animals_Dog.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

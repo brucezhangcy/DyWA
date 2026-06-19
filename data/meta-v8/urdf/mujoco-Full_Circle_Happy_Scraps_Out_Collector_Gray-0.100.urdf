@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.14979052550868444"/>
+            <origin xyz=" 0.0008 -0.0067 -0.0001"/>
+            <inertia ixx="0.0002735968037717231" ixy="3.4820603781526804e-06" ixz="-3.2721756299555444e-06"
+            iyy="0.0004539345986530318" iyz="-3.052561435254462e-06" izz="0.00042493928838419797"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Full_Circle_Happy_Scraps_Out_Collector_Gray.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Full_Circle_Happy_Scraps_Out_Collector_Gray.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

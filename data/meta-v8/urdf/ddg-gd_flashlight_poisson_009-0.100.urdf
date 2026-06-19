@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.09800584668359946"/>
+            <origin xyz=" 0.0073 0.0031 -0.0004"/>
+            <inertia ixx="0.00012852684073633722" ixy="-0.00010955478781460719" ixz="-6.34438277462993e-05"
+            iyy="0.00022111458458839672" iyz="-4.24461511410729e-05" izz="0.00027014572191903736"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_flashlight_poisson_009.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_flashlight_poisson_009.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

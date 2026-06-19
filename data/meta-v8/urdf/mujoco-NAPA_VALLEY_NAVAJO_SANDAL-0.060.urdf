@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.014544243367032616"/>
+            <origin xyz=" 0.0021 0.0001 -0.0092"/>
+            <inertia ixx="1.0372501551238012e-05" ixy="3.0649569494877223e-06" ixz="1.669746091496636e-07"
+            iyy="3.54467300473392e-06" iyz="-2.579269278430514e-07" izz="1.1979466328306226e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-NAPA_VALLEY_NAVAJO_SANDAL.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-NAPA_VALLEY_NAVAJO_SANDAL.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

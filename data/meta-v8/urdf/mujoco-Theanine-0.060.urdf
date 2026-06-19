@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08608356869864905"/>
+            <origin xyz=" -0.0000 0.0001 -0.0043"/>
+            <inertia ixx="9.20148227303094e-05" ixy="-7.804108137377766e-08" ixz="-1.5679764149463277e-07"
+            iyy="9.202306945163851e-05" iyz="-7.289201984712381e-08" izz="3.779926176993465e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Theanine.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Theanine.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

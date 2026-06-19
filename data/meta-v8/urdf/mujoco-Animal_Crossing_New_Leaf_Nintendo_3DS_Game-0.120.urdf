@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2019496549537883"/>
+            <origin xyz=" -0.0004 0.0001 -0.0001"/>
+            <inertia ixx="0.00044749604781919053" ixy="2.6596976872629892e-06" ixz="3.5520126383673234e-06"
+            iyy="0.0005300399073576637" iyz="-2.9585295262248935e-06" izz="0.0009594602844252328"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Animal_Crossing_New_Leaf_Nintendo_3DS_Game.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Animal_Crossing_New_Leaf_Nintendo_3DS_Game.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06495969744931294"/>
+            <origin xyz=" 0.0025 -0.0033 0.0009"/>
+            <inertia ixx="6.153295548694296e-05" ixy="-1.2588990276663045e-07" ixz="4.393236399467232e-06"
+            iyy="2.877703315635386e-05" iyz="9.392509728291174e-07" izz="5.2399805892470396e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_LivioClassicOil.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_LivioClassicOil.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4884235303353558"/>
+            <origin xyz=" -0.0004 0.0004 0.0025"/>
+            <inertia ixx="0.0022253758000239073" ixy="-4.558898079227002e-07" ixz="-1.722295775953596e-07"
+            iyy="0.00222721085845424" iyz="2.127543209945471e-05" izz="0.0005567206202035682"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_red_bull.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_red_bull.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06626203379057483"/>
+            <origin xyz=" -0.0003 -0.0001 0.0070"/>
+            <inertia ixx="0.00012156591095805363" ixy="-2.2953903012315372e-07" ixz="8.99625111061426e-08"
+            iyy="0.00012156100404256106" iyz="4.306979028155656e-07" izz="2.2948572874949214e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_light_bulb_poisson_003.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_light_bulb_poisson_003.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.14553182025885397"/>
+            <origin xyz=" -0.0003 0.0002 0.0002"/>
+            <inertia ixx="0.00029471521194087346" ixy="-4.8120667857345144e-05" ixz="-3.7102152256904514e-06"
+            iyy="0.00021349845757512412" iyz="2.104440276868762e-06" izz="0.0001568088996226898"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_quaker_chewy_smores.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_quaker_chewy_smores.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

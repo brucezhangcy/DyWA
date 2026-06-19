@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.30672451459478306"/>
+            <origin xyz=" 0.0013 -0.0000 -0.0074"/>
+            <inertia ixx="0.000778648924668802" ixy="3.12474989622259e-06" ixz="-1.3767345659405359e-05"
+            iyy="0.0007774426431918184" iyz="1.0277674991938855e-06" izz="0.0003233198052555324"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_zilla_night_black_heat.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_zilla_night_black_heat.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

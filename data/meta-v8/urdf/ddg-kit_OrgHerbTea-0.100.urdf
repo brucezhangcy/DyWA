@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4115541382689481"/>
+            <origin xyz=" 0.0004 0.0002 0.0003"/>
+            <inertia ixx="0.0012038888681802462" ixy="5.190949554841641e-06" ixz="1.4670443877916826e-05"
+            iyy="0.0005744138010216517" iyz="-1.2914320100503914e-05" izz="0.001144214310184696"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_OrgHerbTea.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_OrgHerbTea.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

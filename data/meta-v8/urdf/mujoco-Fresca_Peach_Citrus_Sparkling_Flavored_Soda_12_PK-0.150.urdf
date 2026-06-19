@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.761238479144235"/>
+            <origin xyz=" 0.0003 0.0001 -0.0001"/>
+            <inertia ixx="0.0011454428084189134" ixy="2.156148120921622e-05" ixz="4.7282150485563666e-05"
+            iyy="0.0053152582321026615" iyz="-1.770785507050121e-06" izz="0.00539310404633187"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Fresca_Peach_Citrus_Sparkling_Flavored_Soda_12_PK.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Fresca_Peach_Citrus_Sparkling_Flavored_Soda_12_PK.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

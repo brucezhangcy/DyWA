@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6934434626465221"/>
+            <origin xyz=" 0.0016 -0.0013 -0.0164"/>
+            <inertia ixx="0.0038871761347670734" ixy="1.819607418642669e-05" ixz="2.90921792854731e-05"
+            iyy="0.00420304244212298" iyz="5.234124125174813e-05" izz="0.002627150131912183"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hefty_Waste_Basket_Decorative_Bronze_85_liter.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hefty_Waste_Basket_Decorative_Bronze_85_liter.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06816129825220772"/>
+            <origin xyz=" 0.0000 0.0098 -0.0004"/>
+            <inertia ixx="0.00017359079431716724" ixy="3.08211200143243e-08" ixz="1.5239714207238115e-10"
+            iyy="2.122496305045967e-05" iyz="-2.1259360137954052e-07" izz="0.000189365485862494"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-USBStick-56f49e3cd0d16824b2bf4f773fe0e622.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-USBStick-56f49e3cd0d16824b2bf4f773fe0e622.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

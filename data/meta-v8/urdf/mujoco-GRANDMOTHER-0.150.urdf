@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3647264960055804"/>
+            <origin xyz=" -0.0036 0.0011 -0.0107"/>
+            <inertia ixx="0.002113060177888725" ixy="3.5848145396856846e-05" ixz="-8.859063038492131e-05"
+            iyy="0.0022903187185180055" iyz="-3.79729422758255e-05" izz="0.0003754661038269708"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-GRANDMOTHER.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-GRANDMOTHER.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

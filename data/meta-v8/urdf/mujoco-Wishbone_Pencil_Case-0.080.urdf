@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.11148851997236542"/>
+            <origin xyz=" 0.0003 -0.0007 -0.0033"/>
+            <inertia ixx="4.883577359916553e-05" ixy="3.579908026177887e-06" ixz="-2.998481453159555e-06"
+            iyy="0.00019955413071611852" iyz="8.731972402458082e-07" izz="0.00020138325158380833"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Wishbone_Pencil_Case.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Wishbone_Pencil_Case.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

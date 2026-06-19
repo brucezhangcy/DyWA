@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03353920458273183"/>
+            <origin xyz=" 0.0019 -0.0018 -0.0015"/>
+            <inertia ixx="6.308455042688688e-05" ixy="-4.039139850521535e-07" ixz="-3.958849755339028e-07"
+            iyy="1.0982845307550908e-05" iyz="4.9934880597140835e-08" izz="7.316161891254014e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Now_Designs_Dish_Towel_Mojave_18_x_28.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Now_Designs_Dish_Towel_Mojave_18_x_28.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

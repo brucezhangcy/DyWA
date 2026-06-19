@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.34018310438242044"/>
+            <origin xyz=" -0.0003 0.0015 -0.0007"/>
+            <inertia ixx="0.001050777496322141" ixy="-7.193231725011397e-06" ixz="0.0001033171028369333"
+            iyy="0.00051060709234794" iyz="-4.2845196328482445e-06" izz="0.0008201244767683371"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_DropsCherry.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_DropsCherry.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

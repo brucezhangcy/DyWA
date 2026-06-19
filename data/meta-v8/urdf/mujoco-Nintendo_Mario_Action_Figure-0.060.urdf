@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03531814429749487"/>
+            <origin xyz=" 0.0068 0.0059 0.0027"/>
+            <inertia ixx="3.273158650753335e-05" ixy="1.8303881639132595e-06" ixz="1.2781237710346278e-06"
+            iyy="3.392676795397324e-05" iyz="-5.109487111710302e-07" izz="9.502024902235498e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nintendo_Mario_Action_Figure.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nintendo_Mario_Action_Figure.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

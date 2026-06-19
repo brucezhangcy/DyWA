@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.19194822349845925"/>
+            <origin xyz=" 0.0001 0.0000 -0.0003"/>
+            <inertia ixx="0.0006232046133315831" ixy="-8.671459497499764e-08" ixz="3.5170018161024036e-07"
+            iyy="0.000623270567862671" iyz="2.527332166638509e-07" izz="0.00010206735403362435"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_shampoo_new_poisson_001.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_shampoo_new_poisson_001.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

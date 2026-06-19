@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.036426957742776114"/>
+            <origin xyz=" 0.0001 0.0000 -0.0000"/>
+            <inertia ixx="1.1541769558922409e-05" ixy="-2.0304444047380972e-08" ixz="1.573546030822747e-07"
+            iyy="4.34388288099682e-05" iyz="2.6112306035646003e-08" izz="3.424412275267456e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-LEGO_Fusion_Set_Town_Master.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-LEGO_Fusion_Set_Town_Master.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

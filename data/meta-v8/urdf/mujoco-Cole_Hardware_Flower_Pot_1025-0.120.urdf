@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4627470858437199"/>
+            <origin xyz=" 0.0012 0.0010 0.0041"/>
+            <inertia ixx="0.002039621578545254" ixy="6.522927104186052e-06" ixz="-3.1937163762884204e-06"
+            iyy="0.0020401879723654657" iyz="-1.7422386622424571e-06" izz="0.002178725163228301"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_Flower_Pot_1025.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_Flower_Pot_1025.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

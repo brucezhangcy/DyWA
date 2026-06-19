@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10659313905737518"/>
+            <origin xyz=" -0.0006 0.0018 -0.0085"/>
+            <inertia ixx="0.00019367060490244704" ixy="2.925111317007189e-07" ixz="-3.835874141577111e-06"
+            iyy="0.00019341055380595274" iyz="4.185707103943582e-06" izz="4.236433631548488e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_pepto_bismol.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_pepto_bismol.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

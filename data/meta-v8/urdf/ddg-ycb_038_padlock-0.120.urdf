@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.27973201260369174"/>
+            <origin xyz=" 0.0016 0.0169 -0.0017"/>
+            <inertia ixx="0.00039375837238919274" ixy="6.515965713488736e-06" ixz="-2.990400148389109e-05"
+            iyy="0.0004852939758706413" iyz="7.482501232090655e-07" izz="0.0006746611399673279"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_038_padlock.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_038_padlock.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

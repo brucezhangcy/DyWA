@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.18560244519130883"/>
+            <origin xyz=" 0.0001 0.0000 -0.0000"/>
+            <inertia ixx="0.00017516981793790727" ixy="-5.092030411305098e-07" ixz="2.6545974212179846e-06"
+            iyy="0.0006052320909828392" iyz="4.2558537372277516e-07" izz="0.00046820482750138784"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Little_Debbie_Chocolate_Cupcakes_8_ct.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Little_Debbie_Chocolate_Cupcakes_8_ct.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

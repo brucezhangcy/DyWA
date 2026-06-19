@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.16032675376222727"/>
+            <origin xyz=" 0.0140 -0.0000 0.0001"/>
+            <inertia ixx="0.00010287096409424668" ixy="3.0388915986702534e-06" ixz="-4.4595084004526483e-07"
+            iyy="0.0008395700143132536" iyz="6.817811290041879e-08" izz="0.0009165971368069522"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_pliers_poisson_017.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_pliers_poisson_017.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

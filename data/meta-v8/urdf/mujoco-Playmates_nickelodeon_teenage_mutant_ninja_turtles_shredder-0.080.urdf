@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.05581886951941167"/>
+            <origin xyz=" -0.0017 0.0022 -0.0025"/>
+            <inertia ixx="9.802222797782044e-05" ixy="-9.171197472824034e-07" ixz="-2.3895967165508346e-07"
+            iyy="0.00011405229688473973" iyz="-3.5709212496500473e-06" izz="2.6373557206658763e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Playmates_nickelodeon_teenage_mutant_ninja_turtles_shredder.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Playmates_nickelodeon_teenage_mutant_ninja_turtles_shredder.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

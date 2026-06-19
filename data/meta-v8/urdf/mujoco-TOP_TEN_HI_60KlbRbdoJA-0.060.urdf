@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.034395117595138774"/>
+            <origin xyz=" 0.0003 0.0087 -0.0080"/>
+            <inertia ixx="2.8943733079970816e-05" ixy="5.532203748198389e-08" ixz="4.783542845086206e-08"
+            iyy="9.788857238544537e-06" iyz="-4.325129234583101e-06" izz="2.4896252004310384e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-TOP_TEN_HI_60KlbRbdoJA.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-TOP_TEN_HI_60KlbRbdoJA.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

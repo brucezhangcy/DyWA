@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.1494582894336187"/>
+            <origin xyz=" -0.0000 0.0005 -0.0044"/>
+            <inertia ixx="0.007983146626527196" ixy="-9.748632284372011e-06" ixz="-5.900322716800835e-05"
+            iyy="0.008360915507716123" iyz="4.587533050214971e-05" izz="0.0026546560681044106"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nescafe_Tasters_Choice_Instant_Coffee_Decaf_House_Blend_Light_7_oz.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nescafe_Tasters_Choice_Instant_Coffee_Decaf_House_Blend_Light_7_oz.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

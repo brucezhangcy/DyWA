@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.09980062915350309"/>
+            <origin xyz=" 0.0000 0.0020 -0.0041"/>
+            <inertia ixx="7.942709698824884e-05" ixy="-5.117069933768579e-07" ixz="5.9883910022479e-07"
+            iyy="8.953197642692862e-05" iyz="2.5323423314666116e-06" izz="6.651808216141029e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Olive_Kids_Birdie_Pack_n_Snack.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Olive_Kids_Birdie_Pack_n_Snack.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

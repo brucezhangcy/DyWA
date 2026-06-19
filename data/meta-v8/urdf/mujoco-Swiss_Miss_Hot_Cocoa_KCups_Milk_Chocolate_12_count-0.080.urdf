@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2336749824997616"/>
+            <origin xyz=" 0.0001 0.0000 -0.0003"/>
+            <inertia ixx="0.00024815613465962625" ixy="-7.370213142579447e-07" ixz="8.33329276315258e-08"
+            iyy="0.0004008713249061414" iyz="3.9525047136057844e-07" izz="0.00040601578119227734"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Swiss_Miss_Hot_Cocoa_KCups_Milk_Chocolate_12_count.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Swiss_Miss_Hot_Cocoa_KCups_Milk_Chocolate_12_count.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

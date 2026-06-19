@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07468973612755257"/>
+            <origin xyz=" 0.0189 -0.0045 -0.0047"/>
+            <inertia ixx="3.750697430841042e-05" ixy="-1.6062310748061855e-05" ixz="-1.9570300693208682e-05"
+            iyy="0.0001658908855718337" iyz="1.465384681127909e-06" izz="0.0001843450942703188"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-GoPro_HERO3_Composite_Cable.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-GoPro_HERO3_Composite_Cable.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

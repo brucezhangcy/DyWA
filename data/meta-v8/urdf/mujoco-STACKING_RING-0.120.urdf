@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3339235504459257"/>
+            <origin xyz=" 0.0018 -0.0008 -0.0244"/>
+            <inertia ixx="0.0013745525484554133" ixy="4.823349970273751e-07" ixz="-2.9370091015718665e-05"
+            iyy="0.001371777158967892" iyz="1.8774258164972232e-05" izz="0.00030150540783192755"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-STACKING_RING.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-STACKING_RING.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

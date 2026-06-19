@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07183591338755083"/>
+            <origin xyz=" -0.0034 0.0007 0.0077"/>
+            <inertia ixx="0.000219441642801862" ixy="-1.424130146986037e-07" ixz="2.002276726938955e-07"
+            iyy="7.440450025436502e-05" iyz="9.57801467787529e-07" izz="0.00016369439537976287"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Piano-66b327d254ac1d7eeaa00445ba4a9ddd.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Piano-66b327d254ac1d7eeaa00445ba4a9ddd.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.7005418913073981"/>
+            <origin xyz=" -0.0006 0.0024 -0.0142"/>
+            <inertia ixx="0.002035510380568446" ixy="1.3110501292699074e-05" ixz="2.7613779314660406e-05"
+            iyy="0.0024995977631668974" iyz="-0.00016458486810690706" izz="0.0017743153206388807"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Olive_Kids_Trains_Planes_Trucks_Bogo_Backpack.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Olive_Kids_Trains_Planes_Trucks_Bogo_Backpack.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

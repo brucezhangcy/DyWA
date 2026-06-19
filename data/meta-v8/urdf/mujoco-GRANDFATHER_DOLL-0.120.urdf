@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.18579022516801397"/>
+            <origin xyz=" -0.0046 -0.0001 -0.0039"/>
+            <inertia ixx="0.0006148137240614469" ixy="-1.6984528789124623e-06" ixz="-1.4754961916072677e-05"
+            iyy="0.0007243562197847347" iyz="8.490461750237894e-06" izz="0.0001556067416621384"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-GRANDFATHER_DOLL.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-GRANDFATHER_DOLL.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

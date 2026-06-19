@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.25343479694347626"/>
+            <origin xyz=" 0.0041 0.0009 -0.0117"/>
+            <inertia ixx="0.0009149359511049271" ixy="-3.673208918770592e-05" ixz="-1.1756398119418162e-05"
+            iyy="0.00020314498318332853" iyz="-7.670429347650609e-06" izz="0.0009473924881513819"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Santa_Cruz_Mens.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Santa_Cruz_Mens.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

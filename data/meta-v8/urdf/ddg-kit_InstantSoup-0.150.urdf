@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.1598677555992325"/>
+            <origin xyz=" 0.0006 -0.0014 -0.0009"/>
+            <inertia ixx="0.006922449958710458" ixy="-2.235134828589527e-05" ixz="0.0008631871026526935"
+            iyy="0.00590009047267916" iyz="2.5852190778146894e-05" izz="0.0038485028296270994"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_InstantSoup.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_InstantSoup.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

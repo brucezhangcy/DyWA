@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1821102963789859"/>
+            <origin xyz=" 0.0017 0.0008 0.0000"/>
+            <inertia ixx="0.00018488344006964956" ixy="5.798777902486722e-06" ixz="-1.863749018372268e-07"
+            iyy="0.0005593614230348978" iyz="5.33884501879202e-08" izz="0.00041153222011534765"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Thermostat-e5a96400ffb51cc464c33a5741e8e076.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Thermostat-e5a96400ffb51cc464c33a5741e8e076.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

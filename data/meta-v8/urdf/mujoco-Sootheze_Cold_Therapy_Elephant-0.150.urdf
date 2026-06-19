@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5553973238568534"/>
+            <origin xyz=" 0.0007 0.0031 -0.0218"/>
+            <inertia ixx="0.001945426536446983" ixy="2.977556111402364e-05" ixz="-0.0003405441075129279"
+            iyy="0.0019032809201803783" iyz="1.1624693364550161e-05" izz="0.001713994487691036"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sootheze_Cold_Therapy_Elephant.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sootheze_Cold_Therapy_Elephant.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

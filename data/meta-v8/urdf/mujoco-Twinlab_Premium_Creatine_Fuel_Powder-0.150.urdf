@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.268430939491479"/>
+            <origin xyz=" 0.0006 -0.0001 -0.0112"/>
+            <inertia ixx="0.008371415073518016" ixy="-7.9523846245231e-08" ixz="-5.135663854643396e-05"
+            iyy="0.008382345635777196" iyz="8.961950770233903e-06" izz="0.003267289739970051"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Twinlab_Premium_Creatine_Fuel_Powder.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Twinlab_Premium_Creatine_Fuel_Powder.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

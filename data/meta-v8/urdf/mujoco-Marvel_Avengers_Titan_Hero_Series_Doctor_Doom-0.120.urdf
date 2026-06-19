@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.14646882328226682"/>
+            <origin xyz=" 0.0003 0.0046 -0.0075"/>
+            <inertia ixx="0.0004154672653095024" ixy="2.463318457564346e-06" ixz="-4.537552435236324e-06"
+            iyy="0.00047320412249709007" iyz="1.8076562133411204e-05" izz="9.41307956463513e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Marvel_Avengers_Titan_Hero_Series_Doctor_Doom.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Marvel_Avengers_Titan_Hero_Series_Doctor_Doom.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

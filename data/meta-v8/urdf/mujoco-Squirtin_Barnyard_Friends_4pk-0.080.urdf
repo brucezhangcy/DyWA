@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07140198185681991"/>
+            <origin xyz=" -0.0049 0.0016 -0.0050"/>
+            <inertia ixx="2.4825851730287706e-05" ixy="-1.0942328871756372e-06" ixz="1.1415479115571057e-06"
+            iyy="0.0001409975304874507" iyz="3.31112300161525e-06" izz="0.00014343677771166854"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Squirtin_Barnyard_Friends_4pk.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Squirtin_Barnyard_Friends_4pk.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.044320952040902216"/>
+            <origin xyz=" 0.0003 -0.0001 -0.0001"/>
+            <inertia ixx="3.449569904150759e-05" ixy="-2.2447146685823604e-08" ixz="-2.1068080709893355e-07"
+            iyy="5.206491438549353e-05" iyz="-7.810852892993542e-08" izz="2.0982193123112086e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hasbro_Cranium_Performance_and_Acting_Game.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hasbro_Cranium_Performance_and_Acting_Game.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

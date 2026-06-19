@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.31051870678931903"/>
+            <origin xyz=" -0.0006 -0.0007 -0.0049"/>
+            <inertia ixx="0.001263899398918482" ixy="2.4231803405586176e-06" ixz="2.411663373218316e-06"
+            iyy="0.0012684022528246484" iyz="-3.3534044353194124e-06" izz="0.002399212770560835"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ecoforms_Quadra_Saucer_SQ1_Avocado.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ecoforms_Quadra_Saucer_SQ1_Avocado.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

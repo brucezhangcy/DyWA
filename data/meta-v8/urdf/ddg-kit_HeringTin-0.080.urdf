@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10514277036202596"/>
+            <origin xyz=" -0.0008 0.0001 -0.0008"/>
+            <inertia ixx="0.0002243581731623984" ixy="9.217930329120248e-07" ixz="3.108999321102347e-05"
+            iyy="0.00018030015548953492" iyz="1.1885424961292565e-06" izz="7.145980372658292e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_HeringTin.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_HeringTin.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

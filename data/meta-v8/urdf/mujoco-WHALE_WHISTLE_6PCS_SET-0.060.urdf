@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07480864337717337"/>
+            <origin xyz=" 0.0001 -0.0101 -0.0050"/>
+            <inertia ixx="6.089909760086606e-05" ixy="7.805087244462366e-07" ixz="1.5372892588061842e-07"
+            iyy="3.684062719450869e-05" iyz="3.77040214011749e-06" izz="7.030702025718085e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-WHALE_WHISTLE_6PCS_SET.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-WHALE_WHISTLE_6PCS_SET.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

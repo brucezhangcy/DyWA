@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.0905480381393308"/>
+            <origin xyz=" -0.0000 -0.0000 -0.0000"/>
+            <inertia ixx="7.938711633425198e-05" ixy="-1.771063068547842e-07" ixz="1.2975147959570003e-07"
+            iyy="9.525201352734521e-05" iyz="5.11424210354656e-07" izz="5.232946056812388e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_AcylGlutathione_Deep_Crease_Serum.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_AcylGlutathione_Deep_Crease_Serum.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

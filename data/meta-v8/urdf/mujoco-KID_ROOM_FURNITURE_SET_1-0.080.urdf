@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.04768658424565294"/>
+            <origin xyz=" 0.0042 0.0185 -0.0038"/>
+            <inertia ixx="8.062258971954815e-05" ixy="1.1914623765203216e-05" ixz="1.0779182026217498e-06"
+            iyy="3.47407217611671e-05" iyz="-9.572289009144337e-06" izz="9.643123069713247e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-KID_ROOM_FURNITURE_SET_1.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-KID_ROOM_FURNITURE_SET_1.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

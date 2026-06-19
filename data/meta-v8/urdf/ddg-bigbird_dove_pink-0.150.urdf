@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.337321092810309"/>
+            <origin xyz=" -0.0012 -0.0003 0.0029"/>
+            <inertia ixx="0.009944865067793594" ixy="0.00043883224485676675" ixz="-1.1498545049829937e-06"
+            iyy="0.00469106160726757" iyz="-3.185825885693993e-05" izz="0.007437526433225252"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_dove_pink.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_dove_pink.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

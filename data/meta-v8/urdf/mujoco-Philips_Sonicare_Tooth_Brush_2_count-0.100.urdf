@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.36815058328557093"/>
+            <origin xyz=" 0.0001 -0.0001 0.0000"/>
+            <inertia ixx="0.0008806801351966348" ixy="2.389698202018131e-07" ixz="4.287020028553046e-06"
+            iyy="0.001139499073293117" iyz="1.1842569094216102e-05" izz="0.0005424975300317966"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Philips_Sonicare_Tooth_Brush_2_count.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Philips_Sonicare_Tooth_Brush_2_count.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

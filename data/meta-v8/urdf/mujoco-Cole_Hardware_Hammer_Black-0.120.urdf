@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06902803010118036"/>
+            <origin xyz=" 0.0481 0.0002 -0.0051"/>
+            <inertia ixx="3.291391493028619e-05" ixy="1.2707302891925708e-07" ixz="-3.21710327345614e-05"
+            iyy="0.0002997822392635156" iyz="5.6221014315568704e-08" izz="0.0002824011780547292"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_Hammer_Black.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_Hammer_Black.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

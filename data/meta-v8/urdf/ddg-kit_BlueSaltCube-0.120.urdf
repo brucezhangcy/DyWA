@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.48910097868166474"/>
+            <origin xyz=" -0.0005 -0.0009 -0.0002"/>
+            <inertia ixx="0.002166777962345455" ixy="-1.186786215482906e-06" ixz="2.1284015843567325e-05"
+            iyy="0.0006210437659805756" iyz="-5.685743733795265e-07" izz="0.0020429975490377714"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_BlueSaltCube.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_BlueSaltCube.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

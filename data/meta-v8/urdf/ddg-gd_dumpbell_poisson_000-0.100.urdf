@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.21596524456857216"/>
+            <origin xyz=" 0.0000 0.0001 -0.0000"/>
+            <inertia ixx="0.00019408047123270597" ixy="7.095796913594914e-07" ixz="3.89862668804039e-07"
+            iyy="0.0009915968191917183" iyz="-8.334156319557029e-07" izz="0.0009932528310492737"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_dumpbell_poisson_000.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_dumpbell_poisson_000.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

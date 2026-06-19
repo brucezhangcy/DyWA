@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="2.4111133528396986"/>
+            <origin xyz=" 0.0001 -0.0004 0.0058"/>
+            <inertia ixx="0.015206413130379105" ixy="-6.16657862627623e-05" ixz="-8.402757286903067e-05"
+            iyy="0.015209119368208554" iyz="-4.5849249219576854e-05" izz="0.015931233998905094"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_campbells_chicken_noodle_soup.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_campbells_chicken_noodle_soup.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

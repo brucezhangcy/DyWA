@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.0497896043442147"/>
+            <origin xyz=" -0.0001 0.0002 -0.0024"/>
+            <inertia ixx="3.872785368167337e-05" ixy="2.815989427634071e-07" ixz="4.633469424802604e-07"
+            iyy="3.997532237733245e-05" iyz="8.578455639972869e-08" izz="7.597761503174166e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Melissa_Doug_Felt_Food_Pizza_Set.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Melissa_Doug_Felt_Food_Pizza_Set.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

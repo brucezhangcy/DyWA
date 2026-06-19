@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.19070866463243794"/>
+            <origin xyz=" -0.0005 -0.0002 -0.0002"/>
+            <inertia ixx="0.0003272087380650391" ixy="1.343202823869577e-06" ixz="-3.5966261729784934e-06"
+            iyy="0.0006203949176789348" iyz="1.42261910010287e-05" izz="0.00032767929332283417"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Leap_Frog_Paint_Dabber_Dot_Art_5_paint_bottles.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Leap_Frog_Paint_Dabber_Dot_Art_5_paint_bottles.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

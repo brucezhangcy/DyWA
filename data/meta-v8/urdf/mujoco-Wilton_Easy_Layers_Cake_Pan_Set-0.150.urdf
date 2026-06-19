@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.7078579425222743"/>
+            <origin xyz=" 0.0051 0.0004 -0.0009"/>
+            <inertia ixx="0.002614210934441386" ixy="5.958738000422634e-06" ixz="2.2617795128506714e-05"
+            iyy="0.005044969347542216" iyz="6.695787710720309e-05" izz="0.0028105385992357283"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Wilton_Easy_Layers_Cake_Pan_Set.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Wilton_Easy_Layers_Cake_Pan_Set.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

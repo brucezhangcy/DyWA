@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.18103526497804115"/>
+            <origin xyz=" -0.0005 -0.0000 -0.0003"/>
+            <inertia ixx="0.00036032074080457634" ixy="-8.90445882174472e-07" ixz="2.4863322137716264e-05"
+            iyy="0.00016647921989464668" iyz="-2.019095472056341e-06" izz="0.0002864198657724314"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_InstantDumplings.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_InstantDumplings.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

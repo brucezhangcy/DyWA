@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3374757503385583"/>
+            <origin xyz=" 0.0000 -0.0006 -0.0000"/>
+            <inertia ixx="0.0011066914161888743" ixy="2.4764675075298626e-06" ixz="3.5324363904149294e-07"
+            iyy="0.0005113052266486684" iyz="-3.2128135996875547e-06" izz="0.0015093989521956159"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Seagate_3TB_Central_shared_storage.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Seagate_3TB_Central_shared_storage.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.37610208677632667"/>
+            <origin xyz=" -0.0003 -0.0009 0.0001"/>
+            <inertia ixx="0.0011565887553802775" ixy="-8.383578723353596e-06" ixz="7.120376555097637e-05"
+            iyy="0.0005512729183994214" iyz="-5.639894041606077e-06" izz="0.0009570235598441117"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_TomatoHerbSauce.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_TomatoHerbSauce.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.9493483132807127"/>
+            <origin xyz=" 0.0002 0.0003 -0.0028"/>
+            <inertia ixx="0.006758998763827812" ixy="0.00030011816870869934" ixz="-0.0002428276995870683"
+            iyy="0.006219242984258613" iyz="-5.219726946922115e-05" izz="0.0019208593021685706"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_crest_complete_minty_fresh.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_crest_complete_minty_fresh.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

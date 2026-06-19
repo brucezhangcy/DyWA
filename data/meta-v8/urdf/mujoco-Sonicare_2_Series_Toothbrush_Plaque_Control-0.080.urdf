@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.18484418539243436"/>
+            <origin xyz=" -0.0002 -0.0001 -0.0004"/>
+            <inertia ixx="0.0002787565375010392" ixy="-7.898425267872945e-07" ixz="2.273701799728744e-06"
+            iyy="0.0003609956202496336" iyz="3.100157415637923e-06" izz="0.000171870660198118"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sonicare_2_Series_Toothbrush_Plaque_Control.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sonicare_2_Series_Toothbrush_Plaque_Control.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.22764678395554874"/>
+            <origin xyz=" 0.0007 0.0038 -0.0077"/>
+            <inertia ixx="0.0007882089555531724" ixy="8.311832496301488e-06" ixz="-6.752956868180616e-06"
+            iyy="0.00016032598071732604" iyz="7.281114079047167e-07" izz="0.0008280005669843986"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Timberland_Mens_Earthkeepers_Casco_Bay_Canvas_Oxford.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Timberland_Mens_Earthkeepers_Casco_Bay_Canvas_Oxford.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

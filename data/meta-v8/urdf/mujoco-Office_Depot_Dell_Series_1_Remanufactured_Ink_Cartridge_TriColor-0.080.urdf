@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.18581394752117228"/>
+            <origin xyz=" 0.0000 0.0001 -0.0004"/>
+            <inertia ixx="0.00028468453669041276" ixy="1.0284065380502782e-07" ixz="4.1574029194085455e-09"
+            iyy="0.0003651065406086493" iyz="-1.0986141004421506e-06" izz="0.00017139824505427734"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Office_Depot_Dell_Series_1_Remanufactured_Ink_Cartridge_TriColor.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Office_Depot_Dell_Series_1_Remanufactured_Ink_Cartridge_TriColor.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

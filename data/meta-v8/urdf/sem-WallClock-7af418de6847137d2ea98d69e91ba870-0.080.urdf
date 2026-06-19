@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06948038619115707"/>
+            <origin xyz=" -0.0000 0.0020 -0.0001"/>
+            <inertia ixx="0.00012504858607988615" ixy="7.711613460649448e-10" ixz="2.612176922242505e-09"
+            iyy="0.00014452003663022794" iyz="-7.013676357963014e-08" izz="2.7089329001575015e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-WallClock-7af418de6847137d2ea98d69e91ba870.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-WallClock-7af418de6847137d2ea98d69e91ba870.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

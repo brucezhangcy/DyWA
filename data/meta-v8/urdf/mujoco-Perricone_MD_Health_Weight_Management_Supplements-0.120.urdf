@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.8056388570965906"/>
+            <origin xyz=" 0.0000 0.0003 -0.0004"/>
+            <inertia ixx="0.0025042652535560333" ixy="-2.589315770581403e-06" ixz="4.359896974046363e-07"
+            iyy="0.003112066973051923" iyz="-9.829562494247209e-06" izz="0.002372649399511323"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Health_Weight_Management_Supplements.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Health_Weight_Management_Supplements.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

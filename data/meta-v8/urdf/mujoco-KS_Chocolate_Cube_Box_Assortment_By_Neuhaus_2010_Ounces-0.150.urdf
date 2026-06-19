@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.242620972220336"/>
+            <origin xyz=" -0.0060 0.0135 -0.0070"/>
+            <inertia ixx="0.0054002458689554065" ixy="1.5154187979303992e-06" ixz="-9.9251836882593e-06"
+            iyy="0.005452186045902693" iyz="4.725143729748564e-05" izz="0.0050552415881088475"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-KS_Chocolate_Cube_Box_Assortment_By_Neuhaus_2010_Ounces.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-KS_Chocolate_Cube_Box_Assortment_By_Neuhaus_2010_Ounces.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

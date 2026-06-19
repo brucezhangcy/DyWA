@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6905473284859859"/>
+            <origin xyz=" -0.0005 -0.0012 -0.0083"/>
+            <inertia ixx="0.002206102063828054" ixy="-8.506398751222985e-06" ixz="-4.131638766305959e-06"
+            iyy="0.0022174203543722073" iyz="1.108653244064033e-05" izz="0.0038710716682976813"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_mushroom_poisson_012.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_mushroom_poisson_012.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.47640092734113515"/>
+            <origin xyz=" 0.0066 0.0220 -0.0302"/>
+            <inertia ixx="0.002441392030692338" ixy="-0.00013683194759576796" ixz="-4.978266640641754e-05"
+            iyy="0.0010356224907757613" iyz="-0.0004395036325844401" izz="0.001842326566578636"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-MARTIN_WEDGE_LACE_BOOT.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-MARTIN_WEDGE_LACE_BOOT.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

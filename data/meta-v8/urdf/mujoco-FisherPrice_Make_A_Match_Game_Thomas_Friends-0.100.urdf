@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1816066616806725"/>
+            <origin xyz=" 0.0000 -0.0001 -0.0001"/>
+            <inertia ixx="0.000386375554242503" ixy="-4.418730551687534e-07" ixz="-3.968633745316759e-06"
+            iyy="0.0005842416728729507" iyz="4.740711363749682e-06" izz="0.0002282744094172625"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-FisherPrice_Make_A_Match_Game_Thomas_Friends.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-FisherPrice_Make_A_Match_Game_Thomas_Friends.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

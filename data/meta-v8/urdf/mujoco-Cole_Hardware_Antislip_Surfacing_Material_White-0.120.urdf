@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.0568269111396276"/>
+            <origin xyz=" -0.0004 -0.0001 0.0001"/>
+            <inertia ixx="0.004630484944151177" ixy="-3.0982864646785345e-06" ixz="5.5572364368581074e-06"
+            iyy="0.004642811101705677" iyz="1.0173312200753549e-07" izz="0.006026054374212647"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_Antislip_Surfacing_Material_White.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_Antislip_Surfacing_Material_White.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

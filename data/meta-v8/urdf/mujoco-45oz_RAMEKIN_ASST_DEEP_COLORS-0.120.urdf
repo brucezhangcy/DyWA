@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6661867016173414"/>
+            <origin xyz=" 0.0008 0.0009 -0.0071"/>
+            <inertia ixx="0.0031243800318779126" ixy="1.123582334874831e-06" ixz="3.106217888691502e-05"
+            iyy="0.003100934793869774" iyz="-5.134806016507755e-06" izz="0.004841844906807416"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-45oz_RAMEKIN_ASST_DEEP_COLORS.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-45oz_RAMEKIN_ASST_DEEP_COLORS.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

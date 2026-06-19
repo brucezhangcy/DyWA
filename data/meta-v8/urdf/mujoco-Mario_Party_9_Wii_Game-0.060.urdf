@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.02270331064718751"/>
+            <origin xyz=" -0.0001 -0.0001 0.0001"/>
+            <inertia ixx="1.809521527193832e-05" ixy="1.544252204670133e-07" ixz="8.032351757810424e-08"
+            iyy="9.470496749897172e-06" iyz="-8.773705535830717e-08" izz="2.7114195803447995e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Mario_Party_9_Wii_Game.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Mario_Party_9_Wii_Game.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

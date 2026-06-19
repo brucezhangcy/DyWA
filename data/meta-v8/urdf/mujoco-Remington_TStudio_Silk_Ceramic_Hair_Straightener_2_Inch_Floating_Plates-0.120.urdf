@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08645021000065682"/>
+            <origin xyz=" -0.0120 0.0067 -0.0056"/>
+            <inertia ixx="0.0002519202310121764" ixy="1.2091527579107405e-05" ixz="3.5936055861943775e-06"
+            iyy="4.4326805473296726e-05" iyz="-1.9315772418413065e-05" izz="0.0002773454073914959"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Remington_TStudio_Silk_Ceramic_Hair_Straightener_2_Inch_Floating_Plates.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Remington_TStudio_Silk_Ceramic_Hair_Straightener_2_Inch_Floating_Plates.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

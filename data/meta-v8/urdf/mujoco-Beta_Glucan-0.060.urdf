@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08481542299140105"/>
+            <origin xyz=" 0.0001 0.0001 -0.0046"/>
+            <inertia ixx="8.998079446572976e-05" ixy="2.4065350319090847e-08" ixz="-3.3793492260893185e-07"
+            iyy="9.005392176028924e-05" iyz="1.9421906821351107e-07" izz="3.6856662549647525e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Beta_Glucan.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Beta_Glucan.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.0541427749508308"/>
+            <origin xyz=" 0.0005 -0.0201 -0.0195"/>
+            <inertia ixx="6.393198217309662e-05" ixy="-1.0333388651293002e-06" ixz="-1.0270188635974265e-06"
+            iyy="0.0001077168811660612" iyz="-8.271051549235513e-06" izz="0.00015105873046010376"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Spectrum_Wall_Mount.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Spectrum_Wall_Mount.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

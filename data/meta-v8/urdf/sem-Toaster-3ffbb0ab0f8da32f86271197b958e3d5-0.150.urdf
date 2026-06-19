@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.6112963435554744"/>
+            <origin xyz=" 0.0008 -0.0003 -0.0029"/>
+            <inertia ixx="0.006657353739877401" ixy="3.911290414343964e-05" ixz="-5.49009487759703e-05"
+            iyy="0.011177936803775235" iyz="1.111440566568686e-05" izz="0.009404480344596513"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Toaster-3ffbb0ab0f8da32f86271197b958e3d5.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Toaster-3ffbb0ab0f8da32f86271197b958e3d5.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

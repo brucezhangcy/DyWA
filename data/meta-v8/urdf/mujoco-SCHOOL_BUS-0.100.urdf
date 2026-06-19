@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.21433891544191871"/>
+            <origin xyz=" -0.0004 0.0054 -0.0006"/>
+            <inertia ixx="0.000602577290572772" ixy="1.909432941047462e-06" ixz="1.15859602637951e-06"
+            iyy="0.0001495658200331097" iyz="-4.035116087893822e-05" izz="0.0005820276977338023"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SCHOOL_BUS.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SCHOOL_BUS.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

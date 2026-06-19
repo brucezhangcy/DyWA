@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.38728010931421103"/>
+            <origin xyz=" -0.0200 -0.0009 -0.0106"/>
+            <inertia ixx="0.001042983503334108" ixy="-8.569099503235986e-07" ixz="-5.847916310863207e-05"
+            iyy="0.001168709542947395" iyz="1.5842721905076096e-06" izz="0.0005801943050400051"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Porcelain_Pitcher_White.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Porcelain_Pitcher_White.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

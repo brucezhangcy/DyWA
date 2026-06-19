@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="2.282846138081246"/>
+            <origin xyz=" -0.0001 0.0002 0.0010"/>
+            <inertia ixx="0.013696874626158909" ixy="-1.4374246643435557e-05" ixz="-6.230709467390133e-06"
+            iyy="0.013655890823900271" iyz="2.983930031008621e-06" izz="0.021565877899992727"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_donut_poisson_003.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_donut_poisson_003.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

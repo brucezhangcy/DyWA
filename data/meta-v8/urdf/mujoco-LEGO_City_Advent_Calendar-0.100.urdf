@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1939167489128175"/>
+            <origin xyz=" -0.0000 0.0000 -0.0000"/>
+            <inertia ixx="0.00022573932494152207" ixy="-1.890810363693298e-07" ixz="1.1697863147143369e-06"
+            iyy="0.0006415069012102145" iyz="-1.7753849322798212e-07" izz="0.00045387725332929433"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-LEGO_City_Advent_Calendar.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-LEGO_City_Advent_Calendar.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

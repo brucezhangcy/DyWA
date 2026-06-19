@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.18793677140842463"/>
+            <origin xyz=" -0.0004 -0.0001 -0.0031"/>
+            <inertia ixx="0.0005079910228897814" ixy="9.439669693600566e-06" ixz="-6.866300025024175e-06"
+            iyy="0.0005111844276026533" iyz="7.854467800288274e-07" izz="0.0009909968614854614"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_Plant_Saucer_Glazed_9.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_Plant_Saucer_Glazed_9.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

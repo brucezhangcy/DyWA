@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5721292396778622"/>
+            <origin xyz=" 0.0013 -0.0018 -0.0064"/>
+            <inertia ixx="0.0021826219264019643" ixy="-5.175001953504563e-06" ixz="-1.271614183778519e-05"
+            iyy="0.002142117930494127" iyz="3.275732222908362e-05" izz="0.00280483367481007"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Target_Basket_Medium.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Target_Basket_Medium.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

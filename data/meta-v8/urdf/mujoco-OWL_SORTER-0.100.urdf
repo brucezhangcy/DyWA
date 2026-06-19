@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.12830428511923941"/>
+            <origin xyz=" -0.0036 -0.0017 -0.0206"/>
+            <inertia ixx="0.0001733291790234857" ixy="6.66933806785745e-06" ixz="-5.618653751026869e-07"
+            iyy="0.00031005828251690716" iyz="1.1518335906968679e-05" izz="0.0002170370640283098"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-OWL_SORTER.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-OWL_SORTER.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

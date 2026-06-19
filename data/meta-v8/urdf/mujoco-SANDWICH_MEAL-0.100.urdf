@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2874242940966637"/>
+            <origin xyz=" -0.0006 0.0093 -0.0075"/>
+            <inertia ixx="0.0006047981207664379" ixy="6.84878761409603e-05" ixz="1.3666645099092388e-05"
+            iyy="0.0005037203988867405" iyz="-8.032260391788754e-05" izz="0.000947113861796736"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SANDWICH_MEAL.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SANDWICH_MEAL.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

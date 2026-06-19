@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.0317715543914913"/>
+            <origin xyz=" 0.0027 0.0030 -0.0051"/>
+            <inertia ixx="2.921685704493297e-05" ixy="-1.434902307777738e-06" ixz="-2.835355843032123e-07"
+            iyy="5.983807543073413e-06" iyz="3.8447531311933396e-08" izz="2.9359014812159713e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_GELDirt_Dog_4_SunFlameBlack.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_GELDirt_Dog_4_SunFlameBlack.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

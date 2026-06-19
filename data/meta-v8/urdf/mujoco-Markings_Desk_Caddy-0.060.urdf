@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03349906435140285"/>
+            <origin xyz=" 0.0016 -0.0036 -0.0049"/>
+            <inertia ixx="3.7263594894519285e-05" ixy="-1.1100446732025301e-06" ixz="-7.192083841934076e-07"
+            iyy="9.03569298819911e-06" iyz="1.989348079317719e-06" izz="3.7096464117754535e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Markings_Desk_Caddy.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Markings_Desk_Caddy.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

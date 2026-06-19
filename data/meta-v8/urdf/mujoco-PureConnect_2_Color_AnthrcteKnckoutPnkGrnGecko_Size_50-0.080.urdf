@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08360405330235969"/>
+            <origin xyz=" 0.0025 0.0037 -0.0087"/>
+            <inertia ixx="0.0001354752517223052" ixy="-6.301863757358272e-06" ixz="-2.660514100114264e-06"
+            iyy="3.3491692281997246e-05" iyz="-2.186415686999999e-06" izz="0.00013472442511546146"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-PureConnect_2_Color_AnthrcteKnckoutPnkGrnGecko_Size_50.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-PureConnect_2_Color_AnthrcteKnckoutPnkGrnGecko_Size_50.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

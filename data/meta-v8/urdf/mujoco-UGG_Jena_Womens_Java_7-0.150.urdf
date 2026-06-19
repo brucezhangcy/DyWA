@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.46959665368910164"/>
+            <origin xyz=" 0.0050 0.0175 -0.0252"/>
+            <inertia ixx="0.002854614381167223" ixy="-4.394476910295832e-05" ixz="-3.3324310941407586e-05"
+            iyy="0.001796382310970856" iyz="-0.0006019534434774589" izz="0.0013437150042465947"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-UGG_Jena_Womens_Java_7.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-UGG_Jena_Womens_Java_7.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

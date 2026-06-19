@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1570070551603355"/>
+            <origin xyz=" -0.0016 -0.0000 -0.0001"/>
+            <inertia ixx="9.523851013417436e-05" ixy="-4.539163189765304e-08" ixz="1.921254356997762e-05"
+            iyy="0.0005117184317966282" iyz="-1.642881072709203e-09" izz="0.000575158509616683"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Eraser-203ebd20b1546f318de5f815e8387cfc.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Eraser-203ebd20b1546f318de5f815e8387cfc.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

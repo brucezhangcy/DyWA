@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.46442887188460735"/>
+            <origin xyz=" 0.0006 0.0073 -0.0119"/>
+            <inertia ixx="0.0028398861248971454" ixy="4.70359604190958e-05" ixz="-1.5887425878483333e-05"
+            iyy="0.0005236954582455006" iyz="-0.00021210560243051392" izz="0.0028112086351210932"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-F10_TRX_FG_ssscuo9tGxb.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-F10_TRX_FG_ssscuo9tGxb.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

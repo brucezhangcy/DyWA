@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.026630907239976756"/>
+            <origin xyz=" -0.0015 0.0017 -0.0042"/>
+            <inertia ixx="2.74098371593678e-05" ixy="3.814919244212891e-08" ixz="7.11350495166279e-07"
+            iyy="2.738241547490498e-05" iyz="-9.143673194078313e-07" izz="3.6259344029297393e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Baby_Elements_Stacking_Cups.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Baby_Elements_Stacking_Cups.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

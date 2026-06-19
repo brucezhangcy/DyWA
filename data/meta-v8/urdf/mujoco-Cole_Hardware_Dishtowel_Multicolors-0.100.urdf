@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.09628983820381391"/>
+            <origin xyz=" 0.0010 0.0011 -0.0020"/>
+            <inertia ixx="0.0002148972866495221" ixy="1.6057811891713865e-06" ixz="-2.0906260020397437e-06"
+            iyy="0.00011226987073710078" iyz="-2.635266377533207e-06" izz="0.00032183136004112123"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_Dishtowel_Multicolors.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_Dishtowel_Multicolors.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

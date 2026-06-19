@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.6957580268602375"/>
+            <origin xyz=" 0.0004 0.0007 -0.0008"/>
+            <inertia ixx="0.017268773160746723" ixy="9.617231886566361e-05" ixz="0.001457311232416516"
+            iyy="0.009819895288837178" iyz="2.6691496785164095e-05" izz="0.01005418254520624"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_SoftCheese.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_SoftCheese.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

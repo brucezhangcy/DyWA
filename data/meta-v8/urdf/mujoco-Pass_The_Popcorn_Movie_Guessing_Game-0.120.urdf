@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.39084815011126417"/>
+            <origin xyz=" 0.0000 -0.0002 -0.0001"/>
+            <inertia ixx="0.001227173419236132" ixy="1.4533552557371782e-06" ixz="-3.206673801273579e-06"
+            iyy="0.0018226553491693218" iyz="1.045477786553366e-06" izz="0.0007428905540864573"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Pass_The_Popcorn_Movie_Guessing_Game.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Pass_The_Popcorn_Movie_Guessing_Game.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

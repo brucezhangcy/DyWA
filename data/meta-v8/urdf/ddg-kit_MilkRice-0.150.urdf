@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.7806997917874523"/>
+            <origin xyz=" 0.0001 -0.0008 -0.0003"/>
+            <inertia ixx="0.005505862559352484" ixy="0.00010864577151616222" ixz="0.00034279917878988"
+            iyy="0.001764164800547617" iyz="1.2551132985161885e-05" izz="0.004529058747867279"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_MilkRice.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_MilkRice.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

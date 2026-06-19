@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4063783965448481"/>
+            <origin xyz=" 0.0002 0.0002 -0.0067"/>
+            <inertia ixx="0.001220960413926233" ixy="-2.622689896767999e-07" ixz="-5.51409353252703e-06"
+            iyy="0.0012205777754781464" iyz="-1.5130159699070662e-06" izz="0.0005027708819376684"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Borage_GLA240Gamma_Tocopherol.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Borage_GLA240Gamma_Tocopherol.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

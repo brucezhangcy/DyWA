@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.15336202661685"/>
+            <origin xyz=" -0.0002 0.0001 -0.0031"/>
+            <inertia ixx="0.0001988346885802825" ixy="-1.177795593811486e-07" ixz="2.323692466067037e-07"
+            iyy="0.00029534148089102596" iyz="2.7764858391950942e-08" izz="0.00014278035920542225"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Fujifilm_instax_SHARE_SP1_10_photos.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Fujifilm_instax_SHARE_SP1_10_photos.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.039123627602594524"/>
+            <origin xyz=" 0.0001 -0.0001 -0.0135"/>
+            <inertia ixx="3.37537089305356e-05" ixy="-3.8456463749406784e-08" ixz="1.7882903092085478e-07"
+            iyy="3.399547219078848e-05" iyz="2.4002322224354767e-08" izz="8.460450250552123e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_crystal_hot_sauce.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_crystal_hot_sauce.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

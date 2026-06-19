@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.049095756104571994"/>
+            <origin xyz=" -0.0001 0.0001 -0.0054"/>
+            <inertia ixx="4.976393541173631e-05" ixy="2.6036772148022025e-08" ixz="4.7160186348499513e-07"
+            iyy="5.202425796040327e-05" iyz="-5.8583423771256905e-08" izz="1.206225129974481e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Phillips_Milk_of_Magnesia_Saline_Laxative_Liquid_Original.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Phillips_Milk_of_Magnesia_Saline_Laxative_Liquid_Original.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

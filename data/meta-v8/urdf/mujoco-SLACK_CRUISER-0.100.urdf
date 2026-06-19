@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.15711391327304822"/>
+            <origin xyz=" 0.0045 0.0039 -0.0134"/>
+            <inertia ixx="0.0003886599715860883" ixy="-1.4590127269511308e-05" ixz="-5.746138853503898e-06"
+            iyy="9.664616176467842e-05" iyz="-2.5518547029237363e-05" izz="0.0003870804884899913"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SLACK_CRUISER.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SLACK_CRUISER.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.537907131983539"/>
+            <origin xyz=" 0.0034 0.0107 -0.0127"/>
+            <inertia ixx="0.0030601419015142592" ixy="-7.832099320825763e-05" ixz="-2.7341955394857128e-05"
+            iyy="0.0007042395309022621" iyz="-0.00012186781614107667" izz="0.0029823447589047785"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_ZIGTECH_SHARK_MAYHEM360.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_ZIGTECH_SHARK_MAYHEM360.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

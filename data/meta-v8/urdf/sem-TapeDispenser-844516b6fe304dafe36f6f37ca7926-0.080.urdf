@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1352742085359199"/>
+            <origin xyz=" -0.0029 0.0000 -0.0087"/>
+            <inertia ixx="8.848339997228774e-05" ixy="-8.983530713871988e-08" ixz="1.0642574977831056e-05"
+            iyy="0.0002479263505411065" iyz="-2.122391308595739e-07" izz="0.00022373282624941956"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-TapeDispenser-844516b6fe304dafe36f6f37ca7926.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-TapeDispenser-844516b6fe304dafe36f6f37ca7926.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

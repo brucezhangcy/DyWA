@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3046972984500835"/>
+            <origin xyz=" -0.0012 0.0002 -0.0069"/>
+            <inertia ixx="0.001311696618346542" ixy="2.9584228141632434e-05" ixz="2.6365148802542927e-06"
+            iyy="0.0013133281745803212" iyz="-2.0341880710452074e-06" izz="0.0025205692562549403"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sea_to_Summit_Xl_Bowl.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sea_to_Summit_Xl_Bowl.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

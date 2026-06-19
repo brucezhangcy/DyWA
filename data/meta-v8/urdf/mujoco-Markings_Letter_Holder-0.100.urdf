@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.16116454377100348"/>
+            <origin xyz=" -0.0038 -0.0004 -0.0195"/>
+            <inertia ixx="0.00041027283421239897" ixy="-5.935229654863563e-07" ixz="3.0989360578347505e-05"
+            iyy="0.00022457681282370695" iyz="-1.0721159573685502e-06" izz="0.0003884351725530035"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Markings_Letter_Holder.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Markings_Letter_Holder.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

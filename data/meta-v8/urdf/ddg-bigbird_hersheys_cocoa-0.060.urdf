@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.12198027485049584"/>
+            <origin xyz=" -0.0002 0.0003 0.0008"/>
+            <inertia ixx="0.0001326641725092626" ixy="1.116871689426992e-05" ixz="-1.1861665072933958e-06"
+            iyy="0.00011755052933175242" iyz="7.619339823872254e-07" izz="9.318182647347854e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_hersheys_cocoa.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_hersheys_cocoa.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

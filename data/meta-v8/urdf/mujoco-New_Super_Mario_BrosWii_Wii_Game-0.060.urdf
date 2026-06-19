@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.02112952879590738"/>
+            <origin xyz=" 0.0000 -0.0000 0.0000"/>
+            <inertia ixx="1.7024602822749826e-05" ixy="-2.468232733642717e-08" ixz="3.2995883900076186e-09"
+            iyy="8.934467249994084e-06" iyz="-3.1079755408431223e-09" izz="2.5600464872385658e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-New_Super_Mario_BrosWii_Wii_Game.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-New_Super_Mario_BrosWii_Wii_Game.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

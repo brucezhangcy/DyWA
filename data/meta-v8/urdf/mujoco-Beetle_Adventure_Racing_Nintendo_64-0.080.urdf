@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08896560431126968"/>
+            <origin xyz=" 0.0002 0.0000 -0.0016"/>
+            <inertia ixx="5.936639002877773e-05" ixy="2.4681988606594505e-07" ixz="9.168510845230364e-07"
+            iyy="0.00017687930666950932" iyz="3.2239458441201156e-06" izz="0.00012782442634171404"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Beetle_Adventure_Racing_Nintendo_64.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Beetle_Adventure_Racing_Nintendo_64.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

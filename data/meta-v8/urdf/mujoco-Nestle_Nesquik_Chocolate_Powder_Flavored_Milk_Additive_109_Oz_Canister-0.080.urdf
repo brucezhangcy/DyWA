@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1728080442262931"/>
+            <origin xyz=" 0.0000 0.0001 0.0016"/>
+            <inertia ixx="0.00034715758166379613" ixy="-2.3041369387522383e-07" ixz="-4.701479549693302e-07"
+            iyy="0.0002800570829700586" iyz="5.45838569444102e-07" izz="0.00014156106480169478"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nestle_Nesquik_Chocolate_Powder_Flavored_Milk_Additive_109_Oz_Canister.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nestle_Nesquik_Chocolate_Powder_Flavored_Milk_Additive_109_Oz_Canister.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

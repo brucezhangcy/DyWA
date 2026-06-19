@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3708705316036848"/>
+            <origin xyz=" 0.0001 0.0001 -0.0078"/>
+            <inertia ixx="0.001102403047267237" ixy="1.127554623433403e-07" ixz="-6.828625090352677e-06"
+            iyy="0.0011024171007524162" iyz="-1.8788940754446716e-07" izz="0.00041541969684755876"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-JarroDophilusFOS_Value_Size.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-JarroDophilusFOS_Value_Size.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

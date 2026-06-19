@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.593295929232154"/>
+            <origin xyz=" -0.0006 -0.0018 -0.0071"/>
+            <inertia ixx="0.003849775100598222" ixy="1.5442428825323548e-06" ixz="9.889897608636825e-06"
+            iyy="0.0018042011303576189" iyz="-8.336235057750079e-05" izz="0.002312117542321766"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Wii-effdc659515ff747eb2c6725049f8f.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Wii-effdc659515ff747eb2c6725049f8f.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

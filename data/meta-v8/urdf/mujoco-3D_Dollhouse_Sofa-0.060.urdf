@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03761438914862762"/>
+            <origin xyz=" -0.0000 0.0038 -0.0025"/>
+            <inertia ixx="1.1087572882609207e-05" ixy="6.978195805559456e-10" ixz="-4.402051789127371e-07"
+            iyy="4.468571028976715e-05" iyz="-2.3231535719723827e-06" izz="4.670345561727596e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-3D_Dollhouse_Sofa.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-3D_Dollhouse_Sofa.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

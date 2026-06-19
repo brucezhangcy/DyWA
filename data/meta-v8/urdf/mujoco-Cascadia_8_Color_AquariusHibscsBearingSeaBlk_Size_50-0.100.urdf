@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1657566488454626"/>
+            <origin xyz=" 0.0055 0.0065 -0.0140"/>
+            <inertia ixx="0.00039516246833423734" ixy="-1.424371718369615e-05" ixz="-6.607690925972649e-06"
+            iyy="0.00011271109110566224" iyz="-1.672397270023448e-05" izz="0.0003824638119940362"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cascadia_8_Color_AquariusHibscsBearingSeaBlk_Size_50.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cascadia_8_Color_AquariusHibscsBearingSeaBlk_Size_50.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

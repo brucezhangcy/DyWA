@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.17734420202567275"/>
+            <origin xyz=" 0.0002 0.0002 -0.0007"/>
+            <inertia ixx="0.00039206708345934416" ixy="4.144664797683731e-07" ixz="-1.8566333706999335e-06"
+            iyy="0.0005743255368489079" iyz="8.262299129053453e-06" izz="0.00021140913793795362"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sony_Downloadable_Loops.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sony_Downloadable_Loops.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07600974047798822"/>
+            <origin xyz=" -0.0065 0.0155 -0.0074"/>
+            <inertia ixx="4.082656359401465e-05" ixy="6.262033016364588e-06" ixz="-1.8458694020157433e-06"
+            iyy="9.918869428785776e-05" iyz="-2.9364746845185127e-06" izz="9.10169051015314e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-MIRACLE_POUNDING.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-MIRACLE_POUNDING.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

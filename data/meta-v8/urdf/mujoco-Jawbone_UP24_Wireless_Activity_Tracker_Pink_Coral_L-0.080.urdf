@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06053975427865206"/>
+            <origin xyz=" 0.0002 0.0003 -0.0010"/>
+            <inertia ixx="9.316548513421178e-05" ixy="1.0425358737636571e-06" ixz="2.59404567834841e-06"
+            iyy="0.0001350630759072674" iyz="1.692780128521425e-06" izz="0.00022098143805691743"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Jawbone_UP24_Wireless_Activity_Tracker_Pink_Coral_L.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Jawbone_UP24_Wireless_Activity_Tracker_Pink_Coral_L.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

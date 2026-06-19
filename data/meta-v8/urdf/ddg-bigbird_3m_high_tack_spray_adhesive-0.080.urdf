@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10326811140041647"/>
+            <origin xyz=" 0.0001 0.0001 -0.0012"/>
+            <inertia ixx="0.00021251550344242762" ixy="-6.938581674230461e-09" ixz="-4.960951769490287e-07"
+            iyy="0.00021209283821267542" iyz="-3.691517632934312e-07" izz="3.668884746444325e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_3m_high_tack_spray_adhesive.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_3m_high_tack_spray_adhesive.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.39832954573871127"/>
+            <origin xyz=" -0.0000 0.0003 -0.0073"/>
+            <inertia ixx="0.0011791073670538782" ixy="1.966042957118436e-06" ixz="-7.795027282071707e-06"
+            iyy="0.0011827517801639368" iyz="1.1717934840819918e-06" izz="0.00048623635358164836"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Bifidus_Balance_FOS.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Bifidus_Balance_FOS.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

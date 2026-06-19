@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.42879439801860647"/>
+            <origin xyz=" 0.0000 -0.0003 -0.0002"/>
+            <inertia ixx="0.0008307855757397053" ixy="-3.765805356749215e-07" ixz="-2.30572682407749e-06"
+            iyy="0.0012300595884086653" iyz="4.380228726047783e-06" izz="0.0008823860914901483"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Paint_Maker.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Paint_Maker.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

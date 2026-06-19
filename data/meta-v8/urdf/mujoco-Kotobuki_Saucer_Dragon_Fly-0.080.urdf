@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10611576898491856"/>
+            <origin xyz=" 0.0003 0.0003 0.0001"/>
+            <inertia ixx="0.00016331245384073128" ixy="5.721594812646092e-07" ixz="8.602379049337785e-07"
+            iyy="0.00016371847434408987" iyz="-1.1337594608607883e-06" izz="0.00030536058929041146"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Kotobuki_Saucer_Dragon_Fly.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Kotobuki_Saucer_Dragon_Fly.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

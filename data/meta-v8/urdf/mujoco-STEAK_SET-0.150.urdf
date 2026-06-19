@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2977828512652483"/>
+            <origin xyz=" 0.0063 0.0035 -0.0086"/>
+            <inertia ixx="0.0005537551019258902" ixy="-1.2308148612689064e-05" ixz="-3.5654940273621545e-05"
+            iyy="0.000934688713813933" iyz="-3.183534577056596e-05" izz="0.001385275198030136"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-STEAK_SET.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-STEAK_SET.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

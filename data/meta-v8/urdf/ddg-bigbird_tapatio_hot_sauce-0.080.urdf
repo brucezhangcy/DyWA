@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.05510309667109415"/>
+            <origin xyz=" 0.0006 -0.0003 -0.0172"/>
+            <inertia ixx="8.118081904658535e-05" ixy="2.2590549584946682e-07" ixz="-1.290801700153328e-06"
+            iyy="8.090790572350626e-05" iyz="8.027044880466644e-07" izz="1.2879524089748916e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_tapatio_hot_sauce.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_tapatio_hot_sauce.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

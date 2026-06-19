@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.45802564271557755"/>
+            <origin xyz=" 0.0001 -0.0003 -0.0000"/>
+            <inertia ixx="0.001375552671866897" ixy="2.4407039657652194e-06" ixz="-1.2969859200794333e-05"
+            iyy="0.0013876287191125285" iyz="-1.8596026256165073e-06" izz="0.0024455794753815716"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Shurtape_Gaffers_Tape_Silver_2_x_60_yd.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Shurtape_Gaffers_Tape_Silver_2_x_60_yd.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

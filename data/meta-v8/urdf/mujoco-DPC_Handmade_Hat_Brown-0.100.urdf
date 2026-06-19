@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.19923115715972187"/>
+            <origin xyz=" -0.0029 0.0039 -0.0100"/>
+            <inertia ixx="0.00038641316893373864" ixy="1.598971275199263e-06" ixz="-8.647111939417764e-06"
+            iyy="0.0003426569408979604" iyz="3.966409932728063e-06" izz="0.0005509556657840606"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-DPC_Handmade_Hat_Brown.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-DPC_Handmade_Hat_Brown.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

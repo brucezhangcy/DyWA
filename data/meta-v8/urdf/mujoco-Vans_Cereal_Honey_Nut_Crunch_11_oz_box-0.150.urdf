@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6576933392401012"/>
+            <origin xyz=" 0.0001 0.0001 -0.0006"/>
+            <inertia ixx="0.0033684638445377847" ixy="-2.9993076838254622e-06" ixz="-2.2741571208350433e-05"
+            iyy="0.004893635896600508" iyz="-1.5233616245381663e-05" izz="0.0018063082402250815"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Vans_Cereal_Honey_Nut_Crunch_11_oz_box.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Vans_Cereal_Honey_Nut_Crunch_11_oz_box.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

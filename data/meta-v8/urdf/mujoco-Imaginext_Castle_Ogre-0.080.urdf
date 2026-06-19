@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07267559626207211"/>
+            <origin xyz=" 0.0011 0.0007 0.0007"/>
+            <inertia ixx="5.445322194183966e-05" ixy="-2.199832526423694e-05" ixz="-1.8260751189767338e-07"
+            iyy="0.00011031355368298448" iyz="3.119958374984781e-07" izz="8.846963588490743e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Imaginext_Castle_Ogre.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Imaginext_Castle_Ogre.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08534325265449973"/>
+            <origin xyz=" 0.0134 0.0034 -0.0119"/>
+            <inertia ixx="6.837099019870173e-05" ixy="-6.394969183040354e-06" ixz="-2.5716783125227334e-05"
+            iyy="0.0001343518223614604" iyz="-3.3219127836140394e-06" izz="8.877736980098937e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sperry_TopSider_pSUFPWQXPp3.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sperry_TopSider_pSUFPWQXPp3.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

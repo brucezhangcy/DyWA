@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.09086931273298095"/>
+            <origin xyz=" 0.0001 -0.0001 0.0000"/>
+            <inertia ixx="6.532773932905272e-05" ixy="2.793756870139275e-07" ixz="3.298577543779499e-07"
+            iyy="9.605335039955065e-05" iyz="6.104405853824564e-07" izz="6.441208058963239e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Blue_Plasma_Orbital.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Blue_Plasma_Orbital.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

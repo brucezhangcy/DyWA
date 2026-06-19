@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4746987808393042"/>
+            <origin xyz=" -0.0004 -0.0001 -0.0033"/>
+            <inertia ixx="0.0029026503148275305" ixy="-5.357395376918441e-06" ixz="2.688221804884061e-06"
+            iyy="0.002910462436628817" iyz="-2.4191346338795777e-06" izz="0.0057568334874606684"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Pizza-29fe6bf8e9c364a545004a22a9d35958.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Pizza-29fe6bf8e9c364a545004a22a9d35958.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

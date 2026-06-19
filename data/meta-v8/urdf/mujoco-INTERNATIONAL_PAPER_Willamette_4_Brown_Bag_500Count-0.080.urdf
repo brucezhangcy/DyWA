@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.20241289910283433"/>
+            <origin xyz=" -0.0003 0.0004 -0.0001"/>
+            <inertia ixx="0.00023776324186013434" ixy="-4.912068575065628e-06" ixz="-2.9085760226068945e-06"
+            iyy="0.00026132079662879066" iyz="-1.7232568333503824e-07" izz="0.0003881580475566235"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-INTERNATIONAL_PAPER_Willamette_4_Brown_Bag_500Count.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-INTERNATIONAL_PAPER_Willamette_4_Brown_Bag_500Count.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

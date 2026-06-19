@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5235921198073864"/>
+            <origin xyz=" 0.0057 0.0094 -0.0147"/>
+            <inertia ixx="0.0028855606614698933" ixy="-0.00015176272502541666" ixz="-2.792145712667822e-05"
+            iyy="0.0006819626824190127" iyz="-7.206510880773257e-05" izz="0.002885833519876836"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ravenna_4_Color_WhtOlyBluBlkShkOrngSlvRdO_Size_70.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ravenna_4_Color_WhtOlyBluBlkShkOrngSlvRdO_Size_70.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

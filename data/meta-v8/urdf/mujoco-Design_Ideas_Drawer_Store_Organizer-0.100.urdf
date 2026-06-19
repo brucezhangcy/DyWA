@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10206107621212619"/>
+            <origin xyz=" 0.0002 0.0004 -0.0039"/>
+            <inertia ixx="9.855930053243248e-05" ixy="-1.9818604964729915e-06" ixz="-4.143952075643039e-06"
+            iyy="0.0003211324472246939" iyz="-3.7514830325736403e-07" izz="0.00040087282161643936"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Design_Ideas_Drawer_Store_Organizer.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Design_Ideas_Drawer_Store_Organizer.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

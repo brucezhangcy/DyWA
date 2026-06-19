@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5087621132091101"/>
+            <origin xyz=" 0.0037 0.0073 -0.0154"/>
+            <inertia ixx="0.002742876675793963" ixy="-6.138307502824998e-05" ixz="-3.832502352632484e-05"
+            iyy="0.0006683000038916994" iyz="-0.00010185224180794828" izz="0.0026990893405445934"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SUPERSTAR_CLR.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SUPERSTAR_CLR.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

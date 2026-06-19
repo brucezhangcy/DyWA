@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.042218102856426826"/>
+            <origin xyz=" -0.0002 0.0003 -0.0049"/>
+            <inertia ixx="3.24458960686054e-05" ixy="-5.017615800298947e-09" ixz="-1.8316599455371607e-07"
+            iyy="4.303489697476071e-05" iyz="2.599133696992636e-07" izz="1.4857605539356844e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Crayola_Model_Magic_Modeling_Material_White_3_oz.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Crayola_Model_Magic_Modeling_Material_White_3_oz.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

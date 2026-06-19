@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10026289201683078"/>
+            <origin xyz=" -0.0020 0.0042 -0.0091"/>
+            <inertia ixx="0.00011942262782842785" ixy="2.278005888873268e-05" ixz="1.0830795658355158e-06"
+            iyy="0.00016589366112496615" iyz="-1.872914301339124e-06" izz="0.00026711794866069577"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hasbro_Dont_Wake_Daddy_Board_Game_NJnjGna4u1a.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hasbro_Dont_Wake_Daddy_Board_Game_NJnjGna4u1a.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

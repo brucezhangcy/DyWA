@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1724196096149144"/>
+            <origin xyz=" -0.0003 0.0001 0.0019"/>
+            <inertia ixx="0.0005439394058082818" ixy="8.316420194739417e-08" ixz="-3.1993995500869417e-06"
+            iyy="0.0005443322169034097" iyz="-3.3605749238344484e-07" izz="8.247049578542751e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_pringles_bbq.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_pringles_bbq.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

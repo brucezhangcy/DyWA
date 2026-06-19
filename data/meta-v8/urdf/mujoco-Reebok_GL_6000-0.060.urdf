@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03415284358080893"/>
+            <origin xyz=" 0.0026 0.0054 -0.0072"/>
+            <inertia ixx="2.9914336246013758e-05" ixy="-9.81866163108265e-07" ixz="-4.478778559739445e-07"
+            iyy="7.451220583174213e-06" iyz="-2.1905481715509174e-06" izz="2.8824691950902504e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_GL_6000.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_GL_6000.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

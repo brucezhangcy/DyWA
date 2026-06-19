@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.9191089218268947"/>
+            <origin xyz=" -0.0004 0.0003 0.0009"/>
+            <inertia ixx="0.004058975654236794" ixy="-2.5396634636583694e-07" ixz="-1.2749692757677394e-05"
+            iyy="0.004052709135886205" iyz="1.581953653184786e-05" izz="0.0023194406692330738"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Don_Franciscos_Gourmet_Coffee_Medium_Decaf_100_Colombian_12_oz_340_g.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Don_Franciscos_Gourmet_Coffee_Medium_Decaf_100_Colombian_12_oz_340_g.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

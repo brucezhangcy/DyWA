@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.0624267352983265"/>
+            <origin xyz=" 0.0007 0.0060 -0.0005"/>
+            <inertia ixx="0.007070598526140811" ixy="3.9295683566254574e-05" ixz="2.5397054083350233e-06"
+            iyy="0.0026711503647328253" iyz="-0.00037113785616106143" izz="0.006167426626584588"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Thomas_Friends_Wooden_Railway_Talking_Thomas_z7yi7UFHJRj.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Thomas_Friends_Wooden_Railway_Talking_Thomas_z7yi7UFHJRj.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

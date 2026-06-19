@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.11650705295687415"/>
+            <origin xyz=" 0.0029 -0.0011 -0.0015"/>
+            <inertia ixx="0.00011709897101816351" ixy="1.721500994292676e-06" ixz="1.8437829910735823e-07"
+            iyy="9.315891206574086e-05" iyz="1.7530634513892563e-07" izz="9.470735231609148e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-PEEKABOO_ROLLER.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-PEEKABOO_ROLLER.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

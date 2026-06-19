@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.707756004784625"/>
+            <origin xyz=" 0.0001 0.0002 -0.0079"/>
+            <inertia ixx="0.003059055545701769" ixy="3.701473622318758e-07" ixz="-1.595403173238354e-05"
+            iyy="0.0030598085495919273" iyz="3.629864265311912e-06" izz="0.0012723259971284598"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Jarrow_Formulas_Glucosamine_Hci_Mega_1000_100_ct.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Jarrow_Formulas_Glucosamine_Hci_Mega_1000_100_ct.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

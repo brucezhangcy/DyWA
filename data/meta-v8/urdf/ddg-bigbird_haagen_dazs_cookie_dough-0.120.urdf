@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.0561410399088245"/>
+            <origin xyz=" -0.0003 -0.0006 0.0083"/>
+            <inertia ixx="0.004446732861888367" ixy="6.4608224881106685e-06" ixz="-1.3770125096754987e-05"
+            iyy="0.00446865912949481" iyz="-2.934879492670774e-05" izz="0.003341830115957303"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_haagen_dazs_cookie_dough.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_haagen_dazs_cookie_dough.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

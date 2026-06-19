@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.15241821583272253"/>
+            <origin xyz=" 0.0022 0.0072 -0.0141"/>
+            <inertia ixx="0.00038292008029636404" ixy="-1.6370573506004003e-05" ixz="-2.9105524166846926e-06"
+            iyy="9.478102583674911e-05" iyz="-2.1581190897060775e-05" izz="0.000382518832368009"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Grand_Prix.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Grand_Prix.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

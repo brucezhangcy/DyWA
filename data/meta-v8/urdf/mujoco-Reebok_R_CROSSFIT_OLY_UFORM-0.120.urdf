@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2469162530991626"/>
+            <origin xyz=" 0.0038 0.0104 -0.0137"/>
+            <inertia ixx="0.000784821417636312" ixy="-3.0147898207689312e-05" ixz="-8.905366797338053e-06"
+            iyy="0.00021135395151108963" iyz="-2.714073808663906e-05" izz="0.0007655570213041899"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_R_CROSSFIT_OLY_UFORM.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_R_CROSSFIT_OLY_UFORM.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

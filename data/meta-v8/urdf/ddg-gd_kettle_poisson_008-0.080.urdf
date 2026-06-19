@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2267393124708969"/>
+            <origin xyz=" 0.0018 -0.0008 -0.0075"/>
+            <inertia ixx="0.0003030053220261271" ixy="8.766774588758877e-06" ixz="-2.3192622658512994e-07"
+            iyy="0.0003057861734509054" iyz="-6.120735656758071e-07" izz="0.0002953497499133915"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_kettle_poisson_008.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_kettle_poisson_008.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

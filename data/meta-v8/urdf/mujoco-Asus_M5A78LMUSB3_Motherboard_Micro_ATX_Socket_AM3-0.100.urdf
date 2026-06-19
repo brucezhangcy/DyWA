@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.20571246556426737"/>
+            <origin xyz=" -0.0003 0.0001 -0.0002"/>
+            <inertia ixx="0.00034054152854092444" ixy="4.2441972947466277e-07" ixz="1.7375598568613065e-06"
+            iyy="0.000668810927301014" iyz="-1.0251417808812621e-05" izz="0.00036903766514403605"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Asus_M5A78LMUSB3_Motherboard_Micro_ATX_Socket_AM3.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Asus_M5A78LMUSB3_Motherboard_Micro_ATX_Socket_AM3.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

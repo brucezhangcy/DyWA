@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.7335501724793934"/>
+            <origin xyz=" 0.0082 0.0001 -0.0180"/>
+            <inertia ixx="0.0020288261007130244" ixy="-8.607282470281068e-07" ixz="-0.0006765843978618851"
+            iyy="0.003410631655609466" iyz="-2.8440843697861024e-06" izz="0.0030178530253724156"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_rubber_duck_poisson_001.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_rubber_duck_poisson_001.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

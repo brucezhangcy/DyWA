@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.22851774938233216"/>
+            <origin xyz=" -0.0021 0.0056 -0.0080"/>
+            <inertia ixx="0.00084700245136721" ixy="8.969326002128019e-05" ixz="-9.08320669951086e-06"
+            iyy="0.00018368289747206434" iyz="-2.0668757358124798e-06" izz="0.000903264829953918"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Timberland_Mens_Classic_2Eye_Boat_Shoe.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Timberland_Mens_Classic_2Eye_Boat_Shoe.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.13039107798785085"/>
+            <origin xyz=" -0.0140 -0.0009 -0.0051"/>
+            <inertia ixx="0.00012320637847120988" ixy="8.031672386680796e-06" ixz="-6.652486630691837e-05"
+            iyy="0.0005201057463925396" iyz="1.8639605178481736e-06" izz="0.0005634168659215985"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Porcelain_Spoon_Rest_White.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Porcelain_Spoon_Rest_White.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

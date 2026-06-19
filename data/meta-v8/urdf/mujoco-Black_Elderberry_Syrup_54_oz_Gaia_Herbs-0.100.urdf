@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.276892991096679"/>
+            <origin xyz=" 0.0000 0.0000 -0.0004"/>
+            <inertia ixx="0.0008327474226443568" ixy="1.7829041427673328e-06" ixz="-2.171692309977161e-07"
+            iyy="0.0008253917465459248" iyz="-9.762524583162046e-06" izz="0.00023880517097624605"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Black_Elderberry_Syrup_54_oz_Gaia_Herbs.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Black_Elderberry_Syrup_54_oz_Gaia_Herbs.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

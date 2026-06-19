@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6705172643165996"/>
+            <origin xyz=" 0.0001 0.0001 0.0002"/>
+            <inertia ixx="0.002203098437324404" ixy="-1.5451657151955584e-06" ixz="-7.814038852761212e-06"
+            iyy="0.0028976438820606885" iyz="-1.1642596223618534e-05" izz="0.0015558395568724122"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Little_Big_Planet_3_Plush_Edition.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Little_Big_Planet_3_Plush_Edition.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

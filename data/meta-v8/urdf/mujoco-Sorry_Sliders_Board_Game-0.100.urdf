@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.17377539507974982"/>
+            <origin xyz=" -0.0001 -0.0000 -0.0001"/>
+            <inertia ixx="0.00019444622253288378" ixy="-1.0668243116669447e-07" ixz="3.9389126545070154e-07"
+            iyy="0.0005725221499962941" iyz="1.832126393017036e-07" izz="0.0004061455511811964"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sorry_Sliders_Board_Game.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sorry_Sliders_Board_Game.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

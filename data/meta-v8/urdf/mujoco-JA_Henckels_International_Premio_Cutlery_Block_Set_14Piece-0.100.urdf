@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.15544903717798952"/>
+            <origin xyz=" 0.0006 -0.0033 -0.0203"/>
+            <inertia ixx="0.000334468889258815" ixy="2.423101966747347e-06" ixz="-3.4783132735110853e-06"
+            iyy="0.0001798240761936936" iyz="9.088623812740339e-05" izz="0.0002232509899397808"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-JA_Henckels_International_Premio_Cutlery_Block_Set_14Piece.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-JA_Henckels_International_Premio_Cutlery_Block_Set_14Piece.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

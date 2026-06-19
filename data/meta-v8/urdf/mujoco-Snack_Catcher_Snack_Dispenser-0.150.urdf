@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.4465957574277528"/>
+            <origin xyz=" 0.0001 0.0001 0.0122"/>
+            <inertia ixx="0.006896814727463723" ixy="-0.0001290974296790519" ixz="-1.289546103497367e-05"
+            iyy="0.008165711107970264" iyz="8.442368514207747e-06" izz="0.0068211357479713115"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Snack_Catcher_Snack_Dispenser.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Snack_Catcher_Snack_Dispenser.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

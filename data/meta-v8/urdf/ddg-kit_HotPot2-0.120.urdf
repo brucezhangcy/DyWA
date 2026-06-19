@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4723296596128534"/>
+            <origin xyz=" -0.0002 -0.0006 -0.0006"/>
+            <inertia ixx="0.002126931562157367" ixy="-4.099143174927282e-06" ixz="0.00017811580949270812"
+            iyy="0.0009035567993421414" iyz="-6.4041177500486074e-06" izz="0.0015920665848218872"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_HotPot2.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_HotPot2.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

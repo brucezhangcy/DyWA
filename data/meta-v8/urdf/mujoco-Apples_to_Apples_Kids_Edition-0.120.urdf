@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3680184010297415"/>
+            <origin xyz=" 0.0002 0.0005 -0.0000"/>
+            <inertia ixx="0.001444497936182553" ixy="-1.8467433726000496e-06" ixz="-1.090351101544683e-06"
+            iyy="0.0004494198592534519" iyz="4.377180114325098e-07" izz="0.001721828900292398"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Apples_to_Apples_Kids_Edition.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Apples_to_Apples_Kids_Edition.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

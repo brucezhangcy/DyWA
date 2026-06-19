@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.4058735234807331"/>
+            <origin xyz=" -0.0000 -0.0005 -0.0001"/>
+            <inertia ixx="0.006754717075597327" ixy="-6.063060431033731e-07" ixz="-1.1071153836111548e-05"
+            iyy="0.00976038497995068" iyz="-4.688939736282239e-05" izz="0.005898980307076094"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Phillips_Stool_Softener_Liquid_Gels_30_liquid_gels.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Phillips_Stool_Softener_Liquid_Gels_30_liquid_gels.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

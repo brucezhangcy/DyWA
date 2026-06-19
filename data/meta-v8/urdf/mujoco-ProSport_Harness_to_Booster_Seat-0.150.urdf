@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.8321142576531583"/>
+            <origin xyz=" 0.0006 -0.0015 -0.0097"/>
+            <inertia ixx="0.0038404305233648525" ixy="-0.00018499557835688352" ixz="-5.195294018329862e-05"
+            iyy="0.003051024446957303" iyz="-2.5967758687609374e-05" izz="0.0064483539068900825"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ProSport_Harness_to_Booster_Seat.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ProSport_Harness_to_Booster_Seat.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

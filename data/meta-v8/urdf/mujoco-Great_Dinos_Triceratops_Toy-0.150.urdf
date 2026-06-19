@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.4554104253320665"/>
+            <origin xyz=" -0.0007 -0.0026 -0.0002"/>
+            <inertia ixx="0.007850174505718057" ixy="4.476515937144466e-06" ixz="5.866762280726373e-05"
+            iyy="0.008894672576764734" iyz="5.3199432850662495e-05" izz="0.005270249450590917"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Great_Dinos_Triceratops_Toy.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Great_Dinos_Triceratops_Toy.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

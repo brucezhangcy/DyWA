@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.28282007094339"/>
+            <origin xyz=" 0.0000 -0.0000 -0.0095"/>
+            <inertia ixx="0.001104287174640127" ixy="9.228319009016728e-09" ixz="5.727778349223856e-09"
+            iyy="0.0010390160184063904" iyz="3.0665460356217825e-08" izz="0.0002244096582887857"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-MilkCarton-114f65a1635af7f862237730c52678c5.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-MilkCarton-114f65a1635af7f862237730c52678c5.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

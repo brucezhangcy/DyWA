@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.05163921145118"/>
+            <origin xyz=" 0.0092 0.0007 0.0013"/>
+            <inertia ixx="8.84887796537216e-05" ixy="1.4261802233931602e-06" ixz="-4.047548127338748e-06"
+            iyy="7.98414177879796e-05" iyz="4.802854446457796e-07" izz="3.035657987974529e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Teenage_Mutant_Ninja_Turtles_Rahzar_Action_Figure.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Teenage_Mutant_Ninja_Turtles_Rahzar_Action_Figure.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

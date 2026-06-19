@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5873491815064559"/>
+            <origin xyz=" 0.0003 -0.0001 -0.0029"/>
+            <inertia ixx="0.0013782613278429882" ixy="-1.112402450231622e-06" ixz="1.6435375641775136e-05"
+            iyy="0.004099042990044614" iyz="-8.305392723386944e-05" izz="0.002962696097709881"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Star_Wars_Rogue_Squadron_Nintendo_64.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Star_Wars_Rogue_Squadron_Nintendo_64.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

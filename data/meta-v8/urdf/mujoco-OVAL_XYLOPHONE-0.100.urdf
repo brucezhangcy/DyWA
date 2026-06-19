@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.11124014831222485"/>
+            <origin xyz=" 0.0110 -0.0020 -0.0003"/>
+            <inertia ixx="0.00028614117034053883" ixy="-1.969389826395856e-05" ixz="-6.331854449818211e-06"
+            iyy="0.00011284723745373383" iyz="4.063555793726563e-06" izz="0.00035340017581736384"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-OVAL_XYLOPHONE.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-OVAL_XYLOPHONE.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

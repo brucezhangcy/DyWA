@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.8589615237105541"/>
+            <origin xyz=" -0.0000 0.0004 -0.0011"/>
+            <inertia ixx="0.0032096356418532482" ixy="2.0438376709019403e-05" ixz="-4.168196897324574e-05"
+            iyy="0.0032204350572908286" iyz="-2.965417070653807e-05" izz="0.005039764647780829"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Dixie_10_ounce_Bowls_35_ct.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Dixie_10_ounce_Bowls_35_ct.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

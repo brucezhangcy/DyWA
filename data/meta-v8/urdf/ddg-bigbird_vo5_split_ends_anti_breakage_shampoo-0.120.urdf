@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.20946144885673945"/>
+            <origin xyz=" -0.0001 0.0001 -0.0050"/>
+            <inertia ixx="0.0008566926918910239" ixy="3.0158162593594793e-06" ixz="-4.707941116810173e-07"
+            iyy="0.0008074918724672085" iyz="6.355172500590992e-06" izz="0.00011621584255705619"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_vo5_split_ends_anti_breakage_shampoo.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_vo5_split_ends_anti_breakage_shampoo.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

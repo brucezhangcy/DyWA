@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.9261370289621111"/>
+            <origin xyz=" -0.0012 -0.0008 0.0048"/>
+            <inertia ixx="0.0025406929485975276" ixy="-5.833379310985023e-05" ixz="-1.7624425951504282e-05"
+            iyy="0.004186328232593257" iyz="-1.9136845057544372e-05" izz="0.003765838790041458"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-ToiletPaper-a83653ad2ba5562b713429629f985672.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-ToiletPaper-a83653ad2ba5562b713429629f985672.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

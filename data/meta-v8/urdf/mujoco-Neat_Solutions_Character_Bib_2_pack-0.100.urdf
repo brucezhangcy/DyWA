@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.15549055932231112"/>
+            <origin xyz=" 0.0017 -0.0007 -0.0051"/>
+            <inertia ixx="0.00037178236193970496" ixy="3.697560306398693e-06" ixz="-4.819314636933958e-06"
+            iyy="0.000353143154897821" iyz="8.790287475329005e-07" izz="0.0006451897050953043"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Neat_Solutions_Character_Bib_2_pack.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Neat_Solutions_Character_Bib_2_pack.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

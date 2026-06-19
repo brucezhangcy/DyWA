@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2715533205476444"/>
+            <origin xyz=" 0.0004 0.0039 -0.0022"/>
+            <inertia ixx="0.0003176959441938899" ixy="3.916982008328019e-06" ixz="1.253384305353243e-05"
+            iyy="0.0011123457013891478" iyz="-3.149679396891474e-05" izz="0.0013619397751411205"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Super_Mario_3D_World_Deluxe_Set.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Super_Mario_3D_World_Deluxe_Set.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

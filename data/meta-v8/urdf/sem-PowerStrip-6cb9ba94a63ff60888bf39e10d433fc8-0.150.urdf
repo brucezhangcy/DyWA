@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4018116941592048"/>
+            <origin xyz=" -0.0003 0.0000 -0.0032"/>
+            <inertia ixx="0.0006293760791440602" ixy="1.0875328439544198e-06" ixz="2.815257304265897e-06"
+            iyy="0.002364867298638988" iyz="-2.3330059460946711e-07" izz="0.0028980937011687186"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-PowerStrip-6cb9ba94a63ff60888bf39e10d433fc8.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-PowerStrip-6cb9ba94a63ff60888bf39e10d433fc8.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

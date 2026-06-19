@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.7076877549029998"/>
+            <origin xyz=" -0.0017 -0.0036 0.0117"/>
+            <inertia ixx="0.009798034910813002" ixy="-4.899073144258783e-06" ixz="6.270370491061127e-05"
+            iyy="0.010154056710478082" iyz="-0.00018644637504790964" izz="0.007484902678931633"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_cup_noodles_shrimp_picante.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_cup_noodles_shrimp_picante.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

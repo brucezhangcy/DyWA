@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.8834252929268572"/>
+            <origin xyz=" 0.0002 0.0003 0.0005"/>
+            <inertia ixx="0.0062862597088856435" ixy="2.4503839035917183e-05" ixz="0.0005384533193782369"
+            iyy="0.00244463118182492" iyz="3.363830950967893e-05" izz="0.004935723449729925"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_CoffeeFilters.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_CoffeeFilters.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2515986605621352"/>
+            <origin xyz=" -0.0005 0.0017 -0.0000"/>
+            <inertia ixx="0.0007792413952443823" ixy="-2.54224032509692e-08" ixz="7.518435992737152e-08"
+            iyy="0.00018352474269698314" iyz="8.829592304621573e-09" izz="0.0007835350934921239"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Battery-df764d4f469372c468909d1f30d3c271.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Battery-df764d4f469372c468909d1f30d3c271.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

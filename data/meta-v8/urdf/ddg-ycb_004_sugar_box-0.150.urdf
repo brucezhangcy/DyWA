@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.7730844952634158"/>
+            <origin xyz=" -0.0006 -0.0001 -0.0016"/>
+            <inertia ixx="0.005596380319441583" ixy="-2.8190275610960608e-05" ixz="0.0001608457104320932"
+            iyy="0.004671832544216234" iyz="-5.834348784539361e-05" izz="0.0015528873851740604"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_004_sugar_box.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_004_sugar_box.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

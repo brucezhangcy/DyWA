@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1265676842778328"/>
+            <origin xyz=" 0.0004 0.0004 -0.0013"/>
+            <inertia ixx="0.00023129930910208453" ixy="-2.239301906607515e-06" ixz="1.495814502655588e-06"
+            iyy="0.00024035531525021988" iyz="-4.692978060589106e-07" izz="0.0003143275911153267"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Footed_Bowl_Sand.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Footed_Bowl_Sand.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

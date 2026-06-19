@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03176033952748884"/>
+            <origin xyz=" 0.0001 -0.0003 -0.0001"/>
+            <inertia ixx="2.8932095598405074e-05" ixy="-3.2447354147077395e-07" ixz="-2.0894355821996634e-08"
+            iyy="9.849187984575045e-06" iyz="1.4413497512084593e-07" izz="3.721960530870323e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Big_O_Sponges_Assorted_Cellulose_12_pack.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Big_O_Sponges_Assorted_Cellulose_12_pack.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

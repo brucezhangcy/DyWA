@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06228850803978051"/>
+            <origin xyz=" -0.0002 -0.0157 -0.0042"/>
+            <inertia ixx="9.860763814067396e-05" ixy="6.722777914410823e-08" ixz="7.356046190049719e-08"
+            iyy="3.817831408728884e-05" iyz="2.4195685413651743e-05" izz="7.84219917021699e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Animal_Planet_Foam_2Headed_Dragon.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Animal_Planet_Foam_2Headed_Dragon.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

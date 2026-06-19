@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.3891713708710811"/>
+            <origin xyz=" 0.0001 0.0001 -0.0115"/>
+            <inertia ixx="0.009361650583951414" ixy="-2.0693145905888395e-06" ixz="-3.4669945090065774e-05"
+            iyy="0.009377721190056362" iyz="-1.7361327875758873e-05" izz="0.003922450818900767"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Jarrow_Glucosamine_Chondroitin_Combination_120_Caps.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Jarrow_Glucosamine_Chondroitin_Combination_120_Caps.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.21980649973595195"/>
+            <origin xyz=" 0.0017 0.0002 -0.0111"/>
+            <inertia ixx="0.00028791074923400947" ixy="1.455768209396766e-07" ixz="3.322887947514684e-05"
+            iyy="0.0003338201394163434" iyz="-2.330606221003457e-06" izz="0.0002959740143612372"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Tank-52eb26e5a71f2c8fc36c7821ad0d5a86.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Tank-52eb26e5a71f2c8fc36c7821ad0d5a86.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

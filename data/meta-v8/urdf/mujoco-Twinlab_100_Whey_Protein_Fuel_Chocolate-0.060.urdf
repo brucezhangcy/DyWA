@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10535909038030862"/>
+            <origin xyz=" -0.0000 -0.0000 -0.0018"/>
+            <inertia ixx="0.00011988466647003262" ixy="-3.545568777184975e-08" ixz="-8.034820068954262e-07"
+            iyy="0.00011992264932523981" iyz="4.824049079698002e-09" izz="5.579393275755827e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Twinlab_100_Whey_Protein_Fuel_Chocolate.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Twinlab_100_Whey_Protein_Fuel_Chocolate.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

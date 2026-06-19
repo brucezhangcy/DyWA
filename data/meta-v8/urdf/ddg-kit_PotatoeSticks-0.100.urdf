@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4258977127194698"/>
+            <origin xyz=" -0.0002 0.0006 -0.0003"/>
+            <inertia ixx="0.0013575381789065093" ixy="8.167555999013888e-07" ixz="-5.650246059534528e-07"
+            iyy="0.0005506358444690034" iyz="-1.4243400691893327e-05" izz="0.0013554479847426408"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_PotatoeSticks.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_PotatoeSticks.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

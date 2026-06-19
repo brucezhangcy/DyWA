@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.0758832270303235"/>
+            <origin xyz=" 0.0029 0.0062 -0.0063"/>
+            <inertia ixx="0.0001168584245920237" ixy="-6.383781974794196e-06" ixz="-1.57142876405291e-06"
+            iyy="2.7544830324684893e-05" iyz="-4.353549883191116e-06" izz="0.00011428542755990444"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_REESCULPT_TRAINER_II.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_REESCULPT_TRAINER_II.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2857904275713875"/>
+            <origin xyz=" 0.0057 0.0084 -0.0115"/>
+            <inertia ixx="0.0009926628187355018" ixy="-4.1824442046097485e-05" ixz="-1.0080480873497348e-05"
+            iyy="0.0002508088696154295" iyz="-2.415316330634217e-05" izz="0.0009896188554053068"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ghost_6_Color_BlckWhtLavaSlvrCitrus_Size_80.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ghost_6_Color_BlckWhtLavaSlvrCitrus_Size_80.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4745739779855069"/>
+            <origin xyz=" -0.0003 0.0008 0.0004"/>
+            <inertia ixx="0.0019757475250799204" ixy="-7.766941254205728e-06" ixz="2.3322763568226464e-05"
+            iyy="0.0019889514959850903" iyz="-3.6525405234201616e-05" izz="0.0024877481256516446"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ecoforms_Cup_B4_SAN.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ecoforms_Cup_B4_SAN.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

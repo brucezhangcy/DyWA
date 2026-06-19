@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03684575318099507"/>
+            <origin xyz=" -0.0045 -0.0041 -0.0045"/>
+            <inertia ixx="2.0342448926949433e-05" ixy="-3.825338783970818e-09" ixz="8.041543354130642e-07"
+            iyy="2.08285394985874e-05" iyz="2.0231105993712612e-07" izz="3.0907847659551845e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-TURBOPROP_AIRPLANE_WITH_PILOT.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-TURBOPROP_AIRPLANE_WITH_PILOT.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

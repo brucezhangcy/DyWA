@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4074715615677107"/>
+            <origin xyz=" 0.0001 0.0001 -0.0001"/>
+            <inertia ixx="0.0008548899130886995" ixy="5.5236481461216965e-06" ixz="-2.0359292621216563e-06"
+            iyy="0.0012283059148631072" iyz="2.1646612183899523e-06" izz="0.0007477256928225969"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Phillips_Caplets_Size_24.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Phillips_Caplets_Size_24.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

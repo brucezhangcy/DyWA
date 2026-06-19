@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.3653848342568236"/>
+            <origin xyz=" 0.0003 -0.0000 -0.0125"/>
+            <inertia ixx="0.008995763290969426" ixy="-3.0316877177492963e-06" ixz="-6.545389575149937e-05"
+            iyy="0.009035900539235236" iyz="3.713781653667415e-06" izz="0.0038235127153987813"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Saccharomyces_Boulardii_MOS_Value_Size.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Saccharomyces_Boulardii_MOS_Value_Size.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

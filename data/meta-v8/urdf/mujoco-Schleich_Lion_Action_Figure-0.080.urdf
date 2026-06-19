@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.05222237064535027"/>
+            <origin xyz=" -0.0140 0.0004 0.0025"/>
+            <inertia ixx="2.298182731518287e-05" ixy="4.898908648730981e-06" ixz="1.3593913830658385e-05"
+            iyy="7.527626319426392e-05" iyz="1.9374707161345694e-08" izz="6.46390753332403e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Schleich_Lion_Action_Figure.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Schleich_Lion_Action_Figure.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5056610584001815"/>
+            <origin xyz=" -0.0002 0.0008 -0.0011"/>
+            <inertia ixx="0.0033641808335090817" ixy="-2.1594551840265264e-06" ixz="-1.3820482693435138e-05"
+            iyy="0.003362837801405195" iyz="5.911405669766103e-05" izz="0.0005224152743884327"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-2_of_Jenga_Classic_Game.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-2_of_Jenga_Classic_Game.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

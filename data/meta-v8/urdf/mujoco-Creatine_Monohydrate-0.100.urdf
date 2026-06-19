@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.567695377212001"/>
+            <origin xyz=" -0.0000 0.0000 -0.0020"/>
+            <inertia ixx="0.0018016650453512731" ixy="1.880971035284135e-06" ixz="-5.9395831843467014e-06"
+            iyy="0.0017987100762338294" iyz="-6.967069330388662e-07" izz="0.0010051169207046522"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Creatine_Monohydrate.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Creatine_Monohydrate.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

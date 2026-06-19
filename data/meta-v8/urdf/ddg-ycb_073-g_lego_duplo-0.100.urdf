@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06589717086951871"/>
+            <origin xyz=" 0.0002 -0.0294 0.0017"/>
+            <inertia ixx="0.00011464276692851765" ixy="-2.2104430644550646e-06" ixz="3.9042343238333993e-07"
+            iyy="3.707470521530029e-05" iyz="1.9612499369100207e-06" izz="0.00014201516403609382"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_073-g_lego_duplo.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_073-g_lego_duplo.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

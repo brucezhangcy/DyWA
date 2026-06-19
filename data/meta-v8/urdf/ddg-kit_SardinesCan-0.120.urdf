@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4970378592116355"/>
+            <origin xyz=" -0.0008 -0.0007 -0.0017"/>
+            <inertia ixx="0.0024693634106997065" ixy="9.686771573293717e-05" ixz="0.00021995904716207612"
+            iyy="0.0008363099947560367" iyz="3.309625632698777e-05" izz="0.0021651506137761963"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_SardinesCan.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_SardinesCan.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

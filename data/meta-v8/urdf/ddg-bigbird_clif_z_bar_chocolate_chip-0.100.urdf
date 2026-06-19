@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2951941099563943"/>
+            <origin xyz=" -0.0001 -0.0002 0.0001"/>
+            <inertia ixx="0.0009746855331337819" ixy="-0.00012881320817933442" ixz="-9.713042533921884e-06"
+            iyy="0.0004972184728425682" iyz="2.221946512964386e-06" izz="0.0006491604199067314"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_clif_z_bar_chocolate_chip.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_clif_z_bar_chocolate_chip.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.04504113580208746"/>
+            <origin xyz=" 0.0002 0.0001 0.0000"/>
+            <inertia ixx="3.999770365797825e-05" ixy="-4.4039476580146174e-09" ixz="4.3662516281388853e-07"
+            iyy="5.1906256858721434e-05" iyz="1.2076183286634626e-07" izz="1.6161148437427663e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-NESCAFE_NESCAFE_TC_STKS_DECAF_6_CT.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-NESCAFE_NESCAFE_TC_STKS_DECAF_6_CT.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

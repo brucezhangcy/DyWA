@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.057649939822531"/>
+            <origin xyz=" 0.0000 0.0000 -0.0060"/>
+            <inertia ixx="5.0053434048935056e-05" ixy="3.998536135686128e-08" ixz="-5.1647467102524146e-08"
+            iyy="2.06806067318912e-05" iyz="-4.672774817477286e-08" izz="5.7437438539804696e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-TissueBox-734fb9603548dded66c0c88d96ba938f.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-TissueBox-734fb9603548dded66c0c88d96ba938f.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.8318393011797314"/>
+            <origin xyz=" 0.0007 0.0008 0.0005"/>
+            <inertia ixx="0.005948359703467655" ixy="0.00010452255229380216" ixz="0.0004168175088968717"
+            iyy="0.0020755188428986195" iyz="6.943604319894024e-05" izz="0.00478567297966989"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_VitalisCereals.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_VitalisCereals.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

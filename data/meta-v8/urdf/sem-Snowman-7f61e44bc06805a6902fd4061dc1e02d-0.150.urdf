@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.660986123514104"/>
+            <origin xyz=" -0.0487 -0.0006 -0.0144"/>
+            <inertia ixx="0.0030219841071852053" ixy="1.1883927156715841e-06" ixz="-2.3253149788456784e-05"
+            iyy="0.0031778716868704204" iyz="3.906420403995556e-06" izz="0.00123717790045492"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Snowman-7f61e44bc06805a6902fd4061dc1e02d.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Snowman-7f61e44bc06805a6902fd4061dc1e02d.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

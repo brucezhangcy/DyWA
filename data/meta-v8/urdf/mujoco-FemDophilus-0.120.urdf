@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6203635858437804"/>
+            <origin xyz=" -0.0000 -0.0002 -0.0006"/>
+            <inertia ixx="0.0025314785340457917" ixy="-7.886213814226228e-07" ixz="-1.5407725908190617e-05"
+            iyy="0.002534858893206026" iyz="3.784752831862764e-05" izz="0.001069411936824006"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-FemDophilus.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-FemDophilus.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

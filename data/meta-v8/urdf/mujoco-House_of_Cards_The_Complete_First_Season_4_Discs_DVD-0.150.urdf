@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4449156039402644"/>
+            <origin xyz=" -0.0002 -0.0001 0.0001"/>
+            <inertia ixx="0.0021200693992434643" ixy="-6.897697896490164e-07" ixz="-9.632029184406594e-06"
+            iyy="0.0032796545364620093" iyz="-1.8049773452012123e-05" izz="0.0012448563553721273"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-House_of_Cards_The_Complete_First_Season_4_Discs_DVD.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-House_of_Cards_The_Complete_First_Season_4_Discs_DVD.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

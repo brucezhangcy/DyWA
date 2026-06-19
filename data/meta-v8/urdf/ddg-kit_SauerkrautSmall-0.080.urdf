@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.33800355516317887"/>
+            <origin xyz=" 0.0002 0.0002 0.0004"/>
+            <inertia ixx="0.0006463368024246486" ixy="1.4762204218904038e-06" ixz="1.0567994062376632e-06"
+            iyy="0.000521529003002237" iyz="2.1814088723743093e-06" izz="0.0006460015362227671"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_SauerkrautSmall.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_SauerkrautSmall.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

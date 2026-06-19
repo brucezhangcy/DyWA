@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.053955985329920554"/>
+            <origin xyz=" 0.0001 -0.0009 -0.0314"/>
+            <inertia ixx="5.8646630585388235e-05" ixy="-1.2877236242864452e-05" ixz="9.443054038436703e-07"
+            iyy="9.828903965894577e-05" iyz="2.209814262735713e-06" izz="7.501795095648382e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Headphones-e3e3a16c5561908076ab32996e9bb920.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Headphones-e3e3a16c5561908076ab32996e9bb920.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

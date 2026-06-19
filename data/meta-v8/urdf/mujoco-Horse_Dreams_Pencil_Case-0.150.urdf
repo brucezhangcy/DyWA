@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.7856219479168813"/>
+            <origin xyz=" -0.0040 -0.0007 -0.0064"/>
+            <inertia ixx="0.001240547837991024" ixy="3.105529075817218e-05" ixz="-2.009156930339742e-05"
+            iyy="0.005446345735908356" iyz="-1.6675306419026107e-05" izz="0.005327647465889618"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Horse_Dreams_Pencil_Case.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Horse_Dreams_Pencil_Case.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

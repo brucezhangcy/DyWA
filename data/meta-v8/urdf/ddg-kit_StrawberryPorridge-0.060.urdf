@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.0419207096736124"/>
+            <origin xyz=" 0.0003 0.0002 0.0002"/>
+            <inertia ixx="4.8129762191533696e-05" ixy="1.1698180938750982e-06" ixz="2.6873580783889055e-06"
+            iyy="1.464067703416861e-05" iyz="1.5663010872154326e-07" izz="3.8218798529110334e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_StrawberryPorridge.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_StrawberryPorridge.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

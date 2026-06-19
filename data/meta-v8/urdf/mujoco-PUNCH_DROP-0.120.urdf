@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3467421800158862"/>
+            <origin xyz=" -0.0202 0.0184 -0.0028"/>
+            <inertia ixx="0.0006555343770937551" ixy="0.00010703109647633223" ixz="4.983469830896757e-05"
+            iyy="0.0007000823175448282" iyz="-4.773448446187698e-05" izz="0.0009949449224121547"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-PUNCH_DROP.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-PUNCH_DROP.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>
