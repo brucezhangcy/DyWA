@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.28347881777876605"/>
+            <origin xyz=" 0.0049 0.0088 -0.0156"/>
+            <inertia ixx="0.0009449988237160495" ixy="-4.4744981297308647e-05" ixz="-9.10021252625436e-06"
+            iyy="0.0002722295755286702" iyz="-4.098209355425787e-05" izz="0.0008977060497252406"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_DMX_MAX_MANIA_WD_D.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_DMX_MAX_MANIA_WD_D.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

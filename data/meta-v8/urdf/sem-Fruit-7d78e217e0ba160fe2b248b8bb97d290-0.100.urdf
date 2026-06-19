@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06851528355395417"/>
+            <origin xyz=" 0.0133 -0.0000 -0.0139"/>
+            <inertia ixx="2.854524739992369e-05" ixy="-1.5707406435206786e-07" ixz="-2.1739295073440162e-05"
+            iyy="0.00014821099285209613" iyz="-1.9436179705259666e-08" izz="0.00013393317256118564"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Fruit-7d78e217e0ba160fe2b248b8bb97d290.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Fruit-7d78e217e0ba160fe2b248b8bb97d290.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

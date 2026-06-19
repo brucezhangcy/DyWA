@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.24368378709402094"/>
+            <origin xyz=" 0.0001 0.0001 -0.0001"/>
+            <inertia ixx="0.00039764117307664813" ixy="-6.41607514732295e-08" ixz="8.580184198382935e-08"
+            iyy="0.0003988343999663154" iyz="2.253284330059236e-07" izz="0.0002910501984814089"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Skin_Total_Body_Supplements.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Skin_Total_Body_Supplements.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

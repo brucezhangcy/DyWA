@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08875475978603771"/>
+            <origin xyz=" -0.0001 0.0001 -0.0014"/>
+            <inertia ixx="7.532397281667984e-05" ixy="-2.7113056425984255e-06" ixz="-6.408448856766922e-08"
+            iyy="8.192715171020975e-05" iyz="8.299651758501632e-07" izz="4.814904591750283e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Android_Figure_Orange.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Android_Figure_Orange.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

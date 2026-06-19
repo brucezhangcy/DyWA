@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.039568937016679295"/>
+            <origin xyz=" -0.0061 -0.0000 -0.0180"/>
+            <inertia ixx="3.138005424273566e-05" ixy="-3.954764439594525e-07" ixz="-1.8095245951787641e-06"
+            iyy="1.7678005673795464e-05" iyz="-1.314639479470663e-06" izz="2.336335537993224e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-MINI_FIRE_ENGINE.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-MINI_FIRE_ENGINE.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

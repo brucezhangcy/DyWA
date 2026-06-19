@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10383679967889313"/>
+            <origin xyz=" 0.0008 -0.0239 -0.0107"/>
+            <inertia ixx="0.00018093052310841145" ixy="1.2318880141789962e-06" ixz="3.259755607533634e-07"
+            iyy="0.0001242786643584401" iyz="-3.6323939838529854e-05" izz="0.00026359237228144774"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ocedar_Snap_On_Dust_Pan_And_Brush_1_ct.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ocedar_Snap_On_Dust_Pan_And_Brush_1_ct.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5630990024138406"/>
+            <origin xyz=" 0.0001 0.0010 -0.0135"/>
+            <inertia ixx="0.0025797012278891414" ixy="2.5631561864155823e-06" ixz="1.0044432688480323e-05"
+            iyy="0.003542213340378124" iyz="2.4763327736324282e-05" izz="0.0012307405082990033"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Brother_Ink_Cartridge_Magenta_LC75M.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Brother_Ink_Cartridge_Magenta_LC75M.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

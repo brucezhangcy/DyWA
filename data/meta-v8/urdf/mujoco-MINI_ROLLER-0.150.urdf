@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.1077991497327222"/>
+            <origin xyz=" 0.0006 0.0083 -0.0206"/>
+            <inertia ixx="0.006411242062735014" ixy="-7.88864881372503e-05" ixz="-5.5411008207308316e-05"
+            iyy="0.003913277623119426" iyz="-0.0008446043293446634" izz="0.006131002763211013"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-MINI_ROLLER.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-MINI_ROLLER.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

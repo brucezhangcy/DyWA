@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.12055988676385491"/>
+            <origin xyz=" -0.0002 0.0015 -0.0036"/>
+            <inertia ixx="0.00016524803931269527" ixy="1.9629040552358657e-07" ixz="1.0028056664576453e-06"
+            iyy="0.00017530827485692294" iyz="-8.42807554336791e-06" izz="0.00032882128045972237"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Melissa_Doug_Shape_Sorting_Clock.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Melissa_Doug_Shape_Sorting_Clock.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03887129956772023"/>
+            <origin xyz=" 0.0018 -0.0022 -0.0077"/>
+            <inertia ixx="5.818986621041128e-05" ixy="-3.8981724196452185e-07" ixz="-2.8503549668844867e-07"
+            iyy="1.0026717899907475e-05" iyz="1.9654803255050876e-06" izz="6.376604551555886e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-REEF_BRAIDED_CUSHION.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-REEF_BRAIDED_CUSHION.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

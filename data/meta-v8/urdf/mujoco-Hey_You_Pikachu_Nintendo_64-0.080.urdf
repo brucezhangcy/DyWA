@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08804172998655792"/>
+            <origin xyz=" 0.0002 0.0002 -0.0015"/>
+            <inertia ixx="5.8870153120941643e-05" ixy="3.583330164977196e-07" ixz="1.0419880372477792e-06"
+            iyy="0.00017492243247279547" iyz="3.141930446843057e-06" izz="0.000126079650624076"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hey_You_Pikachu_Nintendo_64.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hey_You_Pikachu_Nintendo_64.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

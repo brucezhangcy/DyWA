@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.025610931412444013"/>
+            <origin xyz=" -0.0007 -0.0002 -0.0002"/>
+            <inertia ixx="1.434921068954684e-05" ixy="6.626512977342745e-09" ixz="1.4859833848023986e-07"
+            iyy="1.691177385858057e-05" iyz="-1.8159305213057154e-07" izz="3.066919449808908e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Luigis_Mansion_Dark_Moon_Nintendo_3DS_Game.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Luigis_Mansion_Dark_Moon_Nintendo_3DS_Game.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.00866651920070288"/>
+            <origin xyz=" 0.0044 -0.0008 -0.0076"/>
+            <inertia ixx="4.074306984990397e-06" ixy="1.0246358533289567e-06" ixz="-2.758709046191702e-08"
+            iyy="1.4989750958734432e-06" iyz="-2.6168130561167703e-08" izz="4.863226973170529e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Weisshai_Great_White_Shark.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Weisshai_Great_White_Shark.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.40973386960434977"/>
+            <origin xyz=" 0.0002 0.0003 0.0043"/>
+            <inertia ixx="0.0028411244207231733" ixy="3.467872586398888e-05" ixz="-5.148392425149835e-06"
+            iyy="0.0027129200421950514" iyz="4.1994821319132555e-06" izz="0.00034566432686220037"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_suave_sweet_guava_nectar_body_wash.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_suave_sweet_guava_nectar_body_wash.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

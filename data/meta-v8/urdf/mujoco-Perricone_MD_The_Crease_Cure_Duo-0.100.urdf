@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3329106183922893"/>
+            <origin xyz=" -0.0000 -0.0002 -0.0003"/>
+            <inertia ixx="0.00045315870526618237" ixy="9.452014236238238e-07" ixz="3.042183159016773e-06"
+            iyy="0.0010425710276985782" iyz="8.991870897929835e-06" izz="0.0008007071163760283"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_The_Crease_Cure_Duo.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_The_Crease_Cure_Duo.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

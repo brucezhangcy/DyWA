@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.22869088411699617"/>
+            <origin xyz=" 0.0000 -0.0003 -0.0001"/>
+            <inertia ixx="0.0004900399602374225" ixy="-1.7333179392454313e-06" ixz="-4.628889947212141e-06"
+            iyy="0.0004940504663982557" iyz="-1.10785362330132e-06" izz="0.0008296687396255391"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Shurtape_Tape_Purple_CP28.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Shurtape_Tape_Purple_CP28.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

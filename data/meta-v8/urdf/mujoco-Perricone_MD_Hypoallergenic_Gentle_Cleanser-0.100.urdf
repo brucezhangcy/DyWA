@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3342417771052048"/>
+            <origin xyz=" 0.0001 -0.0005 -0.0000"/>
+            <inertia ixx="0.0009253628420516864" ixy="-2.1690004305538405e-06" ixz="-1.3287443851543503e-05"
+            iyy="0.0010056706997242698" iyz="-1.2693214943834731e-05" izz="0.0003708038647470703"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Hypoallergenic_Gentle_Cleanser.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Hypoallergenic_Gentle_Cleanser.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.1944556576059882"/>
+            <origin xyz=" -0.0001 0.0003 -0.0000"/>
+            <inertia ixx="0.007481265828143626" ixy="-3.7058504815055366e-06" ixz="-4.0575912214953826e-05"
+            iyy="0.008226865595106516" iyz="-5.6892471897101885e-06" izz="0.0031935086376791793"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-JarroSil_Activated_Silicon.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-JarroSil_Activated_Silicon.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

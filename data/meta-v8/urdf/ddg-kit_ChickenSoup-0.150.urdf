@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.8797865937004139"/>
+            <origin xyz=" 0.0006 -0.0002 0.0001"/>
+            <inertia ixx="0.006218564390518284" ixy="-1.05593145654055e-05" ixz="0.000627054781047469"
+            iyy="0.0026245700343627714" iyz="-2.0644817040041882e-05" izz="0.004733142345028605"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_ChickenSoup.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_ChickenSoup.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1672606935655063"/>
+            <origin xyz=" -0.0048 -0.0221 -0.0030"/>
+            <inertia ixx="0.0003520544488426703" ixy="1.2902883504669647e-05" ixz="0.000247441859397926"
+            iyy="0.0006332294984513414" iyz="-3.4853100460160976e-05" izz="0.0006864653820042249"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_Moon.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_Moon.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

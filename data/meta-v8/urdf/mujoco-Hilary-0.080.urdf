@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07104022039996288"/>
+            <origin xyz=" 0.0015 0.0097 -0.0100"/>
+            <inertia ixx="0.00010377120884712733" ixy="-2.8505040570255125e-06" ixz="-1.4991950951144757e-06"
+            iyy="5.111699211706819e-05" iyz="-2.260671856918043e-05" izz="6.842774240778099e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hilary.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hilary.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

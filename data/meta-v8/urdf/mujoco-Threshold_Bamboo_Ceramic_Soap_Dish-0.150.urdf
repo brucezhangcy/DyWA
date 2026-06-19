@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.7682147672231238"/>
+            <origin xyz=" -0.0002 -0.0001 -0.0021"/>
+            <inertia ixx="0.002603583297335022" ixy="-1.0249619927669824e-05" ixz="1.1956255078717714e-05"
+            iyy="0.003916262537657591" iyz="3.2082219627497244e-06" izz="0.005726246229873421"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Bamboo_Ceramic_Soap_Dish.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Bamboo_Ceramic_Soap_Dish.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

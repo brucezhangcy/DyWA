@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.45157183618995445"/>
+            <origin xyz=" 0.0000 0.0004 -0.0014"/>
+            <inertia ixx="0.0014683921908551008" ixy="2.9699394455029173e-06" ixz="-3.0884338881453983e-06"
+            iyy="0.001484382112197709" iyz="7.0469636243797035e-06" izz="0.000588206893358047"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_krylon_short_cuts.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_krylon_short_cuts.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

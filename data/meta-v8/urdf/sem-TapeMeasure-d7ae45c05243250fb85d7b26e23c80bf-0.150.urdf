@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.9956767842440868"/>
+            <origin xyz=" -0.0027 -0.0045 -0.0000"/>
+            <inertia ixx="0.003969979872280026" ixy="8.19650289621794e-05" ixz="1.3073904776129702e-07"
+            iyy="0.003910742074164904" iyz="-2.038078149183914e-07" izz="0.006873760780206434"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-TapeMeasure-d7ae45c05243250fb85d7b26e23c80bf.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-TapeMeasure-d7ae45c05243250fb85d7b26e23c80bf.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

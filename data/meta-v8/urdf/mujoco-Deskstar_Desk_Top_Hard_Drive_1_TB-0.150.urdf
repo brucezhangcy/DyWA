@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.1381657890758556"/>
+            <origin xyz=" 0.0000 -0.0003 0.0000"/>
+            <inertia ixx="0.005768294841284014" ixy="1.8978931933071685e-05" ixz="-3.232592902979107e-05"
+            iyy="0.008016973705508836" iyz="3.5887936796745764e-05" izz="0.00382797639125378"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Deskstar_Desk_Top_Hard_Drive_1_TB.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Deskstar_Desk_Top_Hard_Drive_1_TB.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

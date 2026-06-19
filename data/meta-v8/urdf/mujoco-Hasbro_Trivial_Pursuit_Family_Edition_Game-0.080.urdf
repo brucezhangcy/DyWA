@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.11581677635072728"/>
+            <origin xyz=" 0.0003 0.0001 -0.0002"/>
+            <inertia ixx="0.00016285028562833145" ixy="6.162576529373404e-08" ixz="-8.970768241315898e-07"
+            iyy="0.0002412834653833158" iyz="-2.61265802284042e-07" izz="9.779235969533413e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hasbro_Trivial_Pursuit_Family_Edition_Game.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Hasbro_Trivial_Pursuit_Family_Edition_Game.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

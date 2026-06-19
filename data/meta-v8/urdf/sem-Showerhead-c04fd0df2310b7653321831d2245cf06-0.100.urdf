@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.049488946758965716"/>
+            <origin xyz=" -0.0003 -0.0163 -0.0071"/>
+            <inertia ixx="0.00013674836907993674" ixy="1.0694617104310444e-06" ixz="5.062518009865389e-07"
+            iyy="4.0967963854221537e-05" iyz="-4.1814623241978184e-05" izz="0.00011713019990685367"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Showerhead-c04fd0df2310b7653321831d2245cf06.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Showerhead-c04fd0df2310b7653321831d2245cf06.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

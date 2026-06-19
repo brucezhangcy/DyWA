@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.8375194233402595"/>
+            <origin xyz=" -0.0023 0.0019 -0.0205"/>
+            <inertia ixx="0.005389056064801606" ixy="-2.7667568978454776e-05" ixz="6.877025744392929e-05"
+            iyy="0.005551993750882351" iyz="2.4019778378833846e-05" izz="0.005962444938017706"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Closetmaid_Premium_Fabric_Cube_Red.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Closetmaid_Premium_Fabric_Cube_Red.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

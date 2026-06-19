@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.20000943966079562"/>
+            <origin xyz=" -0.0001 0.0001 0.0001"/>
+            <inertia ixx="0.00033948937580362016" ixy="-4.199128992767967e-07" ixz="-1.5212711404582222e-06"
+            iyy="0.0003796166111506407" iyz="1.8004107355616818e-06" izz="0.00017591582919264642"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Vitamin_C_Ester_15.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Vitamin_C_Ester_15.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

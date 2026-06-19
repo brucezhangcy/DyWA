@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.04979366782585936"/>
+            <origin xyz=" -0.0004 0.0000 0.0001"/>
+            <inertia ixx="8.7888507688164e-06" ixy="3.7435521842031745e-09" ixz="-1.1164031251810919e-06"
+            iyy="0.0001017498593354288" iyz="6.668272567769897e-08" izz="0.00010154852836148817"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Wilton_PreCut_Parchment_Sheets_10_x_15_24_sheets.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Wilton_PreCut_Parchment_Sheets_10_x_15_24_sheets.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

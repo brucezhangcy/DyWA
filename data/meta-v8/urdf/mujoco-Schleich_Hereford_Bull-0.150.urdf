@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5528525087901679"/>
+            <origin xyz=" -0.0008 0.0108 0.0126"/>
+            <inertia ixx="0.003264071436727649" ixy="0.00010182936029526365" ixz="6.222979644520023e-06"
+            iyy="0.0009537510126405948" iyz="0.0002989976462040634" izz="0.002837964580758898"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Schleich_Hereford_Bull.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Schleich_Hereford_Bull.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

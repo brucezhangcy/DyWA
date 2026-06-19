@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.016297220075588714"/>
+            <origin xyz=" 0.0003 -0.0177 -0.0038"/>
+            <inertia ixx="8.341141600146478e-06" ixy="2.1187840935240877e-08" ixz="-3.6932943955821106e-09"
+            iyy="2.816963083328882e-06" iyz="9.397380917910704e-07" izz="7.860696129978691e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SNAIL_MEASURING_TAPE.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SNAIL_MEASURING_TAPE.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

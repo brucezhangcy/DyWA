@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.12376433963811423"/>
+            <origin xyz=" -0.0007 0.0015 -0.0008"/>
+            <inertia ixx="0.0004949566192460701" ixy="7.513637487434806e-07" ixz="-8.46366870813473e-07"
+            iyy="7.234156611745092e-05" iyz="-5.054298512878551e-06" izz="0.0005567942694729605"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Envision_Home_Dish_Drying_Mat_Red_6_x_18.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Envision_Home_Dish_Drying_Mat_Red_6_x_18.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

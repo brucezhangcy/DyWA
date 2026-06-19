@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5191678985011714"/>
+            <origin xyz=" -0.0007 -0.0002 -0.0254"/>
+            <inertia ixx="0.001283735201027369" ixy="-2.7703930731092337e-06" ixz="8.241126399760478e-06"
+            iyy="0.001682186009808294" iyz="-0.0002527304261598353" izz="0.0014118567025968077"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Squirt_Strain_Fruit_Basket.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Squirt_Strain_Fruit_Basket.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

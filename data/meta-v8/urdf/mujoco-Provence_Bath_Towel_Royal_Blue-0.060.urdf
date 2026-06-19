@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.04460013890671031"/>
+            <origin xyz=" 0.0009 0.0004 -0.0020"/>
+            <inertia ixx="3.636578505966149e-05" ixy="-1.5894345008445825e-07" ixz="-6.899894301217281e-07"
+            iyy="1.8656146263609208e-05" iyz="-1.2625176315699557e-07" izz="5.127265703014756e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Provence_Bath_Towel_Royal_Blue.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Provence_Bath_Towel_Royal_Blue.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

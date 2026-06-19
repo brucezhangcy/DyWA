@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1146507537296876"/>
+            <origin xyz=" 0.0171 0.0238 0.0031"/>
+            <inertia ixx="0.0002400599823081237" ixy="1.8485221290720377e-05" ixz="-6.498385182593871e-06"
+            iyy="0.0002348920894109455" iyz="-1.2309474196162268e-05" izz="0.00014224980281446643"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nickelodeon_Teenage_Mutant_Ninja_Turtles_Leonardo.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nickelodeon_Teenage_Mutant_Ninja_Turtles_Leonardo.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

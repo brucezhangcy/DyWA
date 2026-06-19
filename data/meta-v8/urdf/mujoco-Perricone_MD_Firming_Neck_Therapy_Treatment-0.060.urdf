@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10612033206452218"/>
+            <origin xyz=" 0.0002 -0.0000 0.0001"/>
+            <inertia ixx="9.453434142307837e-05" ixy="2.4699586326854883e-07" ixz="-1.9765031968711325e-07"
+            iyy="9.531767331849774e-05" iyz="3.279186128588945e-07" izz="7.736275665697889e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Firming_Neck_Therapy_Treatment.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Firming_Neck_Therapy_Treatment.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

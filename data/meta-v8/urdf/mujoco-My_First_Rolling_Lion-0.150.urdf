@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4398892657901913"/>
+            <origin xyz=" 0.0015 -0.0004 -0.0148"/>
+            <inertia ixx="0.0015370119887740173" ixy="-1.3062119017220043e-06" ixz="-0.00042542549541638657"
+            iyy="0.0030317159217382855" iyz="-8.733791903890908e-06" izz="0.001688806689091205"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-My_First_Rolling_Lion.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-My_First_Rolling_Lion.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5561599267670426"/>
+            <origin xyz=" 0.0037 0.0089 -0.0120"/>
+            <inertia ixx="0.003005361362179948" ixy="-0.0001305223233022417" ixz="-2.1629577055549106e-05"
+            iyy="0.0007565358457002642" iyz="-7.78920663748274e-05" izz="0.003003977476348578"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_GELBlur33_20_GS_BlackWhiteSafety_Orange.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_GELBlur33_20_GS_BlackWhiteSafety_Orange.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

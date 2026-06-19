@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.029273173390498987"/>
+            <origin xyz=" 0.0005 -0.0001 -0.0025"/>
+            <inertia ixx="2.6410884858593027e-05" ixy="2.460367468266748e-07" ixz="-2.3145271836512095e-07"
+            iyy="2.7088270064570383e-05" iyz="7.59176751589465e-08" izz="5.1216059229150405e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ecoforms_Plant_Saucer_S14NATURAL.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ecoforms_Plant_Saucer_S14NATURAL.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

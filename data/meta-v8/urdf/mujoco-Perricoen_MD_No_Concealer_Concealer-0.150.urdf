@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.035154244219471"/>
+            <origin xyz=" 0.0001 -0.0000 -0.0003"/>
+            <inertia ixx="0.006847101024466127" ixy="-1.3047143568743853e-06" ixz="-0.00011530695433156678"
+            iyy="0.007213165812823258" iyz="-3.851297395489696e-06" izz="0.0022705016459539946"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricoen_MD_No_Concealer_Concealer.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricoen_MD_No_Concealer_Concealer.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

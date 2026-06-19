@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.04720604675765774"/>
+            <origin xyz=" 0.0001 0.0001 -0.0135"/>
+            <inertia ixx="7.216714976091136e-05" ixy="1.1878753389783257e-08" ixz="-2.6440133126274757e-06"
+            iyy="7.206061195549342e-05" iyz="-7.930305129806362e-07" izz="9.272233048040164e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_cholula_chipotle_hot_sauce.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_cholula_chipotle_hot_sauce.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

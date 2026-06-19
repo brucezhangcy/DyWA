@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.14489422537658891"/>
+            <origin xyz=" 0.0001 0.0001 -0.0002"/>
+            <inertia ixx="7.639382352555471e-05" ixy="-1.311535853035218e-07" ixz="4.963495388138621e-07"
+            iyy="0.0002958679097197726" iyz="1.4156170933386094e-08" izz="0.00029021614154023286"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-JBL_Charge_Speaker_portable_wireless_wired_Green.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-JBL_Charge_Speaker_portable_wireless_wired_Green.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.19441428026759314"/>
+            <origin xyz=" -0.0000 -0.0139 0.0110"/>
+            <inertia ixx="0.0004585627886422045" ixy="-3.7862042024921094e-07" ixz="2.1293973077723044e-07"
+            iyy="0.00020716037374612513" iyz="-4.203988206428932e-05" izz="0.000409897846625173"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Bear-821c4789edfbcdda84a6218346f27787.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Bear-821c4789edfbcdda84a6218346f27787.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

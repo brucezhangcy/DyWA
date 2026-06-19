@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.23284329285307467"/>
+            <origin xyz=" 0.0152 -0.0002 -0.0137"/>
+            <inertia ixx="0.00024504055776071714" ixy="-1.604241653737513e-05" ixz="-2.2042509963879413e-05"
+            iyy="0.00047687679379330143" iyz="4.540701097805506e-06" izz="0.0004599126171407044"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-TOOL_BELT.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-TOOL_BELT.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06241416256214946"/>
+            <origin xyz=" -0.0005 -0.0002 -0.0004"/>
+            <inertia ixx="6.146031503076062e-05" ixy="-6.216183897968811e-07" ixz="4.789990820115717e-07"
+            iyy="7.397578853706574e-05" iyz="3.584361696828367e-08" izz="0.0001327465126853478"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Mario_Luigi_Dream_Team_Nintendo_3DS_Game.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Mario_Luigi_Dream_Team_Nintendo_3DS_Game.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

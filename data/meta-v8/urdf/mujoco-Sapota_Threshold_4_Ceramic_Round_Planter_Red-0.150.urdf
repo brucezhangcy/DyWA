@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.9787709035886513"/>
+            <origin xyz=" -0.0001 0.0017 -0.0049"/>
+            <inertia ixx="0.00721478964189184" ixy="2.0192177827902136e-06" ixz="-1.6915345656126978e-05"
+            iyy="0.007107853323978232" iyz="-9.410231561039012e-05" izz="0.007193243296141673"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sapota_Threshold_4_Ceramic_Round_Planter_Red.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sapota_Threshold_4_Ceramic_Round_Planter_Red.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

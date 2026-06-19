@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.21397327354514592"/>
+            <origin xyz=" -0.0001 0.0002 -0.0036"/>
+            <inertia ixx="0.00042190842667528145" ixy="-3.042442179900497e-07" ixz="-1.130827532795186e-06"
+            iyy="0.00042093947280733474" iyz="-2.6457893173813473e-07" izz="0.0001730708227118028"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Folic_Acid.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Folic_Acid.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

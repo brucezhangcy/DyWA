@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.24018778128776685"/>
+            <origin xyz=" -0.0003 0.0052 -0.0019"/>
+            <inertia ixx="0.0005128810188201187" ixy="-2.1879222950123353e-06" ixz="5.6509260800776654e-06"
+            iyy="0.0006755891025250918" iyz="-2.2285348049061476e-05" izz="0.001156041271643113"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nintendo_2DS_Crimson_Red.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nintendo_2DS_Crimson_Red.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

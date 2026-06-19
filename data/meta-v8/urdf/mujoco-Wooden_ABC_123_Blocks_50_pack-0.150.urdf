@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.8232588220786914"/>
+            <origin xyz=" 0.0087 -0.0001 -0.0056"/>
+            <inertia ixx="0.0017772634261152484" ixy="1.3356939508549426e-07" ixz="-0.0003794848938576125"
+            iyy="0.005612761464808917" iyz="2.976049389613048e-06" izz="0.004707010082880703"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Wooden_ABC_123_Blocks_50_pack.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Wooden_ABC_123_Blocks_50_pack.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

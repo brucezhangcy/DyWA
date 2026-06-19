@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.0824322837883723"/>
+            <origin xyz=" 0.0006 0.0001 -0.0101"/>
+            <inertia ixx="0.0001475788478470911" ixy="-3.49505379315183e-08" ixz="-4.8630862716248985e-06"
+            iyy="0.0001477586380161561" iyz="-6.971584699739258e-07" izz="2.535657371034392e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Weston_No_33_Signature_Sausage_Tonic_12_fl_oz.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Weston_No_33_Signature_Sausage_Tonic_12_fl_oz.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

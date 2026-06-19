@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.15224529664503625"/>
+            <origin xyz=" 0.0031 0.0066 -0.0100"/>
+            <inertia ixx="0.0003554053228197708" ixy="-1.4706662306120393e-05" ixz="-3.829640104895167e-06"
+            iyy="9.210332437934669e-05" iyz="-1.3924315782286885e-05" izz="0.0003479981258815149"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-adistar_boost_m.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-adistar_boost_m.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

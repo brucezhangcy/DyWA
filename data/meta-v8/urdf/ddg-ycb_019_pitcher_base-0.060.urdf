@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.075895116360958"/>
+            <origin xyz=" -0.0023 -0.0020 0.0035"/>
+            <inertia ixx="8.09923775738619e-05" ixy="-2.1300344111414756e-06" ixz="-1.5306168767404767e-07"
+            iyy="8.066778435271122e-05" iyz="-9.198447918513967e-07" izz="3.158460754591293e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_019_pitcher_base.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_019_pitcher_base.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

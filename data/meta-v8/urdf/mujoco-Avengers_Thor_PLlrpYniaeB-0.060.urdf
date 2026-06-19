@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.02314714182363597"/>
+            <origin xyz=" -0.0001 0.0017 -0.0059"/>
+            <inertia ixx="1.8141498875250285e-05" ixy="-2.0156912168244183e-07" ixz="5.9847052270853565e-09"
+            iyy="2.1682831558601495e-05" iyz="-1.2540619656373205e-06" izz="3.4277075180059576e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Avengers_Thor_PLlrpYniaeB.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Avengers_Thor_PLlrpYniaeB.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

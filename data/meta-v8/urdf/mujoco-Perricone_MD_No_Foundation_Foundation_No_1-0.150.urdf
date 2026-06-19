@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.0208170489277963"/>
+            <origin xyz=" -0.0002 -0.0001 -0.0002"/>
+            <inertia ixx="0.006427659230912756" ixy="7.105920045161623e-07" ixz="-7.56427931051955e-05"
+            iyy="0.007168500711387528" iyz="-6.657321672123995e-05" izz="0.00233139755277714"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_No_Foundation_Foundation_No_1.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_No_Foundation_Foundation_No_1.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

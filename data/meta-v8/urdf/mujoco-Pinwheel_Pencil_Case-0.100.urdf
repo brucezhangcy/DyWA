@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.24303103356531655"/>
+            <origin xyz=" 0.0017 0.0013 -0.0018"/>
+            <inertia ixx="0.00018020016743625387" ixy="1.732711246730269e-05" ixz="-5.001355198364638e-06"
+            iyy="0.0007053873975686179" iyz="8.006262082997765e-07" izz="0.0007074541257104583"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Pinwheel_Pencil_Case.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Pinwheel_Pencil_Case.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

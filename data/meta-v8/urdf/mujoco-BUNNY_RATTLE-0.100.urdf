@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07827861530022542"/>
+            <origin xyz=" 0.0028 0.0202 -0.0254"/>
+            <inertia ixx="0.0001549352997807679" ixy="1.072682922153896e-05" ixz="2.472942249067401e-05"
+            iyy="0.0001630141147532595" iyz="-3.2459028106004403e-05" izz="8.759570912787525e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-BUNNY_RATTLE.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-BUNNY_RATTLE.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

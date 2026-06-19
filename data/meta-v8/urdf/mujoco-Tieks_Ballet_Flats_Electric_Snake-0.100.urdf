@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1244207713171654"/>
+            <origin xyz=" 0.0010 0.0019 -0.0077"/>
+            <inertia ixx="0.00033207611290555773" ixy="1.7420089169413595e-06" ixz="-6.296750557340307e-07"
+            iyy="5.657978559155801e-05" iyz="-5.273381333866728e-06" izz="0.00033284543889515976"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Tieks_Ballet_Flats_Electric_Snake.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Tieks_Ballet_Flats_Electric_Snake.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5569914766781274"/>
+            <origin xyz=" -0.0002 0.0001 -0.0008"/>
+            <inertia ixx="0.002139059181234545" ixy="-4.2805306427164015e-07" ixz="-3.606418995702278e-05"
+            iyy="0.0024014373112210743" iyz="-3.298949153605941e-05" izz="0.0008902532696863614"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Nutritive_Cleanser.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Nutritive_Cleanser.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

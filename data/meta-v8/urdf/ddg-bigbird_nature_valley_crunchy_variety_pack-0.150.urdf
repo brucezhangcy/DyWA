@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.0890261143888957"/>
+            <origin xyz=" 0.0001 0.0005 0.0000"/>
+            <inertia ixx="0.005376557229107598" ixy="0.001876677879092036" ixz="-1.1107923243794174e-05"
+            iyy="0.007187247877718869" iyz="-6.049879682542234e-07" izz="0.005214936044384345"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_nature_valley_crunchy_variety_pack.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_nature_valley_crunchy_variety_pack.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

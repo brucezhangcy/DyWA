@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5620687215267829"/>
+            <origin xyz=" 0.0047 0.0126 -0.0149"/>
+            <inertia ixx="0.003205944055863168" ixy="-0.00010988616892826597" ixz="-4.0803280016563046e-05"
+            iyy="0.0008198107728507735" iyz="-0.00018318432398252535" izz="0.003081581493068558"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_GELTour_Lyte_WhiteOrchidSilver.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_GELTour_Lyte_WhiteOrchidSilver.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

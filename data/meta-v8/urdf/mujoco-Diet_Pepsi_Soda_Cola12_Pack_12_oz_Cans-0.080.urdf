@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.11456799901768276"/>
+            <origin xyz=" 0.0002 -0.0001 -0.0000"/>
+            <inertia ixx="4.870607992911206e-05" ixy="-6.298574462028783e-07" ixz="1.6365314731015085e-06"
+            iyy="0.0002293401898106689" iyz="-1.22378024841631e-07" izz="0.00022656234462094954"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Diet_Pepsi_Soda_Cola12_Pack_12_oz_Cans.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Diet_Pepsi_Soda_Cola12_Pack_12_oz_Cans.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

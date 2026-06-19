@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.026139938304818124"/>
+            <origin xyz=" -0.0024 -0.0073 -0.0089"/>
+            <inertia ixx="1.836689629737359e-05" ixy="3.739766755544346e-06" ixz="8.882154751770995e-08"
+            iyy="5.767014564800143e-06" iyz="3.3659807037104085e-07" izz="2.0923251857968254e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sootheze_Toasty_Orca.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sootheze_Toasty_Orca.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

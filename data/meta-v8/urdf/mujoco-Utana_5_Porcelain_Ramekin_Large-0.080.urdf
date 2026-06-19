@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.17768311793214828"/>
+            <origin xyz=" 0.0007 0.0001 -0.0046"/>
+            <inertia ixx="0.00036704918503156997" ixy="1.7214916223650713e-06" ixz="-4.7044037865023333e-07"
+            iyy="0.0003639316433238953" iyz="-1.4993317489567463e-07" izz="0.0005640462110403462"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Utana_5_Porcelain_Ramekin_Large.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Utana_5_Porcelain_Ramekin_Large.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

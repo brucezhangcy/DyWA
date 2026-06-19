@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4470495489724939"/>
+            <origin xyz=" -0.0027 0.0256 -0.0175"/>
+            <inertia ixx="0.0014987030956593013" ixy="-4.990987320762244e-05" ixz="6.524861395897541e-05"
+            iyy="0.002313595109946799" iyz="-0.00022312687590974743" izz="0.0032556094368350074"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-STACKING_BEAR_V04KKgGBn2A.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-STACKING_BEAR_V04KKgGBn2A.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

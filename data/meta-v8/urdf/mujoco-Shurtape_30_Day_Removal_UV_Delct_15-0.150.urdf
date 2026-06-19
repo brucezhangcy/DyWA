@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.2763695100115837"/>
+            <origin xyz=" -0.0001 0.0000 0.0002"/>
+            <inertia ixx="0.009716044422354403" ixy="2.7946812906022078e-05" ixz="-8.142573735710185e-05"
+            iyy="0.009567785938794671" iyz="-7.665271492866983e-06" izz="0.017372385168058196"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Shurtape_30_Day_Removal_UV_Delct_15.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Shurtape_30_Day_Removal_UV_Delct_15.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

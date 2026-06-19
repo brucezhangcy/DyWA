@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5111033801833853"/>
+            <origin xyz=" 0.0062 0.0069 -0.0180"/>
+            <inertia ixx="0.0026912809362977875" ixy="-0.00012517918564019704" ixz="-4.197434278577538e-05"
+            iyy="0.0006741733395675114" iyz="-0.00010665918454013228" izz="0.0026773712652820034"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-LEUCIPPUS_ADIPURE.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-LEUCIPPUS_ADIPURE.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

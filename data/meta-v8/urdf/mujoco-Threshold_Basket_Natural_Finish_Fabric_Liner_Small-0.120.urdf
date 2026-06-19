@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5879384353741396"/>
+            <origin xyz=" -0.0004 -0.0002 -0.0042"/>
+            <inertia ixx="0.0015983260100489885" ixy="1.4087218257515875e-05" ixz="4.213661100275622e-06"
+            iyy="0.00247920497136576" iyz="-3.9364750547378694e-05" izz="0.002773214714252842"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Basket_Natural_Finish_Fabric_Liner_Small.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Basket_Natural_Finish_Fabric_Liner_Small.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

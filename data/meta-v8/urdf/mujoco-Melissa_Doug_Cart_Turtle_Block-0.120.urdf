@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2863087574971152"/>
+            <origin xyz=" -0.0013 0.0176 0.0042"/>
+            <inertia ixx="0.0008297795265956847" ixy="-1.1969762618081756e-06" ixz="9.343458564242532e-06"
+            iyy="0.0005896236724989169" iyz="-2.494432608994516e-05" izz="0.0013498971653418325"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Melissa_Doug_Cart_Turtle_Block.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Melissa_Doug_Cart_Turtle_Block.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

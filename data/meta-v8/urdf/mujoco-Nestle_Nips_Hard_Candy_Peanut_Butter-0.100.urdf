@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.25609076177467255"/>
+            <origin xyz=" 0.0000 -0.0001 0.0001"/>
+            <inertia ixx="0.0006625573405783746" ixy="8.433595320333877e-07" ixz="5.105583402948542e-07"
+            iyy="0.0008241243635263725" iyz="-4.719894589418533e-06" izz="0.0002651601870904979"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nestle_Nips_Hard_Candy_Peanut_Butter.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nestle_Nips_Hard_Candy_Peanut_Butter.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

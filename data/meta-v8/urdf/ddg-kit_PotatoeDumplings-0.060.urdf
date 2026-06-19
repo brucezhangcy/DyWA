@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.04884577609204903"/>
+            <origin xyz=" -0.0003 -0.0004 -0.0001"/>
+            <inertia ixx="5.372026287346879e-05" ixy="-8.677037950535338e-07" ixz="6.159115983908844e-06"
+            iyy="2.229468987968242e-05" iyz="-4.6197552593468903e-07" izz="4.102314048971745e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_PotatoeDumplings.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_PotatoeDumplings.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

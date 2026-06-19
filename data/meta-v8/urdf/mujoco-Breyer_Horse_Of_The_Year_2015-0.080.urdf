@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.02860287757614398"/>
+            <origin xyz=" -0.0033 0.0004 0.0091"/>
+            <inertia ixx="9.373430149993465e-06" ixy="-1.1395032055454176e-06" ixz="5.071463923850878e-06"
+            iyy="3.423801149983358e-05" iyz="4.825727955774643e-07" izz="2.829271655832097e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Breyer_Horse_Of_The_Year_2015.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Breyer_Horse_Of_The_Year_2015.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

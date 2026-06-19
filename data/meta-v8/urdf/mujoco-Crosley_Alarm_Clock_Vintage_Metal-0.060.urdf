@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03946875091068688"/>
+            <origin xyz=" -0.0001 -0.0002 -0.0102"/>
+            <inertia ixx="1.82780366323316e-05" ixy="-9.343553096724313e-08" ixz="-2.3195480584694212e-08"
+            iyy="2.755798917176418e-05" iyz="-6.109063437617712e-07" izz="1.5387005385082744e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Crosley_Alarm_Clock_Vintage_Metal.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Crosley_Alarm_Clock_Vintage_Metal.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

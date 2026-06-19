@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.47844856136905894"/>
+            <origin xyz=" 0.0006 0.0006 -0.0000"/>
+            <inertia ixx="0.0023713423489972055" ixy="1.1223229542877943e-05" ixz="-1.2653064903013106e-05"
+            iyy="0.002376441649469213" iyz="-3.2208201637709687e-06" izz="0.004481087625541945"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-3M_Vinyl_Tape_Green_1_x_36_yd.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-3M_Vinyl_Tape_Green_1_x_36_yd.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

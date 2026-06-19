@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.264583228735406"/>
+            <origin xyz=" 0.0000 -0.0001 0.0000"/>
+            <inertia ixx="0.001487986531334101" ixy="5.847143334535068e-07" ixz="3.886755691701102e-09"
+            iyy="0.0005632872328184764" iyz="8.87332112294913e-09" izz="0.0020314680469121524"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/core-cellphone-5cc54b5db73e9e1e6decf1414eac2924.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/core-cellphone-5cc54b5db73e9e1e6decf1414eac2924.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

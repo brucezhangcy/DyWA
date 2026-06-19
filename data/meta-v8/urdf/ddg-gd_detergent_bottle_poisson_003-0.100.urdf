@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2705668969696168"/>
+            <origin xyz=" -0.0000 -0.0000 -0.0152"/>
+            <inertia ixx="0.000617684439409842" ixy="-7.405525652667386e-08" ixz="-4.5727390998059036e-07"
+            iyy="0.0007066645474194267" iyz="-1.1106500047543478e-07" izz="0.0002605439520573297"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_detergent_bottle_poisson_003.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_detergent_bottle_poisson_003.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

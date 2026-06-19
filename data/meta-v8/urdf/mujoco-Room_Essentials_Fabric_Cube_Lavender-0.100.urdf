@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.181474958943327"/>
+            <origin xyz=" -0.0003 0.0001 -0.0111"/>
+            <inertia ixx="0.0005598154607575857" ixy="1.8389231780650141e-06" ixz="3.851006745549605e-06"
+            iyy="0.0005439905587683971" iyz="6.107077131563446e-06" izz="0.0006397644457915169"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Room_Essentials_Fabric_Cube_Lavender.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Room_Essentials_Fabric_Cube_Lavender.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

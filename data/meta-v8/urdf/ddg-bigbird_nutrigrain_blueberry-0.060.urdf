@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.05204755947166834"/>
+            <origin xyz=" -0.0000 0.0002 -0.0002"/>
+            <inertia ixx="4.485370970470637e-05" ixy="1.890794354203661e-05" ixz="-1.1127447379375507e-07"
+            iyy="4.256882260703888e-05" iyz="1.779712830395496e-07" izz="4.293394730899119e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_nutrigrain_blueberry.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_nutrigrain_blueberry.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

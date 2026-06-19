@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.0722561899434704"/>
+            <origin xyz=" 0.0005 0.0113 -0.0191"/>
+            <inertia ixx="9.787539291918998e-05" ixy="9.216595081325181e-07" ixz="-1.388533234274088e-06"
+            iyy="6.837906494359312e-05" iyz="2.7896653123535962e-05" izz="5.8947131192131496e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-MINI_EXCAVATOR.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-MINI_EXCAVATOR.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

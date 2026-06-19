@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3331419947489369"/>
+            <origin xyz=" -0.0000 0.0004 -0.0000"/>
+            <inertia ixx="0.0006693892679280026" ixy="1.573563095423975e-06" ixz="4.480928710237972e-06"
+            iyy="0.0006684499647627961" iyz="-1.8557192271076063e-06" izz="0.00045611309018469436"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_progresso_new_england_clam_chowder.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_progresso_new_england_clam_chowder.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

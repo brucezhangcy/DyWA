@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.6845475807159476"/>
+            <origin xyz=" 0.0002 0.0000 -0.0027"/>
+            <inertia ixx="0.012134061382898735" ixy="6.317361427638762e-06" ixz="-2.521255359615672e-05"
+            iyy="0.012188220394759584" iyz="2.5779523470778943e-05" izz="0.005608586710926187"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_v8_fusion_strawberry_banana.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_v8_fusion_strawberry_banana.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

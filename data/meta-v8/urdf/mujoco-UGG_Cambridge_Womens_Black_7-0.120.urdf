@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.32911243616648655"/>
+            <origin xyz=" 0.0069 0.0181 -0.0186"/>
+            <inertia ixx="0.0011733850098333764" ixy="-0.00020723190298288835" ixz="-8.523578070769334e-05"
+            iyy="0.0007552011608189537" iyz="-0.00026820908088647546" izz="0.0008186183036142879"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-UGG_Cambridge_Womens_Black_7.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-UGG_Cambridge_Womens_Black_7.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

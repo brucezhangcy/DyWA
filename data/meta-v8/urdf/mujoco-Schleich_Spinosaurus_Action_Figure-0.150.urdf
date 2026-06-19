@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.12889086512522682"/>
+            <origin xyz=" -0.0033 -0.0179 0.0041"/>
+            <inertia ixx="0.0003913429372334982" ixy="-4.014097811238237e-06" ixz="3.2524424100944114e-06"
+            iyy="0.00013642380032480729" iyz="1.3449951891471815e-05" izz="0.00030797497777449703"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Schleich_Spinosaurus_Action_Figure.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Schleich_Spinosaurus_Action_Figure.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

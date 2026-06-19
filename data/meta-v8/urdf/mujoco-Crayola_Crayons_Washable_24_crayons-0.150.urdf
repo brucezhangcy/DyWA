@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.716418446969736"/>
+            <origin xyz=" 0.0001 0.0010 -0.0155"/>
+            <inertia ixx="0.003179169229619005" ixy="-1.3502805521824998e-06" ixz="-5.35865926647676e-06"
+            iyy="0.004403854759045848" iyz="-5.049479705527271e-05" izz="0.0017873893049169002"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Crayola_Crayons_Washable_24_crayons.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Crayola_Crayons_Washable_24_crayons.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

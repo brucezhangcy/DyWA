@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.080773919655833"/>
+            <origin xyz=" 0.0003 -0.0001 0.0005"/>
+            <inertia ixx="0.007094710137968471" ixy="0.0018105643963923094" ixz="-4.922571285094363e-05"
+            iyy="0.005252325910705068" iyz="-3.231951039457895e-05" izz="0.005117967908464158"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_nutrigrain_fruit_crunch_strawberry_parfait.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_nutrigrain_fruit_crunch_strawberry_parfait.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

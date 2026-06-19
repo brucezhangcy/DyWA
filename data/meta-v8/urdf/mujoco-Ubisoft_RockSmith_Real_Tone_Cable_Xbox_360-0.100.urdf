@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.11530291776683832"/>
+            <origin xyz=" 0.0074 -0.0052 -0.0039"/>
+            <inertia ixx="0.00022679327701831826" ixy="-6.184016404526488e-06" ixz="5.592123753249379e-06"
+            iyy="0.0002848343910739894" iyz="1.4782089134064626e-05" izz="0.0004909967853517519"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ubisoft_RockSmith_Real_Tone_Cable_Xbox_360.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Ubisoft_RockSmith_Real_Tone_Cable_Xbox_360.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1619852847279851"/>
+            <origin xyz=" 0.0003 0.0004 0.0001"/>
+            <inertia ixx="0.0003325160941745483" ixy="7.267763577760549e-06" ixz="2.0806586408698425e-05"
+            iyy="0.00014242296118376372" iyz="-3.985802342092292e-07" izz="0.0002538489672152257"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_CoughDropsHoney.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_CoughDropsHoney.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

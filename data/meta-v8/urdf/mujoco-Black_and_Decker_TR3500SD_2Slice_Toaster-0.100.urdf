@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3942333255194413"/>
+            <origin xyz=" -0.0013 -0.0058 -0.0018"/>
+            <inertia ixx="0.0009389706868726192" ixy="1.0351345332646017e-05" ixz="-2.846140833656073e-06"
+            iyy="0.0006172534048847025" iyz="7.64528271286919e-08" izz="0.0008373816055995678"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Black_and_Decker_TR3500SD_2Slice_Toaster.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Black_and_Decker_TR3500SD_2Slice_Toaster.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

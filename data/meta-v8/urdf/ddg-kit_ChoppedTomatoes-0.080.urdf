@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.25979834285457726"/>
+            <origin xyz=" 0.0003 -0.0001 0.0002"/>
+            <inertia ixx="0.0005081508016201972" ixy="1.9387672236309987e-06" ixz="-2.1584003737030825e-07"
+            iyy="0.00027459733509938527" iyz="-1.1595176099928275e-06" izz="0.0005079570216804068"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_ChoppedTomatoes.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_ChoppedTomatoes.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.054932195696537796"/>
+            <origin xyz=" -0.0009 -0.0012 0.0024"/>
+            <inertia ixx="4.858022619774004e-05" ixy="-4.915271537146991e-07" ixz="2.2994572386177266e-06"
+            iyy="4.854460074556054e-05" iyz="-3.8829954962536064e-06" izz="1.6556130185990357e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_crayola_yellow_green.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_crayola_yellow_green.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

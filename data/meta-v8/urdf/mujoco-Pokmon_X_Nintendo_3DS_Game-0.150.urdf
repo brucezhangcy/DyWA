@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.38905904779293016"/>
+            <origin xyz=" -0.0011 -0.0005 -0.0002"/>
+            <inertia ixx="0.0013430800894822718" ixy="-4.124129627023856e-06" ixz="9.127135952556004e-06"
+            iyy="0.0015911304634338773" iyz="-1.7155066575902073e-06" izz="0.002881464926064094"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Pokmon_X_Nintendo_3DS_Game.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Pokmon_X_Nintendo_3DS_Game.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

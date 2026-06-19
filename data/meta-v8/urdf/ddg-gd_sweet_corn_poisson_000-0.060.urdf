@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.027148899200102636"/>
+            <origin xyz=" 0.0000 0.0000 -0.0053"/>
+            <inertia ixx="2.760343092105646e-05" ixy="-4.862636001589695e-09" ixz="1.9150325170649452e-08"
+            iyy="2.759800346755665e-05" iyz="-1.3542932174605136e-08" izz="3.572907980983618e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_sweet_corn_poisson_000.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_sweet_corn_poisson_000.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

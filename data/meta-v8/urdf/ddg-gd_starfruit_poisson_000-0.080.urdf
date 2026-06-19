@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.14963585038279506"/>
+            <origin xyz=" -0.0000 -0.0001 -0.0003"/>
+            <inertia ixx="0.00023790484071333076" ixy="-1.1065071575597998e-07" ixz="9.637626583259728e-08"
+            iyy="9.011610580886149e-05" iyz="-1.145493671424373e-07" izz="0.00023555843634972073"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_starfruit_poisson_000.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-gd_starfruit_poisson_000.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

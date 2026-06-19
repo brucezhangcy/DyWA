@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03109779013548724"/>
+            <origin xyz=" 0.0018 0.0044 -0.0089"/>
+            <inertia ixx="2.5127890284037262e-05" ixy="-9.732546549634205e-07" ixz="-2.6225430302379856e-07"
+            iyy="6.5349409811043665e-06" iyz="-1.0590576802015167e-06" izz="2.4671635544695008e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-TROCHILUS_BOOST.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-TROCHILUS_BOOST.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

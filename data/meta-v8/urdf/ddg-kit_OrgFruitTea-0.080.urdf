@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.21101773509074007"/>
+            <origin xyz=" 0.0004 0.0002 0.0002"/>
+            <inertia ixx="0.0003955138185853668" ixy="3.4045157367786156e-06" ixz="4.388228327505507e-06"
+            iyy="0.00018875431687083417" iyz="-3.9013600253227346e-06" izz="0.00037555158063709153"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_OrgFruitTea.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_OrgFruitTea.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

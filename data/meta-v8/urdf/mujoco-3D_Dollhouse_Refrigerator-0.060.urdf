@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.049464242555996865"/>
+            <origin xyz=" -0.0000 0.0014 0.0004"/>
+            <inertia ixx="5.3644708773217346e-05" ixy="6.291599724504845e-08" ixz="6.261205536144434e-07"
+            iyy="5.555590177705429e-05" iyz="3.7428134105133267e-07" izz="1.2611570409696405e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-3D_Dollhouse_Refrigerator.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-3D_Dollhouse_Refrigerator.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

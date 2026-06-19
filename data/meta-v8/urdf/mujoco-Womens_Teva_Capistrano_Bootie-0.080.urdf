@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07971768236835708"/>
+            <origin xyz=" 0.0034 0.0115 -0.0138"/>
+            <inertia ixx="0.00012958266029515654" ixy="-5.909166580556554e-06" ixz="-2.027130647827382e-06"
+            iyy="5.5388039122302314e-05" iyz="-2.4305657177725153e-05" izz="9.351059609875059e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Womens_Teva_Capistrano_Bootie.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Womens_Teva_Capistrano_Bootie.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

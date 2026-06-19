@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.47429721892551163"/>
+            <origin xyz=" 0.0026 0.0001 0.0024"/>
+            <inertia ixx="0.0021384473535393297" ixy="2.1812018186335706e-07" ixz="0.00016274428388657902"
+            iyy="0.0007975047472473882" iyz="-1.691833548781801e-05" izz="0.0017405603461038877"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_ChocolateBars.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_ChocolateBars.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

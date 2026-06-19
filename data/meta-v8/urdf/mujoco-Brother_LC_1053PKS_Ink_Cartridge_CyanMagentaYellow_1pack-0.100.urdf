@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2840991561437831"/>
+            <origin xyz=" 0.0003 -0.0002 -0.0116"/>
+            <inertia ixx="0.0005401280393587635" ixy="-8.112155362261263e-07" ixz="3.971548875619286e-07"
+            iyy="0.0007297482185338758" iyz="1.2040697679058203e-05" izz="0.00036909643643484136"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Brother_LC_1053PKS_Ink_Cartridge_CyanMagentaYellow_1pack.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Brother_LC_1053PKS_Ink_Cartridge_CyanMagentaYellow_1pack.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

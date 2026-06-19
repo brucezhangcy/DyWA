@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.9990588631328119"/>
+            <origin xyz=" -0.0007 0.0003 -0.0020"/>
+            <inertia ixx="0.007101142348059631" ixy="8.199838189281268e-06" ixz="0.0008973809938094175"
+            iyy="0.0054878419572671495" iyz="2.303746577088404e-06" izz="0.0030438742617942605"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_SoftCakeOrange.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_SoftCakeOrange.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

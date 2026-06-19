@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.17524603275098583"/>
+            <origin xyz=" -0.0008 0.0014 -0.0094"/>
+            <inertia ixx="0.00036782559057809414" ixy="4.032392975221808e-06" ixz="-2.6858613984687323e-06"
+            iyy="0.0006358238752480793" iyz="-2.4773245392420153e-06" izz="0.0008106069560724846"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Curver_Storage_Bin_Black_Small.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Curver_Storage_Bin_Black_Small.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

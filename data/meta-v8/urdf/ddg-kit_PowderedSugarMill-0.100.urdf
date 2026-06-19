@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.20882855072884252"/>
+            <origin xyz=" 0.0001 0.0012 -0.0003"/>
+            <inertia ixx="0.0006794800708631475" ixy="1.04652505360226e-06" ixz="2.5469170371639426e-07"
+            iyy="0.00012211204444447944" iyz="-6.697516964777071e-06" izz="0.0006795978854629972"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_PowderedSugarMill.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_PowderedSugarMill.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

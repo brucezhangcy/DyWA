@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2703348625141678"/>
+            <origin xyz=" 0.0004 0.0010 0.0007"/>
+            <inertia ixx="0.00039550396583314557" ixy="9.849733760913697e-07" ixz="5.076509009000459e-06"
+            iyy="0.001255120427204319" iyz="-1.8633281050823333e-05" izz="0.0009150922533401026"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Super_Mario_Kart_Super_Nintendo_Entertainment_System.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Super_Mario_Kart_Super_Nintendo_Entertainment_System.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

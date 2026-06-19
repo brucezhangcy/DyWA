@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.02468708059663796"/>
+            <origin xyz=" 0.0002 -0.0077 0.0004"/>
+            <inertia ixx="5.0128926104405354e-05" ixy="-1.1719995238002847e-07" ixz="2.3374482734364954e-09"
+            iyy="2.385341968524483e-06" iyz="-3.2562883497190163e-07" izz="5.01242820755409e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Telescope-4789d91c52c2847a79c0e593f920268b.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Telescope-4789d91c52c2847a79c0e593f920268b.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

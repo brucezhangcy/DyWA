@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.29844859372776966"/>
+            <origin xyz=" -0.0001 -0.0001 -0.0002"/>
+            <inertia ixx="0.0003272884229937001" ixy="-5.952041704320177e-07" ixz="5.469927124594791e-06"
+            iyy="0.0009453696498405752" iyz="-4.615610280561269e-06" izz="0.0007910368604210095"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Little_Debbie_Cloud_Cakes_10_ct.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Little_Debbie_Cloud_Cakes_10_ct.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

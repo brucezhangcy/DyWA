@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.19694879819444314"/>
+            <origin xyz=" -0.0002 -0.0001 0.0001"/>
+            <inertia ixx="0.00021248529845013372" ixy="2.521191963169942e-07" ixz="3.252950487373071e-06"
+            iyy="0.0009317874690729666" iyz="8.336678277825298e-06" izz="0.0007448372980925847"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Clue_Board_Game_Classic_Edition.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Clue_Board_Game_Classic_Edition.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

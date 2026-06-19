@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.13981070962257117"/>
+            <origin xyz=" 0.0003 0.0003 0.0025"/>
+            <inertia ixx="0.0001276255021990311" ixy="-2.4938923467056084e-07" ixz="8.873698536703867e-08"
+            iyy="0.00012849671952018437" iyz="2.1471543406514275e-07" izz="0.0001918196321177992"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_bumblebee_albacore.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_bumblebee_albacore.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

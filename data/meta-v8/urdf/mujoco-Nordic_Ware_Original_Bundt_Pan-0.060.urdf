@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.055830896147178385"/>
+            <origin xyz=" 0.0009 0.0006 -0.0025"/>
+            <inertia ixx="5.3857990109287495e-05" ixy="3.2880676610739966e-07" ixz="-4.1314060632448877e-07"
+            iyy="5.0134200990621334e-05" iyz="-2.3271383113404426e-07" izz="8.813778134681911e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nordic_Ware_Original_Bundt_Pan.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nordic_Ware_Original_Bundt_Pan.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

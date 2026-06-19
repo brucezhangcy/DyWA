@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.34542948802879114"/>
+            <origin xyz=" -0.0002 -0.0001 0.0000"/>
+            <inertia ixx="0.0010565472895249653" ixy="6.668711428788199e-07" ixz="7.974619759315022e-06"
+            iyy="0.0016207343483427023" iyz="1.7630926208544172e-05" izz="0.0006629439531856064"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-HP_Card_Invitation_Kit.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-HP_Card_Invitation_Kit.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.21311076210634036"/>
+            <origin xyz=" -0.0015 0.0007 -0.0013"/>
+            <inertia ixx="0.0005579065589960148" ixy="1.7974478281017869e-06" ixz="1.4322947549401924e-06"
+            iyy="0.0001859050637255285" iyz="-7.582204143448281e-06" izz="0.0006799904332404745"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Performance_Bath_Sheet_Sandoval_Blue_33_x_63.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Performance_Bath_Sheet_Sandoval_Blue_33_x_63.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

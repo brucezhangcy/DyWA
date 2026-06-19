@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08762879001905745"/>
+            <origin xyz=" 0.0017 0.0113 -0.0111"/>
+            <inertia ixx="0.00012511225146055423" ixy="-5.811347315059584e-06" ixz="-3.2146865318274668e-06"
+            iyy="4.476827111188081e-05" iyz="-1.2151320165685941e-05" izz="0.00011056026710280229"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_PUMP_OMNI_LITE_HLS.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_PUMP_OMNI_LITE_HLS.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

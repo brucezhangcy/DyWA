@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.05478066862900962"/>
+            <origin xyz=" 0.0020 0.0002 -0.0029"/>
+            <inertia ixx="6.683831174227087e-05" ixy="3.4751396677838455e-06" ixz="2.0800103128218474e-06"
+            iyy="7.338361035609055e-05" iyz="1.2257691966274935e-05" izz="4.027903816914416e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Schleich_Bald_Eagle.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Schleich_Bald_Eagle.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

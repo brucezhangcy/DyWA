@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1285396802855042"/>
+            <origin xyz=" 0.0016 0.0040 -0.0068"/>
+            <inertia ixx="0.00033710495482987615" ixy="5.316281377059304e-06" ixz="1.3762712313891813e-07"
+            iyy="5.856211087803315e-05" iyz="-9.545109548225454e-06" izz="0.0003393009940342169"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-California_Navy_Tieks_Italian_Leather_Ballet_Flats.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-California_Navy_Tieks_Italian_Leather_Ballet_Flats.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

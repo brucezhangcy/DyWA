@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.17852105444765892"/>
+            <origin xyz=" 0.0003 0.0013 -0.0079"/>
+            <inertia ixx="0.00021546886439053126" ixy="3.2761508200484716e-07" ixz="1.2862314154512843e-06"
+            iyy="0.0002896422819835471" iyz="8.401704659322086e-06" izz="0.0001838874964997004"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Olive_Kids_Dinosaur_Land_Munch_n_Lunch.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Olive_Kids_Dinosaur_Land_Munch_n_Lunch.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

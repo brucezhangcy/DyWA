@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2123038334289894"/>
+            <origin xyz=" -0.0136 0.0007 -0.0009"/>
+            <inertia ixx="0.0005264626021316542" ixy="-3.667258782196275e-06" ixz="-6.336550026443126e-06"
+            iyy="0.0005968940832242875" iyz="3.725149806873157e-06" izz="0.0003593564704383945"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ACE_Coffee_Mug_Kristen_16_oz_cup.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ACE_Coffee_Mug_Kristen_16_oz_cup.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

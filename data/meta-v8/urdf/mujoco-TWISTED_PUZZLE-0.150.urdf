@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4219453847539337"/>
+            <origin xyz=" 0.0006 -0.0009 -0.0026"/>
+            <inertia ixx="0.00159161019310317" ixy="-5.38728121848877e-06" ixz="2.1071496187022576e-06"
+            iyy="0.0013717267095024062" iyz="-5.659374352583168e-05" izz="0.0028669866888122305"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-TWISTED_PUZZLE.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-TWISTED_PUZZLE.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

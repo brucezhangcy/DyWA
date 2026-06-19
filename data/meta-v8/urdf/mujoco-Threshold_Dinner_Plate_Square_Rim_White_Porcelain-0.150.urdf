@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2276704985888642"/>
+            <origin xyz=" 0.0006 -0.0009 -0.0040"/>
+            <inertia ixx="0.0009254703377577589" ixy="8.65758206489708e-06" ixz="9.79052309128247e-06"
+            iyy="0.0009015431301230058" iyz="-1.8991179641321595e-06" izz="0.0017955637530324895"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Dinner_Plate_Square_Rim_White_Porcelain.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Dinner_Plate_Square_Rim_White_Porcelain.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

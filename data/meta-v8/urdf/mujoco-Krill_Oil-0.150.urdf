@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.3341661880737736"/>
+            <origin xyz=" 0.0005 0.0002 -0.0114"/>
+            <inertia ixx="0.008866219609608747" ixy="-3.2157723073488537e-06" ixz="-0.00010970188917345799"
+            iyy="0.00887248379674889" iyz="2.2209035119691376e-05" izz="0.0036493225193862653"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Krill_Oil.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Krill_Oil.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

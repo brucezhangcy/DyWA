@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6469064478779238"/>
+            <origin xyz=" 0.0000 0.0001 -0.0000"/>
+            <inertia ixx="0.0024663252756285062" ixy="1.5273212790175215e-06" ixz="1.1771398841391953e-05"
+            iyy="0.004732801040884571" iyz="1.987862015285558e-05" izz="0.002517252196301143"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Frozen_Olafs_In_Trouble_PopOMatic_Game.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Frozen_Olafs_In_Trouble_PopOMatic_Game.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

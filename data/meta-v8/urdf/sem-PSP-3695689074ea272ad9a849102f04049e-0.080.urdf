@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.05341323411079631"/>
+            <origin xyz=" -0.0001 0.0004 0.0002"/>
+            <inertia ixx="2.0818572352798707e-05" ixy="1.7567403522118382e-08" ixz="-3.7765888144328275e-07"
+            iyy="0.00011729892022833914" iyz="3.184685595560949e-08" izz="9.912472760682742e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-PSP-3695689074ea272ad9a849102f04049e.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-PSP-3695689074ea272ad9a849102f04049e.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

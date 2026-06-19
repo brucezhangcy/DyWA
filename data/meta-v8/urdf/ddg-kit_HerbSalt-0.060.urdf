@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06639076299614047"/>
+            <origin xyz=" -0.0001 0.0003 -0.0000"/>
+            <inertia ixx="7.763466723988582e-05" ixy="-9.84297281797505e-08" ixz="1.6158142728906345e-07"
+            iyy="2.11377113297003e-05" iyz="-5.029575958748297e-07" izz="7.711399158662395e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_HerbSalt.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_HerbSalt.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

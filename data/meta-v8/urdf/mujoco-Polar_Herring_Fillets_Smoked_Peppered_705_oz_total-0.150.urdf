@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.727988765382561"/>
+            <origin xyz=" -0.0001 -0.0011 -0.0012"/>
+            <inertia ixx="0.0016752366669622032" ixy="-8.674259303652586e-06" ixz="-3.896229124977173e-05"
+            iyy="0.005699392609272548" iyz="-9.342477931296935e-05" izz="0.0044252751537073925"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Polar_Herring_Fillets_Smoked_Peppered_705_oz_total.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Polar_Herring_Fillets_Smoked_Peppered_705_oz_total.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

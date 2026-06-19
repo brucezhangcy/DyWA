@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08832345311348412"/>
+            <origin xyz=" 0.0030 0.0029 -0.0124"/>
+            <inertia ixx="0.00012740891177281954" ixy="-4.092022972172896e-06" ixz="-2.784118810328645e-06"
+            iyy="4.73668388523503e-05" iyz="-1.0503548082776727e-05" izz="0.00011243011226232512"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ZigKick_Hoops.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ZigKick_Hoops.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

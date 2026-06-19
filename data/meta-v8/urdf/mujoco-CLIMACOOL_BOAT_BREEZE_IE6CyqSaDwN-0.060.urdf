@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03355052360229201"/>
+            <origin xyz=" 0.0026 0.0023 -0.0074"/>
+            <inertia ixx="3.1659541510396477e-05" ixy="-1.3371161994413381e-06" ixz="-4.662986818440298e-07"
+            iyy="7.4128608304332525e-06" iyz="-1.7312505863715344e-06" izz="3.179767128772523e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-CLIMACOOL_BOAT_BREEZE_IE6CyqSaDwN.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-CLIMACOOL_BOAT_BREEZE_IE6CyqSaDwN.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

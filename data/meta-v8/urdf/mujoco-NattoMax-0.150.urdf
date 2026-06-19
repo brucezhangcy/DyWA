@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.4390220466041148"/>
+            <origin xyz=" 0.0004 0.0002 -0.0115"/>
+            <inertia ixx="0.009580844291662748" ixy="-2.9203757586273016e-06" ixz="-7.83779961277058e-05"
+            iyy="0.00962081492651582" iyz="3.487374504356217e-06" izz="0.004305294323005324"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-NattoMax.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-NattoMax.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1693026396100421"/>
+            <origin xyz=" 0.0046 0.0035 -0.0121"/>
+            <inertia ixx="0.00043147552864978395" ixy="-1.8859618951668686e-05" ixz="-3.926080824285153e-06"
+            iyy="0.00010306420086659095" iyz="-8.98254452486027e-06" izz="0.00043401936826187803"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-PureFlow_2_Color_RylPurHibiscusBlkSlvrWht_Size_50.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-PureFlow_2_Color_RylPurHibiscusBlkSlvrWht_Size_50.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

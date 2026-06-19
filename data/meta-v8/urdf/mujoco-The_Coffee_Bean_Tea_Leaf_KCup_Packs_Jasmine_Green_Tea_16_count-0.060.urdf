@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.09826671024001492"/>
+            <origin xyz=" 0.0001 -0.0000 -0.0000"/>
+            <inertia ixx="7.151228716015021e-05" ixy="1.748516386287262e-07" ixz="-2.448069265256399e-07"
+            iyy="9.926263193880878e-05" iyz="5.86236412837687e-07" izz="7.379318858513708e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-The_Coffee_Bean_Tea_Leaf_KCup_Packs_Jasmine_Green_Tea_16_count.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-The_Coffee_Bean_Tea_Leaf_KCup_Packs_Jasmine_Green_Tea_16_count.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

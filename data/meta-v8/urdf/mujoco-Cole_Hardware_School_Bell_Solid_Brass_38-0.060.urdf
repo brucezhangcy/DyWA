@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.016775487251064612"/>
+            <origin xyz=" -0.0004 0.0000 -0.0199"/>
+            <inertia ixx="1.4687320376383402e-05" ixy="1.9591085648918383e-08" ixz="1.7938943250005265e-07"
+            iyy="1.4738642936108878e-05" iyz="-8.883314795111571e-08" izz="3.9652286781725785e-06"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_School_Bell_Solid_Brass_38.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Cole_Hardware_School_Bell_Solid_Brass_38.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

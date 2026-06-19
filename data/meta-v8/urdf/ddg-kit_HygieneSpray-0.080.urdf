@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.05800626006253549"/>
+            <origin xyz=" -0.0002 -0.0138 0.0003"/>
+            <inertia ixx="8.691615439757244e-05" ixy="-1.0514390217267855e-07" ixz="-6.575475764115035e-08"
+            iyy="1.3482705640201046e-05" iyz="-6.728167243295967e-07" izz="8.696876538525044e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_HygieneSpray.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_HygieneSpray.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

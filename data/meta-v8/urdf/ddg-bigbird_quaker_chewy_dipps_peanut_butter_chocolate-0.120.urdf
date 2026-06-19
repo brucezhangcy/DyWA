@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5426204627769635"/>
+            <origin xyz=" 0.0000 -0.0002 -0.0002"/>
+            <inertia ixx="0.002398689420136209" ixy="-0.0004889482527473138" ixz="-1.0527091898118992e-05"
+            iyy="0.0017097477630070683" iyz="1.0505214321044646e-05" izz="0.0015061977238077136"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_quaker_chewy_dipps_peanut_butter_chocolate.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_quaker_chewy_dipps_peanut_butter_chocolate.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

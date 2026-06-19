@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.3302595022587302"/>
+            <origin xyz=" -0.0000 0.0002 -0.0114"/>
+            <inertia ixx="0.008813392089667561" ixy="-1.39776960763545e-06" ixz="-2.5728426910447455e-05"
+            iyy="0.008815230585577486" iyz="1.2106505773151998e-05" izz="0.0036337713324504917"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Blackcurrant_Lutein.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Blackcurrant_Lutein.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

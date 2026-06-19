@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.7031268897681969"/>
+            <origin xyz=" -0.0000 0.0001 -0.0079"/>
+            <inertia ixx="0.003066085451177549" ixy="-2.0296389149115116e-06" ixz="-1.1794576921030537e-05"
+            iyy="0.003066487394802011" iyz="5.412090312743431e-06" izz="0.0012410168700953026"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Pet_Dophilus_powder.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Pet_Dophilus_powder.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

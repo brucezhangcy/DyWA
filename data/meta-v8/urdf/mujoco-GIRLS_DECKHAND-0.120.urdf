@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1981369723020058"/>
+            <origin xyz=" 0.0031 0.0026 -0.0086"/>
+            <inertia ixx="0.0007673666076078028" ixy="-6.6132951969551345e-06" ixz="-8.077525037332459e-06"
+            iyy="0.00012981233304994874" iyz="-1.927339050329363e-05" izz="0.0008123016756658824"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-GIRLS_DECKHAND.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-GIRLS_DECKHAND.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

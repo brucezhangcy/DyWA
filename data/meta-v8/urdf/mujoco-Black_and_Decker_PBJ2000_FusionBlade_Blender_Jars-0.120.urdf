@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.47478855090741995"/>
+            <origin xyz=" 0.0007 0.0001 -0.0001"/>
+            <inertia ixx="0.0017987013763954278" ixy="2.3246278261127143e-06" ixz="1.5634513981008314e-05"
+            iyy="0.002192410162664841" iyz="3.720327709256289e-07" izz="0.0007244128201711493"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Black_and_Decker_PBJ2000_FusionBlade_Blender_Jars.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Black_and_Decker_PBJ2000_FusionBlade_Blender_Jars.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

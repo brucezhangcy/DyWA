@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1460966981618125"/>
+            <origin xyz=" 0.0001 0.0005 0.0008"/>
+            <inertia ixx="0.0002990615848414117" ixy="6.346015124654107e-07" ixz="-2.7088797536053238e-06"
+            iyy="0.00029952679055452066" iyz="5.127445336405081e-07" izz="7.601082502607139e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_coffee_mate_french_vanilla.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_coffee_mate_french_vanilla.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.16519837206031637"/>
+            <origin xyz=" 0.0002 0.0003 0.0016"/>
+            <inertia ixx="0.00017433603078549794" ixy="-1.0382914719596262e-06" ixz="-4.904219331165192e-07"
+            iyy="0.000174608484008135" iyz="4.146270219901486e-07" izz="0.00017907550655532322"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_nice_honey_roasted_almonds.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_nice_honey_roasted_almonds.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

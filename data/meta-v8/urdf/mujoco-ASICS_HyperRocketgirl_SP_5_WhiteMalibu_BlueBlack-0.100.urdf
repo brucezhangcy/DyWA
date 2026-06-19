@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.14642832076083648"/>
+            <origin xyz=" 0.0012 0.0052 -0.0073"/>
+            <inertia ixx="0.00038043296154649867" ixy="-6.106588041074058e-06" ixz="-3.0500933337391846e-06"
+            iyy="7.775738614623517e-05" iyz="-9.810539835072842e-06" izz="0.0003900083379644712"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_HyperRocketgirl_SP_5_WhiteMalibu_BlueBlack.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_HyperRocketgirl_SP_5_WhiteMalibu_BlueBlack.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

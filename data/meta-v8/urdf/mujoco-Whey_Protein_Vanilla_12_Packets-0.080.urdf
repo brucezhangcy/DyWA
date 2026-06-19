@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2323729811562798"/>
+            <origin xyz=" -0.0001 -0.0001 -0.0001"/>
+            <inertia ixx="0.00041824419806252874" ixy="-3.3822861155427435e-07" ixz="-2.842020959272969e-07"
+            iyy="0.0003072344174527851" iyz="1.1581468093207966e-06" izz="0.00030432208244809495"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Whey_Protein_Vanilla_12_Packets.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Whey_Protein_Vanilla_12_Packets.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6935958954920826"/>
+            <origin xyz=" -0.0004 0.0003 -0.0103"/>
+            <inertia ixx="0.0033857951671592027" ixy="-1.5003281327874116e-06" ixz="-1.0001329573371862e-05"
+            iyy="0.004536061415704411" iyz="-7.242339491823388e-05" izz="0.0016187769172501653"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Travel_Smart_Neck_Rest_Inflatable.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Travel_Smart_Neck_Rest_Inflatable.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

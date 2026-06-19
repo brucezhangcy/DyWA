@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="2.3813622819174496"/>
+            <origin xyz=" 0.0000 -0.0014 -0.0056"/>
+            <inertia ixx="0.014922603495360719" ixy="1.224154008728251e-06" ixz="1.1862208723226317e-05"
+            iyy="0.015182899133925858" iyz="2.1703532483259524e-05" izz="0.01461280431817254"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-RiceCooker-b3bbd60c89f54f1231a50841704a69bf.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-RiceCooker-b3bbd60c89f54f1231a50841704a69bf.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

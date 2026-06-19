@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.394927033771174"/>
+            <origin xyz=" 0.0016 0.0031 -0.0186"/>
+            <inertia ixx="0.000946443482116983" ixy="4.549008008927711e-05" ixz="2.623822595555582e-05"
+            iyy="0.001996553239561126" iyz="-2.7420854364608467e-05" izz="0.002796079572863466"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-BREAKFAST_MENU.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-BREAKFAST_MENU.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

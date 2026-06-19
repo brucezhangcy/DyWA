@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.20350535152020952"/>
+            <origin xyz=" 0.0014 0.0004 -0.0029"/>
+            <inertia ixx="0.00012686754115570008" ixy="-1.9033024367896097e-05" ixz="-1.6917332832327726e-05"
+            iyy="0.0007388527169298153" iyz="-3.207725686365898e-06" izz="0.0007689470919447566"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-My_First_Wiggle_Crocodile.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-My_First_Wiggle_Crocodile.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5121542697960931"/>
+            <origin xyz=" 0.0060 0.0126 -0.0201"/>
+            <inertia ixx="0.0029450859539548535" ixy="-0.00011613911230513791" ixz="-4.749253452838847e-05"
+            iyy="0.0007053072226625336" iyz="-0.0002668845640944405" izz="0.002819146784728106"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-D_ROSE_ENGLEWOOD_II.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-D_ROSE_ENGLEWOOD_II.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

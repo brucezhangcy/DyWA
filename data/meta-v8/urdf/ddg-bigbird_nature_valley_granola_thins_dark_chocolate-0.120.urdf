@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5483072655316555"/>
+            <origin xyz=" -0.0001 0.0005 -0.0002"/>
+            <inertia ixx="0.0025900035337954163" ixy="-0.0003192045588537874" ixz="-2.401550219335964e-05"
+            iyy="0.0015103284560917972" iyz="-5.1026669930531796e-06" izz="0.001577172141944721"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_nature_valley_granola_thins_dark_chocolate.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_nature_valley_granola_thins_dark_chocolate.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

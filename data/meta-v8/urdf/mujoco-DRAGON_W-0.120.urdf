@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.24027146769708477"/>
+            <origin xyz=" 0.0034 0.0105 -0.0139"/>
+            <inertia ixx="0.000821105735098578" ixy="-3.8545073187494745e-05" ixz="-1.2140277674276261e-05"
+            iyy="0.00018937494198164616" iyz="-4.481791027916206e-05" izz="0.0008105665599759079"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-DRAGON_W.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-DRAGON_W.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

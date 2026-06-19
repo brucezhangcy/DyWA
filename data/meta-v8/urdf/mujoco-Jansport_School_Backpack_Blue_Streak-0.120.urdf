@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6752025555902036"/>
+            <origin xyz=" -0.0040 0.0060 -0.0075"/>
+            <inertia ixx="0.002118947625533479" ixy="1.55666550309998e-05" ixz="1.323193518522731e-05"
+            iyy="0.00207463688887995" iyz="-2.513249060879205e-05" izz="0.0015584783294112499"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Jansport_School_Backpack_Blue_Streak.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Jansport_School_Backpack_Blue_Streak.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

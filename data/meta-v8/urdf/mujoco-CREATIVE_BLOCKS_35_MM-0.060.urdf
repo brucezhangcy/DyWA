@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.035158056432292355"/>
+            <origin xyz=" 0.0010 0.0005 -0.0076"/>
+            <inertia ixx="1.2678681734505817e-05" ixy="-3.969583368503838e-07" ixz="-3.7935895981196246e-07"
+            iyy="2.6049513305326023e-05" iyz="-1.6938204935863213e-07" izz="1.8254771145098696e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-CREATIVE_BLOCKS_35_MM.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-CREATIVE_BLOCKS_35_MM.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

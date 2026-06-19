@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.12488972382933261"/>
+            <origin xyz=" 0.0008 -0.0109 -0.0018"/>
+            <inertia ixx="0.00017454130843957123" ixy="-2.6060883070937453e-06" ixz="3.111079803537387e-06"
+            iyy="0.00016319346624322391" iyz="3.876946473303759e-06" izz="8.169764775307641e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Black_Decker_CM2035B_12Cup_Thermal_Coffeemaker.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Black_Decker_CM2035B_12Cup_Thermal_Coffeemaker.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

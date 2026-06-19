@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.014019875545317589"/>
+            <origin xyz=" -0.0000 0.0004 -0.0000"/>
+            <inertia ixx="1.3191278654823148e-05" ixy="1.5131765896382456e-07" ixz="-4.000706097037279e-08"
+            iyy="3.006701707697609e-06" iyz="-2.699288697467283e-08" izz="1.6025703324323027e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sushi_Mat.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Sushi_Mat.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6652099650675013"/>
+            <origin xyz=" 0.0042 0.0235 -0.0271"/>
+            <inertia ixx="0.003449916503858618" ixy="-0.00011493520555147063" ixz="-0.00011107039376151011"
+            iyy="0.0016508647074905956" iyz="-0.0006715232736342634" izz="0.0026031866801174545"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-AMBERLIGHT_UP_W.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-AMBERLIGHT_UP_W.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.037056763992344637"/>
+            <origin xyz=" 0.0000 -0.0000 -0.0001"/>
+            <inertia ixx="1.4824342013659876e-05" ixy="1.1071478477848103e-09" ixz="1.5581854932124715e-07"
+            iyy="4.370244137887016e-05" iyz="-1.8332327088411993e-09" izz="3.1012066068217195e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Firefly_Clue_Board_Game.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Firefly_Clue_Board_Game.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08863378778556717"/>
+            <origin xyz=" -0.0001 0.0003 -0.0004"/>
+            <inertia ixx="5.7899956795047334e-05" ixy="-2.19107773019166e-06" ixz="-4.4332679344249666e-08"
+            iyy="9.293109974273848e-05" iyz="2.8979682463822828e-08" izz="6.739072344189464e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_010_potted_meat_can.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_010_potted_meat_can.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

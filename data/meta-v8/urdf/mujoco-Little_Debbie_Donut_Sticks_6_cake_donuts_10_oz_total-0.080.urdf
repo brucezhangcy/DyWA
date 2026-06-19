@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.050748293446562884"/>
+            <origin xyz=" -0.0002 -0.0001 0.0000"/>
+            <inertia ixx="1.4228808894914004e-05" ixy="-1.2672817893959735e-07" ixz="4.4637376829302885e-08"
+            iyy="0.00010447726559013796" iyz="-1.1287955263240724e-07" izz="9.379340781431797e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Little_Debbie_Donut_Sticks_6_cake_donuts_10_oz_total.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Little_Debbie_Donut_Sticks_6_cake_donuts_10_oz_total.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

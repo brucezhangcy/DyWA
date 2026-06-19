@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="2.1395300911746498"/>
+            <origin xyz=" 0.0000 -0.0402 -0.0000"/>
+            <inertia ixx="0.012253033576090687" ixy="1.8931417192338113e-06" ixz="-1.3529193503353295e-05"
+            iyy="0.014062020380404614" iyz="-7.310693607117112e-06" izz="0.012294899718271567"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/core-bottle-3ae3a9b74f96fef28fe15648f042f0d9.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/core-bottle-3ae3a9b74f96fef28fe15648f042f0d9.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

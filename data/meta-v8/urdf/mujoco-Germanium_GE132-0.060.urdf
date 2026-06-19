@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08688745586931143"/>
+            <origin xyz=" -0.0000 0.0000 -0.0044"/>
+            <inertia ixx="9.400817321213317e-05" ixy="-1.230472088352522e-08" ixz="-9.29068127246791e-09"
+            iyy="9.393920859463059e-05" iyz="-4.470287221826687e-08" izz="3.8691344920333465e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Germanium_GE132.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Germanium_GE132.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.04225666260521249"/>
+            <origin xyz=" -0.0014 -0.0001 -0.0078"/>
+            <inertia ixx="6.21345885613321e-05" ixy="-6.867997328301503e-06" ixz="-2.514231983270596e-07"
+            iyy="1.2460784287255317e-05" iyz="-2.2420530368967436e-06" izz="6.916168791449873e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-REEF_ZENFUN.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-REEF_ZENFUN.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

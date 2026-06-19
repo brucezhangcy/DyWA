@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1794669253000178"/>
+            <origin xyz=" -0.0001 -0.0003 0.0000"/>
+            <inertia ixx="0.0003613177778214292" ixy="8.894188608197695e-07" ixz="1.7771595114241584e-05"
+            iyy="0.00026349581090305703" iyz="4.046983840764635e-07" izz="0.00017537763292239898"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_Knaeckebrot.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_Knaeckebrot.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

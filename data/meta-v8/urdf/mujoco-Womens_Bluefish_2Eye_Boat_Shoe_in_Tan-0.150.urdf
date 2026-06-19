@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4483382807168911"/>
+            <origin xyz=" 0.0038 -0.0008 -0.0174"/>
+            <inertia ixx="0.0005370946111222791" ixy="-0.00011541853254285324" ixz="-5.458253849502579e-05"
+            iyy="0.002532381510108875" iyz="2.613941504833766e-05" izz="0.0025864240295133795"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Womens_Bluefish_2Eye_Boat_Shoe_in_Tan.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Womens_Bluefish_2Eye_Boat_Shoe_in_Tan.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

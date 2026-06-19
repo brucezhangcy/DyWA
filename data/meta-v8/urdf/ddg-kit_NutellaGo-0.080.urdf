@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.14352683534662483"/>
+            <origin xyz=" 0.0037 0.0018 0.0032"/>
+            <inertia ixx="0.0002245490409991702" ixy="4.987441177879172e-08" ixz="2.6377343517201e-05"
+            iyy="0.0001283106137667263" iyz="-2.5200505978344906e-07" izz="0.00017621438824263948"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_NutellaGo.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_NutellaGo.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

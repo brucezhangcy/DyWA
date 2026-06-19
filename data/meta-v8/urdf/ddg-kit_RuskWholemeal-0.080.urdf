@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.22200118640714597"/>
+            <origin xyz=" 0.0005 0.0002 -0.0002"/>
+            <inertia ixx="0.0004249595644528992" ixy="8.506959987019121e-07" ixz="2.931737801790983e-05"
+            iyy="0.000285385246433198" iyz="3.9002780727258255e-07" izz="0.0002936214039620625"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_RuskWholemeal.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-kit_RuskWholemeal.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

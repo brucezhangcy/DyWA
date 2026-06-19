@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.11180585967143"/>
+            <origin xyz=" 0.0001 0.0019 -0.0227"/>
+            <inertia ixx="0.00012113794281964031" ixy="-1.4506019195833687e-07" ixz="-5.521869071783474e-07"
+            iyy="0.0001233096983022607" iyz="-8.556564942933076e-06" izz="0.00011656917895706064"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-CHICKEN_RACER.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-CHICKEN_RACER.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

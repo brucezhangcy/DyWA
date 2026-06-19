@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.4636510778483363"/>
+            <origin xyz=" 0.0004 -0.0001 -0.0082"/>
+            <inertia ixx="0.01018812839980935" ixy="2.880707134555647e-06" ixz="-7.957216631456984e-05"
+            iyy="0.010197198159811122" iyz="2.1378203879428542e-05" izz="0.004316969339828097"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-QAbsorb_CoQ10.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-QAbsorb_CoQ10.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4397108624023902"/>
+            <origin xyz=" 0.0058 0.0106 -0.0157"/>
+            <inertia ixx="0.0024281732695037314" ixy="-0.00011043891244509816" ixz="-3.040365660349236e-05"
+            iyy="0.0005175971306944075" iyz="-7.767310353074183e-05" izz="0.0024483022681882766"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Great_Jones_Wingtip_j5NV8GRnitM.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Great_Jones_Wingtip_j5NV8GRnitM.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

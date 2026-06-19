@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.6756782741547105"/>
+            <origin xyz=" -0.0003 0.0019 -0.0016"/>
+            <inertia ixx="0.00270265554752816" ixy="-6.44257865711174e-06" ixz="5.3753478516178725e-06"
+            iyy="0.004895026259298468" iyz="-4.722440354238646e-05" izz="0.0024881443054421215"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Android_Lego.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Android_Lego.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.32766691973976"/>
+            <origin xyz=" 0.0000 -0.0000 -0.0111"/>
+            <inertia ixx="0.008838185515308837" ixy="-4.125201291387369e-06" ixz="-8.552964086679437e-06"
+            iyy="0.008851636898756747" iyz="2.0996628599448982e-05" izz="0.003602080056961647"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-QHPomegranate.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-QHPomegranate.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

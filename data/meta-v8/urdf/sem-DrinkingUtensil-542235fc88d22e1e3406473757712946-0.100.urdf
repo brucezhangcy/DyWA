@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2931256386544702"/>
+            <origin xyz=" -0.0003 -0.0099 0.0041"/>
+            <inertia ixx="0.0005889497704668424" ixy="3.153315347094212e-06" ixz="-2.4125306226866313e-06"
+            iyy="0.0005528707762177677" iyz="-2.9367929246116033e-06" izz="0.0004759000580059479"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-DrinkingUtensil-542235fc88d22e1e3406473757712946.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-DrinkingUtensil-542235fc88d22e1e3406473757712946.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

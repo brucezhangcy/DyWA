@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.05149011241651301"/>
+            <origin xyz=" -0.0000 0.0000 -0.0002"/>
+            <inertia ixx="2.574452493450397e-05" ixy="-1.4508354656249094e-08" ixz="-1.3014306009172415e-07"
+            iyy="5.989268278829042e-05" iyz="-9.363976495749477e-08" izz="3.943638388890169e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Asus_X99Deluxe_Motherboard_ATX_LGA2011v3_Socket.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Asus_X99Deluxe_Motherboard_ATX_LGA2011v3_Socket.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.07748106060217476"/>
+            <origin xyz=" 0.0031 0.0040 -0.0080"/>
+            <inertia ixx="0.00012472843213494187" ixy="-4.78631225208707e-06" ixz="-2.014635904003794e-06"
+            iyy="2.791110142567e-05" iyz="-7.076014383001928e-06" izz="0.00012354083761285898"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SAMBA_HEMP.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SAMBA_HEMP.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06472773256599516"/>
+            <origin xyz=" -0.0106 0.0024 -0.0022"/>
+            <inertia ixx="4.8129946722758185e-05" ixy="-1.4884300872563473e-06" ixz="7.026290547091551e-06"
+            iyy="8.339942856454195e-05" iyz="-1.168081881193973e-06" izz="0.00012004707063406324"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-HAMMER_PEG.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-HAMMER_PEG.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.22964032215460387"/>
+            <origin xyz=" 0.0036 0.0012 -0.0124"/>
+            <inertia ixx="0.00017404782383120192" ixy="-4.170264986422005e-05" ixz="-1.648715455124634e-05"
+            iyy="0.0008352618517548505" iyz="4.939114266117597e-06" izz="0.0008538223152554147"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Womens_Canvas_Bahama_in_Black.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Womens_Canvas_Bahama_in_Black.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

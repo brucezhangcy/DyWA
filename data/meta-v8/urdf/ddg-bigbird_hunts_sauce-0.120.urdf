@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.8953792005653067"/>
+            <origin xyz=" 0.0001 -0.0003 0.0040"/>
+            <inertia ixx="0.004009897048599145" ixy="-7.942219508383902e-06" ixz="2.2192153688659177e-07"
+            iyy="0.004061082608491993" iyz="-5.616064731996838e-06" izz="0.002054982693818923"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_hunts_sauce.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_hunts_sauce.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

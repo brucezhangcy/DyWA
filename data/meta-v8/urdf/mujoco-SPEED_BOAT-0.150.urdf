@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.7427475689570471"/>
+            <origin xyz=" -0.0369 -0.0051 -0.0138"/>
+            <inertia ixx="0.002378547832120691" ixy="-9.907264145253702e-05" ixz="-0.00018356425743983688"
+            iyy="0.0031732280004550884" iyz="-2.919570946376497e-05" izz="0.004523210223442776"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SPEED_BOAT.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-SPEED_BOAT.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

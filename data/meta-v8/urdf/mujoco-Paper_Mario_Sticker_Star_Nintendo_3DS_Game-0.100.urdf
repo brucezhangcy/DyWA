@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.117346307243991"/>
+            <origin xyz=" -0.0012 -0.0005 -0.0001"/>
+            <inertia ixx="0.00018427189490078993" ixy="9.918037210798509e-07" ixz="2.4237628997746033e-06"
+            iyy="0.00021532372401094162" iyz="-1.4044183932324372e-06" izz="0.0003922327887317316"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Paper_Mario_Sticker_Star_Nintendo_3DS_Game.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Paper_Mario_Sticker_Star_Nintendo_3DS_Game.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

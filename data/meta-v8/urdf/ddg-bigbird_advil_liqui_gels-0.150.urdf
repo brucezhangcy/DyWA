@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.52762215934598"/>
+            <origin xyz=" 0.0014 0.0007 0.0020"/>
+            <inertia ixx="0.009260810111939778" ixy="0.0025155445920891253" ixz="-6.898526326400904e-05"
+            iyy="0.006238319130937452" iyz="-3.914151302585538e-05" izz="0.01051817953132405"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_advil_liqui_gels.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_advil_liqui_gels.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.7436128551330272"/>
+            <origin xyz=" -0.0000 0.0000 -0.0002"/>
+            <inertia ixx="0.003600191335366598" ixy="-6.158675112642924e-06" ixz="-1.3593272742699595e-05"
+            iyy="0.005375062267509263" iyz="2.253073635675405e-05" izz="0.002188906978055328"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Balderdash_Game.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Balderdash_Game.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

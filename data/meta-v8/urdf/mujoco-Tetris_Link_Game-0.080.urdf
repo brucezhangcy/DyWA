@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.13226637045276865"/>
+            <origin xyz=" 0.0001 0.0002 -0.0001"/>
+            <inertia ixx="0.00012586188267592942" ixy="1.9572833817266094e-07" ixz="-2.6998398684203513e-07"
+            iyy="0.0002744419033587019" iyz="-1.7474530748847422e-06" izz="0.0001762314203539227"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Tetris_Link_Game.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Tetris_Link_Game.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.12141537249662171"/>
+            <origin xyz=" 0.0002 0.0003 0.0020"/>
+            <inertia ixx="0.00010308180679093192" ixy="-5.766456035502681e-07" ixz="-4.1062893842002816e-07"
+            iyy="0.00010396868488482865" iyz="-9.81796957301625e-07" izz="0.0001556408986510743"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Ramekin_White_Porcelain.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Ramekin_White_Porcelain.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

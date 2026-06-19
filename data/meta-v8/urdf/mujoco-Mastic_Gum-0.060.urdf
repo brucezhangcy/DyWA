@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08543685361947327"/>
+            <origin xyz=" 0.0001 0.0001 -0.0045"/>
+            <inertia ixx="9.07939090460733e-05" ixy="8.018584732686211e-09" ixz="-5.525932329674553e-07"
+            iyy="9.093561938047124e-05" iyz="-7.137883734011382e-07" izz="3.741846988745718e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Mastic_Gum.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Mastic_Gum.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

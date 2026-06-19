@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.4785648516142801"/>
+            <origin xyz=" -0.0006 -0.0001 -0.0002"/>
+            <inertia ixx="0.0019723395524212273" ixy="1.941702790033027e-05" ixz="-2.684334711834104e-05"
+            iyy="0.0019732662180185065" iyz="-6.74004717177148e-06" izz="0.003777175591899466"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-3M_Antislip_Surfacing_Light_Duty_White.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-3M_Antislip_Surfacing_Light_Duty_White.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

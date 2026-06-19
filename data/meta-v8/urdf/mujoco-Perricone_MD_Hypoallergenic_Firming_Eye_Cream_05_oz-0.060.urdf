@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.1160364561439625"/>
+            <origin xyz=" -0.0001 0.0001 -0.0001"/>
+            <inertia ixx="9.729627974921954e-05" ixy="-5.490887198216802e-07" ixz="6.132153113579751e-09"
+            iyy="9.788616984566197e-05" iyz="5.759173464008087e-08" izz="0.00011097623547947933"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Hypoallergenic_Firming_Eye_Cream_05_oz.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Hypoallergenic_Firming_Eye_Cream_05_oz.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

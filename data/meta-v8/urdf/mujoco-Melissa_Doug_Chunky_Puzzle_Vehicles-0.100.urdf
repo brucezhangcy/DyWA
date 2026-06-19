@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08215352490158759"/>
+            <origin xyz=" 0.0004 0.0009 -0.0011"/>
+            <inertia ixx="9.76519475807048e-05" ixy="-3.957617974079312e-06" ixz="5.437288500210782e-08"
+            iyy="0.0001652442698326822" iyz="-5.160298313122833e-07" izz="0.000259849286105725"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Melissa_Doug_Chunky_Puzzle_Vehicles.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Melissa_Doug_Chunky_Puzzle_Vehicles.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.5819210884661583"/>
+            <origin xyz=" 0.0005 0.0022 0.0029"/>
+            <inertia ixx="0.00265242272954029" ixy="1.3684894064381841e-05" ixz="-4.080801026012101e-06"
+            iyy="0.002638633351722425" iyz="-2.1308267074551046e-05" izz="0.0025593291196959805"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Pennington_Electric_Pot_Cabana_4.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Pennington_Electric_Pot_Cabana_4.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

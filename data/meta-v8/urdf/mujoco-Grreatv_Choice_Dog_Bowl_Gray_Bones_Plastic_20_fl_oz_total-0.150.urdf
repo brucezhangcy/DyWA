@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.9130971926763645"/>
+            <origin xyz=" -0.0022 0.0010 -0.0056"/>
+            <inertia ixx="0.006093005609563872" ixy="3.516163917778151e-05" ixz="-8.958318445169246e-05"
+            iyy="0.005489789816058908" iyz="-5.24529728921609e-05" izz="0.010649622018889143"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Grreatv_Choice_Dog_Bowl_Gray_Bones_Plastic_20_fl_oz_total.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Grreatv_Choice_Dog_Bowl_Gray_Bones_Plastic_20_fl_oz_total.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

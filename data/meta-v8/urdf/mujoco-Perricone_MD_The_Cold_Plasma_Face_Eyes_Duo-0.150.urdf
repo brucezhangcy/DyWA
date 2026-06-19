@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.3698408604635801"/>
+            <origin xyz=" 0.0007 0.0001 -0.0002"/>
+            <inertia ixx="0.005645274777219148" ixy="2.000341936756382e-05" ixz="1.3283928970366087e-05"
+            iyy="0.00925954682473204" iyz="3.6907324074927434e-05" izz="0.006451237001134639"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_The_Cold_Plasma_Face_Eyes_Duo.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_The_Cold_Plasma_Face_Eyes_Duo.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

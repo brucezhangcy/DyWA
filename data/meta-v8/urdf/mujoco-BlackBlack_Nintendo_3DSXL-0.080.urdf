@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.057578309610784"/>
+            <origin xyz=" 0.0002 0.0035 -0.0143"/>
+            <inertia ixx="6.41545564223357e-05" ixy="-1.796847642819786e-07" ixz="5.291316322943243e-07"
+            iyy="8.13880034223736e-05" iyz="-2.347477654285185e-05" izz="0.00010617957830779136"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-BlackBlack_Nintendo_3DSXL.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-BlackBlack_Nintendo_3DSXL.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

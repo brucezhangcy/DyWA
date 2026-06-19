@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.08502277920548751"/>
+            <origin xyz=" 0.0035 0.0063 -0.0067"/>
+            <inertia ixx="0.00013717311602650005" ixy="-6.240659328584318e-06" ixz="-2.2950687013715304e-06"
+            iyy="3.261985302766646e-05" iyz="-8.423620406844077e-06" izz="0.00013409772485619572"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_R_DANCE_FLASH.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Reebok_R_DANCE_FLASH.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

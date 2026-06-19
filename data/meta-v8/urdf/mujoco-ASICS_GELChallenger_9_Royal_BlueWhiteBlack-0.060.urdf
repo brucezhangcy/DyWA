@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03592092111533071"/>
+            <origin xyz=" 0.0026 0.0047 -0.0045"/>
+            <inertia ixx="3.079131306425023e-05" ixy="-1.4809578985374297e-06" ixz="-4.207596396271944e-07"
+            iyy="7.656692834244161e-06" iyz="-9.937909715585948e-07" izz="3.066956321012914e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_GELChallenger_9_Royal_BlueWhiteBlack.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_GELChallenger_9_Royal_BlueWhiteBlack.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.0794416999107511"/>
+            <origin xyz=" -0.0003 -0.0011 -0.0059"/>
+            <inertia ixx="4.528174696122376e-05" ixy="3.7527559971947993e-07" ixz="5.807863815269159e-07"
+            iyy="9.199015850861321e-05" iyz="6.113385971866564e-07" izz="6.466405789902726e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Paul_Frank_Dot_Lunch_Box.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Paul_Frank_Dot_Lunch_Box.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

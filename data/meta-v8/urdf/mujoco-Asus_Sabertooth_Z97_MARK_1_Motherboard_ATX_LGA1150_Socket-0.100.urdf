@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.24737807094754843"/>
+            <origin xyz=" -0.0003 0.0001 -0.0001"/>
+            <inertia ixx="0.0003481930752485206" ixy="1.5435567007725605e-06" ixz="1.0165893250566556e-06"
+            iyy="0.0008123741339396081" iyz="3.230780695224976e-06" izz="0.000536542771993437"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Asus_Sabertooth_Z97_MARK_1_Motherboard_ATX_LGA1150_Socket.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Asus_Sabertooth_Z97_MARK_1_Motherboard_ATX_LGA1150_Socket.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

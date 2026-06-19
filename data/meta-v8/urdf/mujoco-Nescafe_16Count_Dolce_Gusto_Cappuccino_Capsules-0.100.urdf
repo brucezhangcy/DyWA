@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.49415347275006904"/>
+            <origin xyz=" 0.0001 0.0002 -0.0005"/>
+            <inertia ixx="0.0011363910573489841" ixy="6.486917594145427e-06" ixz="-1.1469157941537582e-06"
+            iyy="0.0011366823835609978" iyz="-1.9880045269180693e-06" izz="0.0011425163125368142"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nescafe_16Count_Dolce_Gusto_Cappuccino_Capsules.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Nescafe_16Count_Dolce_Gusto_Cappuccino_Capsules.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

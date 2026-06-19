@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.09177547450412941"/>
+            <origin xyz=" 0.0000 0.0001 -0.0001"/>
+            <inertia ixx="9.083640222935739e-05" ixy="-4.6771227010151384e-08" ixz="-2.3185681431987198e-07"
+            iyy="9.108199625685212e-05" iyz="1.1350484356880618e-07" izz="4.924905464002104e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Super_Berry_Powder_with_Acai_Supplements.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Perricone_MD_Super_Berry_Powder_with_Acai_Supplements.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

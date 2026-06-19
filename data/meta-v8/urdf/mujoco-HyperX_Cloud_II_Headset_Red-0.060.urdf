@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.06572629785276295"/>
+            <origin xyz=" 0.0001 -0.0000 -0.0043"/>
+            <inertia ixx="4.6664421923032034e-05" ixy="6.5675259813008146e-09" ixz="-1.807474542792915e-08"
+            iyy="6.553243440264327e-05" iyz="6.92398299851762e-08" izz="3.3391225424870955e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-HyperX_Cloud_II_Headset_Red.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-HyperX_Cloud_II_Headset_Red.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

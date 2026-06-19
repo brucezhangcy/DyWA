@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.3490804228405696"/>
+            <origin xyz=" -0.0005 0.0016 0.0049"/>
+            <inertia ixx="0.0006686653523869645" ixy="6.151570632204466e-07" ixz="-5.4574354840879525e-06"
+            iyy="0.0006688240608105691" iyz="-4.319865408439275e-06" izz="0.0005204682207006613"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_blue_clover_baby_toy.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-bigbird_blue_clover_baby_toy.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

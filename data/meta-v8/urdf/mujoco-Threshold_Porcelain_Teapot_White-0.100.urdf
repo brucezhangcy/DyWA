@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.2827537942367284"/>
+            <origin xyz=" -0.0009 0.0024 -0.0108"/>
+            <inertia ixx="0.00042290555646843666" ixy="4.930842883782946e-05" ixz="1.9642423738823894e-06"
+            iyy="0.00042901195100338013" iyz="3.926881223931952e-06" izz="0.0005358631287832093"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Porcelain_Teapot_White.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Threshold_Porcelain_Teapot_White.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.8850061908626237"/>
+            <origin xyz=" 0.0052 0.0001 -0.0019"/>
+            <inertia ixx="0.001998229939594061" ixy="-6.706576401465996e-06" ixz="1.1676678062532881e-05"
+            iyy="0.005820075604021733" iyz="8.267206178623584e-06" izz="0.004920208084972752"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Orbit_Bubblemint_Mini_Bottle_6_ct.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Orbit_Bubblemint_Mini_Bottle_6_ct.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

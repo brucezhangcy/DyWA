@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03916348202277903"/>
+            <origin xyz=" 0.0024 0.0057 -0.0052"/>
+            <inertia ixx="3.671535833529749e-05" ixy="-1.2068029803895967e-06" ixz="-5.758330576972694e-07"
+            iyy="9.513494946112947e-06" iyz="-2.6299386422767932e-06" izz="3.564011727104e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_GELLinksmaster_WhiteRasberryGunmetal.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-ASICS_GELLinksmaster_WhiteRasberryGunmetal.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

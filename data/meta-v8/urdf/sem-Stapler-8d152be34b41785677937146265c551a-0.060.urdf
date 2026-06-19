@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03061563536354387"/>
+            <origin xyz=" 0.0044 0.0001 -0.0003"/>
+            <inertia ixx="6.405326763746575e-06" ixy="8.578481344318999e-08" ixz="1.7487756538487906e-07"
+            iyy="3.227185801529719e-05" iyz="-3.758234141977221e-09" izz="2.915353095216715e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Stapler-8d152be34b41785677937146265c551a.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-Stapler-8d152be34b41785677937146265c551a.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.11626690506582074"/>
+            <origin xyz=" -0.0000 0.0000 -0.0001"/>
+            <inertia ixx="0.0001294690156236364" ixy="4.102451846276978e-08" ixz="-1.186242990975425e-07"
+            iyy="0.00012933044448376076" iyz="-6.489475782107775e-08" izz="7.352502470135171e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_002_master_chef_can.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/ddg-ycb_002_master_chef_can.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

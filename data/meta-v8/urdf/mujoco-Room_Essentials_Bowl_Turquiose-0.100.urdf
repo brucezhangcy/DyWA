@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.23468513412110067"/>
+            <origin xyz=" 0.0015 0.0008 -0.0036"/>
+            <inertia ixx="0.0006458365970094459" ixy="4.4312993159010846e-07" ixz="-1.227764695965881e-05"
+            iyy="0.0006548507294131625" iyz="1.053657529237722e-06" izz="0.0009609430003926715"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Room_Essentials_Bowl_Turquiose.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Room_Essentials_Bowl_Turquiose.obj" scale="0.1 0.1 0.1"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.38361631085318787"/>
+            <origin xyz=" 0.0003 0.0003 -0.0008"/>
+            <inertia ixx="0.0017209453090169021" ixy="6.2171217999587745e-06" ixz="-1.5844480226198596e-05"
+            iyy="0.0017267535559788506" iyz="4.305657724918028e-05" izz="0.0003636778614705809"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-YumYum_D3_Liquid.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-YumYum_D3_Liquid.obj" scale="0.12 0.12 0.12"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

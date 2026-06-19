@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.03389095226296065"/>
+            <origin xyz=" 0.0029 0.0073 -0.0104"/>
+            <inertia ixx="2.857046930469486e-05" ixy="-1.925018736819667e-06" ixz="-1.1690048451874465e-06"
+            iyy="9.944483373267604e-06" iyz="-3.972299844625156e-06" izz="2.4357350662320738e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Crazy_Shadow_2.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Crazy_Shadow_2.obj" scale="0.06 0.06 0.06"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

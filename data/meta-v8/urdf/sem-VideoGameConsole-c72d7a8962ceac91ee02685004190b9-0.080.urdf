@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="0.10019588322556426"/>
+            <origin xyz=" 0.0001 0.0006 -0.0020"/>
+            <inertia ixx="0.00020542136034005698" ixy="5.589330981109144e-07" ixz="9.906483292236165e-08"
+            iyy="0.00012045324913238992" iyz="-4.943175057857881e-08" izz="9.780314631213648e-05"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-VideoGameConsole-c72d7a8962ceac91ee02685004190b9.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/sem-VideoGameConsole-c72d7a8962ceac91ee02685004190b9.obj" scale="0.08 0.08 0.08"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>

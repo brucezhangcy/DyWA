@@ -1,0 +1,22 @@
+<robot name="robot">
+    <link name="base_link">
+        <inertial>
+            <mass value="1.0929041351719044"/>
+            <origin xyz=" -0.0002 0.0129 -0.0061"/>
+            <inertia ixx="0.005153811174363345" ixy="-2.2664788376050415e-05" ixz="3.0858817923555405e-05"
+            iyy="0.003408516362917367" iyz="0.0003371257121226447" izz="0.006030352984104426"/>
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Vtech_Roll_Learn_Turtle.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="/home/brucezhang/Downloads/DyWA/data/coacd/mujoco-Vtech_Roll_Learn_Turtle.obj" scale="0.15 0.15 0.15"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>
