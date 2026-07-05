@@ -1711,4 +1711,86 @@ can actually reach the table.
 
 ---
 
-*Log started: 2026-05-01 · Resumed on new machine: 2026-05-14 · Eval reproduced: 2026-05-16 · Trossen PPO smoke test passed: 2026-05-16 · Trossen Stage 1 50k smoke training run: 2026-05-17 · GPU CUDA context wedge: 2026-05-17 · Trossen placement re-fixed (rendered + body match): 2026-05-17 · Franka placement bug confirmed by top-down render: 2026-05-18 · Policy invariance confirmed (78.79% with fixed Franka): 2026-05-18 · Side-view A/B evidence recorded for Franka and Trossen, output dir cleanup: 2026-05-18 · Success-criterion reference section added: 2026-05-19 · CI-vs-cpos_n control-mode gap identified; Trossen speedup options recorded: 2026-05-19 · Trossen workspace bug found; widened ws_bound and restarted from scratch: 2026-05-20 · Trossen Stage 1 phase transition at step 75k (cur_suc_rate 3% → 48% by step 100k): 2026-05-20 · Trossen Stage 1 wide run completed at 500k, final cur_suc_rate 93.1% (logged 2026-05-28): 2026-05-21*
+## 2026-06-21 — Trossen teacher rendered on a 2nd machine (`coldbrew`, RTX 4090), fully local — and the real "glitch" root cause
+
+Reproduced the 93.1% Trossen Stage-1 teacher pushing objects on a **separate
+lab box `coldbrew` (single RTX 4090, driver 575, no CUDA toolkit, no Docker)**,
+end-to-end, **without barista**. Goal was a watchable visualization of the trained
+policy; the journey surfaced the actual reason earlier Trossen renders looked
+"frozen/jittering."
+
+### Building the DyWA Isaac Gym stack from scratch on coldbrew (no Docker)
+- **Isaac Gym Preview 4** — not present and NVIDIA-login-gated; fetched the
+  201 MB package from a public HuggingFace mirror (`lithiumice/motion_imitation`),
+  `pip install -e isaacgym/python`. gymtorch JIT-compiles its C++ binding at import
+  (needs `ninja` on PATH; g++ only, no nvcc).
+- **Env:** conda `dywa_render` (Python 3.8) + `torch 1.11.0+cu113` (matches the
+  barista Docker; RTX 6000 Ada and 4090 are both sm_89, so the cu113 PTX-JIT path
+  is proven) + `pytorch3d 0.7.2` cu113 wheel (the HF wheel from the README) +
+  ~25 pip deps (hydra, trimesh, coacd, yourdfpy, pymeshlab, transformers, mvp, …).
+- **Shims (no nvcc / no GL build needed for this render):** `flash_attn` 1.x
+  (`FlashMHA`/`FlashAttention` via plain attention), `nvtx` (no-op `annotate`),
+  `nvdiffrast.torch` (import-stub; the raw-GPU-camera recorder never calls it),
+  and `cxx.{franka,ur5}_kin_cuda` stubs (Trossen uses pure-PyTorch IK; the Franka/UR5
+  CUDA kin is never called). All under `~/dywa_setup/shims` on `PYTHONPATH`.
+- **Assets:** extracted the full `meta-v8` (poses/clouds/normals) **and `coacd/`**
+  from `DGN.tar.gz` (1.46 GB, HF `imm-unicorn/corn-public`).
+
+### Two recorder bugs fixed in `show_trossen_record.py`
+1. **Static frames** — the loop called `render_all_camera_sensors` but never
+   `step_graphics(sim)`, so every frame was identical (frame-diff 0.003). Added
+   `fetch_results` + `step_graphics` before the render → live motion.
+2. **Crash on missing stat** — `load_env` hard-failed when the normalizer `_stat`
+   was absent; made it non-fatal (warn + default normalizer). Moot once the real
+   `run-000/stat/env-last.ckpt` was pushed from barista, which loads via the sibling
+   `stat/` branch.
+
+### The actual root cause of "glitching" — broken object collision meshes
+After ruling out (each confirmed to MATCH the 93.1% training run): the obs
+normalizer (none / online-reconstructed / real stats → byte-identical behavior),
+`ws_bound` (wide `[[-0.25,-0.35,-0.1],[0.6,0.35,0.4]]`), `ik_n_iter=5`,
+`max_pos=0.06`, object scale (radii 0.06–0.09 m, correct), BatchNorm (`track_running_stats=False`
+by design → batch stats), and `num_env` (4/32/512) — the arm stayed in the same
+raised pose, jittering.
+
+The give-away was in the asset-load log:
+```
+[Error][carb.gym.plugin] Failed to resolve collision mesh '/home/brucezhang/Downloads/DyWA/data/coacd/...obj'
+```
+The object URDFs hard-code mesh paths to **`/home/brucezhang/Downloads/DyWA/data/coacd/`**
+(the *original* dev-log machine), and `coacd/` was never extracted on coldbrew. So
+**every object's collision + visual mesh failed to load and Isaac Gym fell back to a
+degenerate bounding-box body** — the "white box" wasn't just a visual; the physics
+object was an unmanipulable box. The teacher (trained on real object shapes) couldn't
+push it → looked frozen. *The policy was fine the whole time; the assets were broken.*
+
+**Fix:** extract `coacd/` (5,751 meshes) → `data/coacd/`, then repoint URDF mesh
+paths (same sed as the original 2026-05-02 patch):
+```bash
+find data/meta-v8/urdf -name '*.urdf' -exec \
+  sed -i 's#/home/brucezhang/Downloads/DyWA/data/coacd/#/home/bruce/DyWA/data/coacd/#g' {} +
+```
+
+### Result
+| Signal | Broken collision | After coacd fix |
+|---|---|---|
+| `Failed to resolve mesh` errors | thousands | **0** |
+| `rew_mean` | −0.05 / −0.025 (negative) | **+0.285 / +0.147** (positive) |
+| Scout pass (`++scout=true`, 64 envs) | — | **62/64 envs succeed (97%)**, many within ~1 mm of goal |
+
+Added two recorder features for the showcase: `++scout=true` (deterministic pass
+ranking envs by first-success step / closest object→goal approach) and `++cam_env=N`
+(film a chosen env; `set_camera_location` with an env handle is env-local — no origin
+offset). Filmed env 35 (first success ~step 26) → clean push of a real coacd object,
+transcoded to H.264 (`output/trossen_push_showcase_h264.mp4`).
+
+### Reproduction notes (coldbrew)
+- Launcher env: `source ~/dywa_setup/render_env.sh` (sets `PYTORCH_JIT=0`, PATH incl.
+  `ninja`, `PYTHONPATH=dywa/src:dywa:~/dywa_setup/shims`, torch `LD_LIBRARY_PATH`).
+- The teardown `Segmentation fault (core dumped)` after `Done — N frames written` is
+  harmless (Isaac Gym exit), the mp4 is already finalized.
+- The URDF coacd-path edits are machine-specific and intentionally **not committed**.
+
+---
+
+*Log started: 2026-05-01 · Resumed on new machine: 2026-05-14 · Eval reproduced: 2026-05-16 · Trossen PPO smoke test passed: 2026-05-16 · Trossen Stage 1 50k smoke training run: 2026-05-17 · GPU CUDA context wedge: 2026-05-17 · Trossen placement re-fixed (rendered + body match): 2026-05-17 · Franka placement bug confirmed by top-down render: 2026-05-18 · Policy invariance confirmed (78.79% with fixed Franka): 2026-05-18 · Side-view A/B evidence recorded for Franka and Trossen, output dir cleanup: 2026-05-18 · Success-criterion reference section added: 2026-05-19 · CI-vs-cpos_n control-mode gap identified; Trossen speedup options recorded: 2026-05-19 · Trossen workspace bug found; widened ws_bound and restarted from scratch: 2026-05-20 · Trossen Stage 1 phase transition at step 75k (cur_suc_rate 3% → 48% by step 100k): 2026-05-20 · Trossen Stage 1 wide run completed at 500k, final cur_suc_rate 93.1% (logged 2026-05-28): 2026-05-21 · Trossen teacher reproduced + rendered fully locally on coldbrew (RTX 4090); root-caused the "glitch" to unresolved coacd object collision meshes; 62/64 envs succeed after fix: 2026-06-21*

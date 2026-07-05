@@ -854,10 +854,19 @@ def load_env(cfg: Config, path,
                 if freeze_env:
                     env.normalizer.eval()
             else:
-                stat_ckpt = last_ckpt(cfg.load_ckpt + "_stat", key=ckpt_key)
-                print(F'Also loading env stats from {stat_ckpt}')
-                env.load(stat_ckpt,
-                         strict=False)
+                try:
+                    stat_ckpt = last_ckpt(cfg.load_ckpt + "_stat", key=ckpt_key)
+                    print(F'Also loading env stats from {stat_ckpt}')
+                    env.load(stat_ckpt,
+                             strict=False)
+                    if freeze_env:
+                        env.normalizer.eval()
+                except (ValueError, FileNotFoundError) as e:
+                    print(F'[WARN] No env-normalizer stats found '
+                          F'({cfg.load_ckpt}_stat or sibling stat/): {e}. '
+                          F'Proceeding with default normalizer.')
+                    if freeze_env:
+                        env.normalizer.eval()
 
     if cfg.use_p2v:
         env = P2VembObs(env, cfg.p2v)

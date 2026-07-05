@@ -55,14 +55,20 @@ from train_ppo_arm import (
 class Config(TrainConfig):
     sample_action: bool = False
     n_steps: int = 500
+    # Warmup steps to re-accumulate env-normalizer stats online when the
+    # trained stat/ ckpt is unavailable. Uses all parallel envs (each a distinct
+    # object/scale/goal/physics sample) to converge mean/std quickly, then freezes.
+    warmup: int = 0
     cam_eye: tuple = (-0.25, -1.6, 0.7)
     cam_at: tuple = (-0.25, 0.0, 0.25)
     cam_h: int = 480
     cam_w: int = 640
     out_path: str = 'output/trossen_pipeline/trossen_playback.mp4'
+    cam_env: int = 0       # which env the camera films
+    scout: bool = False    # if True: don't record; rank envs by successful push
 
 
-def _make_camera(gym, sim, envs, H, W, eye, at):
+def _make_camera(gym, sim, envs, H, W, eye, at, env_idx=0):
     prop = gymapi.CameraProperties()
     prop.height = H
     prop.width = W
@@ -71,13 +77,15 @@ def _make_camera(gym, sim, envs, H, W, eye, at):
     prop.horizontal_fov = 68.0
     prop.near_plane = 0.01
     prop.far_plane = 100.0
-    cam = gym.create_camera_sensor(envs[0], prop)
+    e = envs[env_idx]
+    # set_camera_location with an env handle is env-LOCAL — no origin offset.
+    cam = gym.create_camera_sensor(e, prop)
     gym.set_camera_location(
-        cam, envs[0],
+        cam, e,
         gymapi.Vec3(*eye),
         gymapi.Vec3(*at),
     )
-    desc = gym.get_camera_image_gpu_tensor(sim, envs[0], cam, gymapi.IMAGE_COLOR)
+    desc = gym.get_camera_image_gpu_tensor(sim, e, cam, gymapi.IMAGE_COLOR)
     color_t = gymtorch.wrap_tensor(desc)
     return cam, color_t
 
@@ -105,10 +113,47 @@ def main(cfg: Config):
     agent = load_agent(cfg, env, None, None)
     agent.eval()
 
+    # SCOUT MODE: run the (deterministic) rollout once and rank envs by how
+    # well they push their object to the goal, so we can film the best one.
+    if cfg.scout:
+        import numpy as _np
+        n = cfg.env.num_env
+        first_succ = _np.full(n, -1, dtype=int)   # step of first success per env
+        min_dist = _np.full(n, _np.inf)           # closest obj->goal seen per env
+        rms = env.normalizer.obs_rms
+        for i, (act, obs, rew, done, info) in enumerate(agent.test(
+                sample=cfg.sample_action, steps=cfg.n_steps)):
+            suc = info.get('success') if isinstance(info, dict) else None
+            if suc is not None:
+                suc = suc.detach().cpu().numpy().astype(bool)
+                newly = suc & (first_succ < 0)
+                first_succ[newly] = i
+            try:  # track obj->goal distance from unnormalized obs
+                def _u(k):
+                    t = obs[k]
+                    r = rms[k]
+                    return (t * th.sqrt(r.var + 1e-6) + r.mean
+                            ).detach().cpu().numpy()
+                d = _np.linalg.norm(_u('object_state')[:, :2]
+                                    - _u('goal')[:, :2], axis=-1)
+                min_dist = _np.minimum(min_dist, d)
+            except Exception:
+                pass
+        succ_envs = [int(e) for e in _np.where(first_succ >= 0)[0]]
+        ranked = sorted(succ_envs, key=lambda e: first_succ[e])
+        print(f'SCOUT: {len(succ_envs)}/{n} envs succeeded.')
+        print(f'SCOUT: earliest-success envs (env:step): '
+              f'{[(e, int(first_succ[e])) for e in ranked[:10]]}')
+        order = _np.argsort(min_dist)
+        print('SCOUT: closest-approach envs (env:dist): '
+              + str([(int(e), round(float(min_dist[e]), 3)) for e in order[:10]]))
+        return
+
     # Camera + video writer
     cam, color_t = _make_camera(env.gym, env.sim, env.envs,
                                 cfg.cam_h, cfg.cam_w,
-                                cfg.cam_eye, cfg.cam_at)
+                                cfg.cam_eye, cfg.cam_at,
+                                env_idx=cfg.cam_env)
     out_path = Path(cfg.out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     tmp_path = out_path.with_suffix('.tmp.mp4')
@@ -117,17 +162,31 @@ def main(cfg: Config):
     writer = cv2.VideoWriter(str(tmp_path), fourcc, 30, (W, H))
     print(f'Recording → {out_path}  ({W}×{H} @ 30 fps)')
 
+    if cfg.warmup > 0:
+        env.normalizer.train()  # accumulate obs running mean/std online
+        print(f'Warming up env-normalizer for {cfg.warmup} steps '
+              f'across {cfg.env.num_env} parallel envs...')
+
     step_count = 0
-    for (act, obs, rew, done, info) in agent.test(
-            sample=cfg.sample_action, steps=cfg.n_steps):
+    rec_count = 0
+    for i, (act, obs, rew, done, info) in enumerate(agent.test(
+            sample=cfg.sample_action, steps=cfg.warmup + cfg.n_steps)):
+        if i < cfg.warmup:
+            continue  # discard warmup frames; normalizer is still adapting
+        if i == cfg.warmup and cfg.warmup > 0:
+            env.normalizer.eval()  # freeze the reconstructed stats
+            print('Normalizer frozen; recording...')
+        env.gym.fetch_results(env.sim, True)
+        env.gym.step_graphics(env.sim)
         env.gym.render_all_camera_sensors(env.sim)
         env.gym.start_access_image_tensors(env.sim)
         rgba = color_t.cpu().numpy()
         bgr = cv2.cvtColor(rgba, cv2.COLOR_RGBA2BGR)
         writer.write(bgr)
         env.gym.end_access_image_tensors(env.sim)
-        if step_count % 50 == 0 and rew is not None:
-            print(f'step {step_count:4d} | rew_mean: {rew.mean().item():.4f}')
+        if rec_count % 50 == 0 and rew is not None:
+            print(f'step {rec_count:4d} | rew_mean: {rew.mean().item():.4f}')
+        rec_count += 1
         step_count += 1
 
     writer.release()
