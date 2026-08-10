@@ -9,7 +9,19 @@ Legend: 🔴 could invalidate the claim · 🟠 weakens/qualifies · 🟢 hygien
 
 ---
 
-## 0. 🔴🔴 FIXED-TABLE geometry artifact — the frontier ≈ the table limit — **CONFIRMED, dominant**
+## 0. 🔴→🟢 FIXED-TABLE geometry artifact — **RESOLVED: frontier survives, it's a real control limit**
+UPDATE (size-invariant-table experiment): scaled the table WITH the object so the placement/OOB
+region stays constant across scales. Result: immediate terminations → 0% (artifact removed), yet the
+frontier STILL collapses — 93%→58%→12%→1%→0% at s=0.10/0.15/0.20/0.25/0.30, s* essentially unchanged
+(~0.155). Crucially the failure mode FLIPS from OOB to **TIMEOUT** (85–98% at collapse): with ample
+room and no boundary loss, the single arm simply cannot maneuver a large object to the goal pose in
+time. This is the controllability limit (H2), cleanly isolated. **The table artifact was real but is
+NOT the cause of the frontier.** The bimanual-necessity direction is re-validated, and #1 (necessity
+fine-tuning) is now UNBLOCKED and scientifically valid to run on the size-invariant table.
+Residual: timeout-dominated failure raises a fair question — would a longer episode timeout help?
+(worth one control; but 0% at s=0.30 with room suggests not merely a time budget issue.)
+
+### (historical) original concern — FIXED-TABLE geometry artifact
 The DyWA table is a fixed small URDF (`table-with-wall-small.urdf`); `table_dims=[0.4,0.5]` sets
 bounds only, not the physical table. Objects are scaled so bounding radius ≈ s (set_actor_scale).
 Two fixed-table facts then bite exactly at the measured s*:

@@ -332,6 +332,29 @@ a dual-arm ENV (repo modification, conflicts with the 'keep to dywa_research' ru
 the table confound (#0). Deliverable_C_competence.png + competence_dataset.csv saved.
 ---
 
+### 19. DECISIVE — size-invariant-table test: frontier is a REAL control limit (#0 RESOLVED)
+Scaled the table WITH the object (table_dim=(usable_half_baseline+s)/0.475 per axis) so the
+placement/OOB region stays constant = the s=0.10 baseline. Pure config override (table is procedural
+gym.create_box; the URDF default is unused). Held-out, force_rad=0.10, seed0:
+
+| scale | table[x,y]   | success | oob   | timeout | immediate | fixed-table succ |
+|-------|--------------|---------|-------|---------|-----------|------------------|
+| 0.10  | [0.40,0.50]  | 0.931   | 0.050 | 0.019   | 0.000     | 0.931 |
+| 0.15  | [0.51,0.61]  | 0.579   | 0.067 | 0.354   | 0.000     | 0.694 |
+| 0.20  | [0.61,0.71]  | 0.120   | 0.026 | 0.854   | 0.000     | 0.12-0.21 |
+| 0.25  | [0.72,0.82]  | 0.012   | 0.012 | 0.977   | 0.000     | 0.027 |
+| 0.30  | [0.82,0.92]  | 0.000   | 0.023 | 0.977   | 0.004     | 0.001 |
+
+CONCLUSION: removing the fixed-table placement artifact drives immediate terminations to ~0, yet the
+frontier STILL collapses (s* ~= 0.155, essentially unchanged). The failure mode FLIPS from OOB to
+TIMEOUT (0.85-0.98 at collapse): with room and no boundary loss, a single arm cannot maneuver a large
+object to the 6D goal in time. => a GENUINE single-contact controllability limit (H2), not a table
+artifact. #0 RESOLVED; bimanual-necessity direction re-validated. Failure is now clean/interpretable.
+UNBLOCKED: #1 necessity fine-tuning is now scientifically valid (run it on the size-invariant table
+with extended scale DR). Residual control worth one check: does a longer episode timeout help?
+Figure: results/phase_d_sizeinv/deliverable_D_control_limit.png. CRITIQUES #0 -> RESOLVED.
+---
+
 ## 2026-07-20 — Session 1: reconnaissance, fact-verification, Phase-A harness build
 
 **Agent:** Claude (Opus 4.8), driving remotely over SSH into `coldbrew` (10.137.31.174).
