@@ -37,14 +37,19 @@ artifact.
   *fraction* of object size; worth one pass to re-derive s*, but the absolute-tolerance robustness
   already makes an artifact unlikely.
 
-## 3. 🔴 Object feasibility at large scale — **OPEN**
-At s=0.20–0.30 some test objects may exceed the table/reachable region, or their sampled
-initial/goal "stable poses" may be infeasible — guaranteeing failure for reasons unrelated to
-single-arm *control*. The s=0.30 run had 5367 episodes with 5 successes (very short episodes ⇒ many
-immediate terminations), a hint of degenerate setups.
-- **Close it:** per-object audit at each scale — object bbox vs table dims vs workspace; fraction of
-  episodes terminating at t≈0 (infeasible spawn) vs after a real attempt; exclude objects that don't
-  fit and re-plot. Report the "physically admissible" frontier.
+## 3. 🔴→🟠 Object feasibility at large scale — **ADDRESSED (confounded confirmed + corrected)**
+Concern: at large scale, infeasible spawns/goals cause failures unrelated to *control*.
+- **Measured (taxonomy sweep):** fraction of episodes ending in ≤3 steps ("immediate") is 0% for
+  s ≤ 0.15, then spikes to **63.7% at s=0.20 and 89.2% at s=0.30** — a real contamination that
+  appears exactly in the collapse region (workspace contracts by object radius ⇒ big objects spawn
+  at/over the boundary and instantly go OOB).
+- **Corrected frontier (feasible-only = success / (done − immediate)):** s=0.20 raw 12.0% →
+  **33.0%**; s=0.30 raw 0.09% → 0.9%. So the raw curve OVERSTATED the collapse; s* shifts right
+  (feasible 50%-crossover ≈ 0.18 vs raw 0.167). **The collapse SURVIVES the correction** (33%→0.9%),
+  so it is real, just less extreme. Both curves are now plotted (deliverable_B_taxonomy.png).
+- **Residual caveat:** "immediate ≤3 steps" is a heuristic; some instant OOB is genuine control loss
+  (arm knocks a big object out), so feasible-only may slightly OVER-correct. Honest frontier lies
+  between raw and feasible. A per-object bbox-vs-workspace admissibility filter would tighten this.
 
 ## 4. 🟠 Single seed, no error bars — **OPEN**
 All runs are seed=0. Differences like reach 12.0→12.4% are within unknown noise; I cannot call them

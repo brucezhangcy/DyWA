@@ -245,6 +245,32 @@ claim: (#1) train-test scale gap [necessity experiment], (#3) per-object feasibi
 (#4) multi-seed error bars.
 ---
 
+### 15. DELIVERABLE B — failure-mode taxonomy vs scale (+ feasible-only frontier correction)
+Instrumented a termination-cause wrapper (valid_ppo_arm_taxonomy.py, separate from the validated
+eval) and swept scale. force_rad=0.10 (matches Del A). Fractions of episodes:
+
+| scale | success | oob(lost) | timeout | immediate(<=3) | mean_eplen | feasible-only succ |
+|-------|---------|-----------|---------|----------------|------------|--------------------|
+| 0.05  | 0.967   | 0.016     | 0.017   | 0.000          | 48.4       | 0.967 |
+| 0.10  | 0.931   | 0.050     | 0.019   | 0.000          | 57.3       | 0.931 |
+| 0.15  | 0.694   | 0.157     | 0.149   | 0.000          | 113.3      | 0.694 |
+| 0.20  | 0.120   | 0.698     | 0.182   | 0.637          | 73.5       | **0.330** |
+| 0.30  | 0.001   | 0.961     | 0.038   | 0.892          | 13.7       | 0.009 |
+
+Findings:
+1. Failure MECHANISM shifts with size: in-dist failures are rare/split; at collapse OOB DOMINATES
+   (0.70 @0.20, 0.96 @0.30) => objects knocked out of bounds = single-contact controllability loss,
+   NOT timeout. Consistent with a geometric/contact limit (H3).
+2. CONFOUND #3 confirmed + corrected: immediate(<=3-step) terminations 0% for s<=0.15 but 64%@0.20,
+   89%@0.30 (workspace contracts by object radius => big objects spawn at/over the boundary and
+   instantly go OOB). Raw frontier OVERSTATES collapse.
+3. Feasible-only frontier (success/(done-immediate)): 0.20 -> 0.330 (vs raw 0.120), 0.30 -> 0.009.
+   Collapse SURVIVES the correction; s* shifts right (~0.18 vs raw 0.167). Honest frontier lies
+   between raw and feasible-only. Figure: results/phase_b_taxonomy/deliverable_B_taxonomy.png.
+CRITIQUES.md #3 updated to ADDRESSED. Remaining top-OPEN: #1 (train-test scale gap / necessity),
+#4 (multi-seed error bars). A per-object bbox-vs-workspace admissibility filter would sharpen #3.
+---
+
 ## 2026-07-20 — Session 1: reconnaissance, fact-verification, Phase-A harness build
 
 **Agent:** Claude (Opus 4.8), driving remotely over SSH into `coldbrew` (10.137.31.174).
