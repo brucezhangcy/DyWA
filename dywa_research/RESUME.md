@@ -1,3 +1,5 @@
+> NOTE (user instruction): after this file has been used to resume, DELETE it (git rm + push) to save space — its content is preserved in progress_log_size_transition.md.
+
 # RESUME — DyWA single-arm size frontier → single-vs-double (bimanual) study
 
 **Single entry point for resuming.** Full history: [progress_log_size_transition.md](progress_log_size_transition.md)
