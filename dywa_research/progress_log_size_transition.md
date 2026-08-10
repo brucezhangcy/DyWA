@@ -201,6 +201,50 @@ CAVEATS / next (per prompt guardrails, before this is paper-ready):
 
 ---
 
+### 13. Phase-B mechanism battery + a measurement-validity correction (force_rad)
+Ran a single-knob intervention battery at the collapsed scale s=0.20 (baseline suc_rate 0.120):
+
+| knob            | value | suc_rate | balanced |
+|-----------------|-------|----------|----------|
+| baseline        | -     | 0.120    | 0.278    |
+| reach ws_xmax   | 0.9   | 0.124    | 0.280    |
+| reach ws_xmax   | 1.2   | 0.124    | 0.280    |
+| mass (pinned)   | 0.05  | 0.123    | 0.174    |
+| mass (pinned)   | 0.30  | 0.097    | 0.226    |
+| mass (pinned)   | 0.80  | 0.066    | 0.196    |
+
+Findings: (H1 reach) REJECTED — widening workspace does nothing. (H2 inertia) modulates but does
+NOT cause — heavier hurts monotonically yet near-massless (0.05) does NOT recover (still ~0.12).
+=> the collapse is a genuine geometric/contact-controllability limit, not workspace or mass.
+
+**MEASUREMENT-VALIDITY CORRECTION (caught via a null result):** the goal_radius=0.10 intervention
+returned byte-identical numbers to baseline. Root cause: force_rad OVERRIDES env.task.goal_radius in
+Config.__post_init__ (rma.py:389-391). Resolved config confirms Deliverable A + anchor actually ran
+at **force_rad=0.1 (goal tolerance 0.10 m), NOT the 0.05 I previously logged.** The frontier SHAPE /
+s* stay valid (tolerance was a constant 0.10 across all scales), but:
+  - CORRECTION: Deliverable A goal tolerance = 0.10 m (via force_rad default), not 0.05.
+  - The correct threshold knob is ++force_rad (not ++env.task.goal_radius). Re-running a proper
+    force_rad sweep at s=0.20 {0.05,0.15,0.20} + a strict-0.05 in-dist anchor recheck. [pending]
+  - LESSON: always verify the RESOLVED config (grep the run log), not just the CLI override, because
+    __post_init__ can silently clobber overrides.
+
+---
+
+### 14. Threshold control (proper force_rad knob) + strict anchor + CRITIQUES.md
+Threshold-artifact test at s=0.20 (force_rad = goal tolerance):
+  force_rad 0.05->0.157, 0.10->0.120, 0.15->0.106, 0.20->0.142 suc_rate. No systematic recovery even
+  at a 0.20 m goal (larger than the object) => collapse is THRESHOLD-ROBUST. Threshold artifact rejected.
+Strict-tolerance anchor: in-dist s=0.10 at force_rad=0.05 = **0.908** (balanced 0.866) — reproduction
+survives the strict 0.05 criterion (was 0.93 at 0.10). Robust either way.
+Net Phase-B: the size frontier survives THREE independent controls — reach (rejected), inertia
+(modulates, not causal), threshold (rejected). Strongly consistent with a genuine geometric/contact
+-controllability limit. The one dominant remaining confound is the train-test scale gap (#1).
+Wrote dywa_research/CRITIQUES.md — a rigorous anticipated-critique / red-team doc (12 items, ranked by
+threat, each with status + the experiment that closes it). Top OPEN before any bimanual-necessity
+claim: (#1) train-test scale gap [necessity experiment], (#3) per-object feasibility audit at scale,
+(#4) multi-seed error bars.
+---
+
 ## 2026-07-20 — Session 1: reconnaissance, fact-verification, Phase-A harness build
 
 **Agent:** Claude (Opus 4.8), driving remotely over SSH into `coldbrew` (10.137.31.174).
