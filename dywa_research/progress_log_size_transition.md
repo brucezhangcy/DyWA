@@ -312,6 +312,26 @@ Deliverable A v2 (multi-seed, error bars) plotted: results/phase_c_multiseed/del
 CRITIQUES.md updated: added #0 (fixed-table artifact, dominant) and marked #1 gated on it.
 ---
 
+### 18. DELIVERABLE C (partial) - single-arm COMPETENCE predictor = the trigger's single-arm branch
+Built the decision module 'can ONE arm do THIS object?' from per-object success (64 objects x 3
+transition scales 0.125/0.15/0.175 = 192 points) vs object geometry (from clouds).
+Results (interpretable): logistic & depth-3 tree both CV acc ~= 0.697.
+  Pearson r with success: scaled_S=-0.565 (shortest extent, STRONGEST), scale=-0.509,
+  flatness=-0.466, aspect=+0.296 (elongated -> more success), scaled_L=-0.279 (weakest).
+  Tree importances: scaled_S 0.54, scale 0.22, scaled_M 0.17, aspect 0.075.
+  SHAPE-beyond-SIZE: size-only acc 0.640 -> size+shape 0.687 (delta +0.047) => shape adds a real,
+  modest signal beyond size.
+INTERPRETATION: single-arm competence is best predicted by the object's SHORTEST scaled extent
+(bulkiness), not overall size: one arm handles THIN/FLAT objects to larger sizes but fails on BULKY/
+chunky ones. This is the explicit, interpretable single-arm branch of a single-vs-bimanual trigger.
+CAVEATS: ~70%% acc is first-pass (single seed, 64 objects, and the fixed-table confound (#0) adds
+noise/leaks a size-fit signal); the +5%% shape term is the part least table-confounded.
+NOT YET DONE (answering the user directly): this is only the SINGLE-ARM branch. A full single/double
+ADAPTIVE policy also needs (Phase D) a real bimanual 2-Trossen policy to compare against, which needs
+a dual-arm ENV (repo modification, conflicts with the 'keep to dywa_research' rule) and is gated on
+the table confound (#0). Deliverable_C_competence.png + competence_dataset.csv saved.
+---
+
 ## 2026-07-20 — Session 1: reconnaissance, fact-verification, Phase-A harness build
 
 **Agent:** Claude (Opus 4.8), driving remotely over SSH into `coldbrew` (10.137.31.174).
