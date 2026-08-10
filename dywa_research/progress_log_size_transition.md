@@ -271,6 +271,47 @@ CRITIQUES.md #3 updated to ADDRESSED. Remaining top-OPEN: #1 (train-test scale g
 #4 (multi-seed error bars). A per-object bbox-vs-workspace admissibility filter would sharpen #3.
 ---
 
+### 16. #4 multi-seed error bars + #3 feasibility mechanism (CONVERGING findings)
+Multi-seed (3 seeds) frontier, force_rad=0.10, held-out:
+  s=0.10: raw 0.934+-0.005   s=0.15: 0.681+-0.012   s=0.20: 0.209+-0.064   s=0.30: 0.001+-0.000
+KEY: the single-seed Deliverable-A point at s=0.20 (0.12) was a BAD-SEED OUTLIER; 3-seed mean is
+0.209 raw / 0.298 feasible-only. Variance is tiny everywhere EXCEPT s=0.20 (std 0.064) — the point
+sits on a cliff.
+
+#3 feasibility MECHANISM (code-confirmed, tabletop_with_object_scene.py:660-677): the object
+placement + OOB region = 0.5*margin_scale*table_dims - radius per xy side, on a FIXED table
+(0.4x0.5, margin 0.95). Usable_x = 0.38 - 2s -> hits 0 at **s=0.19**, then the region collapses to a
+single point (mask), so any motion = immediate OOB. This QUANTITATIVELY coincides with:
+  - the measured s* ~= 0.17-0.19, AND
+  - the immediate-termination spike (0 for s<=0.15 -> 0.64/0.006/0.19 across seeds @0.20 -> 0.87 @0.30), AND
+  - the s=0.20 seed variance (marginal region => hypersensitive to the random draw).
+=> A LARGE part of the raw frontier is a FIXED-TABLE placement artifact, not (yet) a demonstrated
+control limit. This is the single most important caveat on Deliverable A.
+Decisive test launched: prevent_fall=False (removes the radius-contraction, gives objects the full
+table region) at s={0.15,0.20,0.30}. If success recovers => placement artifact dominates; if not =>
+genuine control limit. [result pending]
+---
+
+### 17. DECISIVE feasibility result — frontier is dominated by a FIXED-TABLE artifact; #1 GATED
+Traced the OOB bound: push_task.py:512 sets it from env.scene_cfg.table_dims * margin_scale (FIXED
++-[0.16,0.20]); the table is a fixed small URDF (table-with-wall-small.urdf) — table_dims sets bounds
+only, not the physical mesh. Objects are scaled so radius ~= s, so at s=0.20 the object radius (0.20)
+equals the table half-width (0.20): the object is as big as the table.
+- prevent_fall=False test was INCONCLUSIVE (byte-identical) because init_type=stable uses precomputed
+  stable poses, so that knob does not move spawns. (Another verify-the-resolved-config lesson.)
+- Convergent evidence the table artifact DOMINATES the raw frontier: placement region collapses at
+  s~=0.19 == measured s*; immediate-terminations 0/64/89% at s=0.15/0.20/0.30; multi-seed variance
+  peaks only at the s=0.20 cliff.
+CONCLUSION: the measured single-arm size frontier (s*~=0.17) is substantially a fixed-table geometry
+artifact, NOT yet a demonstrated single-arm CONTROL limit. Deliverable A must be reframed accordingly.
+GATING DECISION: #1 necessity fine-tuning is DEFERRED — it would be scientifically invalid on a
+table-confounded setup (fine-tuning on objects that cannot fit the table). The required unblock is a
+LARGER TABLE ASSET so the object-to-table ratio stays constant across scales; then re-measure the
+frontier and, if the collapse persists, run necessity. This is the rigorous ordering.
+Deliverable A v2 (multi-seed, error bars) plotted: results/phase_c_multiseed/deliverable_A_v2_multiseed.png.
+CRITIQUES.md updated: added #0 (fixed-table artifact, dominant) and marked #1 gated on it.
+---
+
 ## 2026-07-20 — Session 1: reconnaissance, fact-verification, Phase-A harness build
 
 **Agent:** Claude (Opus 4.8), driving remotely over SSH into `coldbrew` (10.137.31.174).

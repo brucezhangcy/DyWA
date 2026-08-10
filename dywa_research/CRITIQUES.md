@@ -9,7 +9,25 @@ Legend: 🔴 could invalidate the claim · 🟠 weakens/qualifies · 🟢 hygien
 
 ---
 
-## 1. 🔴 Train–test scale gap — is this a PHYSICAL limit or just POLICY generalization? — **OPEN (biggest threat)**
+## 0. 🔴🔴 FIXED-TABLE geometry artifact — the frontier ≈ the table limit — **CONFIRMED, dominant**
+The DyWA table is a fixed small URDF (`table-with-wall-small.urdf`); `table_dims=[0.4,0.5]` sets
+bounds only, not the physical table. Objects are scaled so bounding radius ≈ s (set_actor_scale).
+Two fixed-table facts then bite exactly at the measured s*:
+- Object placement/OOB region = 0.5·margin·table_dims − radius per xy side collapses to a POINT at
+  **s≈0.19** (x-dim), forcing spawns to table center and immediate OOB (scene:660-677).
+- Task OOB bound = ±0.5·margin·table_dims ≈ ±[0.16,0.20] (push_task:512), FIXED; but at s=0.20 the
+  object radius (0.20) already equals the table half-width — the object is as big as the table.
+Evidence it dominates: immediate-termination 0%→64%→89% across s=0.15/0.20/0.30; multi-seed variance
+peaks only at s=0.20 (the cliff); s* (≈0.17) ≈ placement-collapse scale (0.19). **So the measured
+"size frontier" is substantially a table-size artifact, not a demonstrated single-arm control limit.**
+- **Close it (required before #1):** re-measure with a table that SCALES with object size (needs a
+  larger table ASSET — not a pure config override, since the mesh is fixed). Only the object-to-table
+  ratio held constant isolates control from table geometry. The `prevent_fall=False` test was
+  inconclusive (objects use precomputed stable poses, so that knob doesn't move spawns).
+- **Consequence:** #1 (necessity fine-tuning) is GATED on this — training for hours on objects that
+  don't fit the table would be scientifically invalid. Deferring it is the rigorous call.
+
+## 1. 🔴 Train–test scale gap — is this a PHYSICAL limit or just POLICY generalization? — **OPEN (gated on #0)**
 The teacher trained on scale DR **[0.05, 0.10]**. Every collapse point (s ≥ 0.15) is **out of
 distribution**. So the curve may measure "this teacher never saw big objects," not "one arm
 physically cannot." The whole thesis (bimanual *necessity*) rests on this distinction.
