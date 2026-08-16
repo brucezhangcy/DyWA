@@ -355,6 +355,21 @@ with extended scale DR). Residual control worth one check: does a longer episode
 Figure: results/phase_d_sizeinv/deliverable_D_control_limit.png. CRITIQUES #0 -> RESOLVED.
 ---
 
+### 20. Bimanual mjlab env FIXED (dependency hell resolved); eval ready
+Resumed the single-vs-double thread. The user has a dual-arm non-prehensile Trossen PUSH env (mjlab):
+/home/bruce/Aloha_real/sim_3d_bimanual-main. Fixed the broken bring-up (their uv.lock pinned a 404'd
+mujoco nightly + mujoco-warp git rev; driver is CUDA 12.9 so torch cu130 gave cuda=False):
+  - torch -> 2.11.0+cu128 (cuda True, 1 device; driver 12.9 supports cu128 not cu130).
+  - mujoco-warp -> 3.11.0 (git main) matching the only-available mujoco 3.11.1 (older pin removed the
+    mjENBL_MULTICCD API; nightly index purged all 3.7.x builds).
+  - venv at dywa_research/mjlab_venv; Aloha_real tree UNTOUCHED (uv.lock restored). mjlab imports clean.
+Eval ready (dywa_research/bimanual_eval.sh): scripted bimanual push primitive on the 10 cat_box objects
+(half-extents up to ~0.15 m => bounding radius ~0.15-0.23 m = the single-arm collapse regime),
+--scripted_only, per-object success. BLOCKED only on GPU (another user's job at 100%/22GB); will run
+when it frees. Comparison plan (Deliverable E): overlay bimanual box success vs single-arm frontier at
+matched bounding-radius; cross-sim => illustrative, clearly labeled.
+---
+
 ## 2026-07-20 — Session 1: reconnaissance, fact-verification, Phase-A harness build
 
 **Agent:** Claude (Opus 4.8), driving remotely over SSH into `coldbrew` (10.137.31.174).
