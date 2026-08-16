@@ -128,3 +128,46 @@ Hierarchical/Modular https://arxiv.org/abs/2502.20843 · BiNoMaP https://arxiv.o
 DART https://arxiv.org/abs/2604.17833 · PerAct2 https://arxiv.org/pdf/2407.00278 ·
 DA-VIL https://arxiv.org/pdf/2410.19712 · Data Scaling Laws https://arxiv.org/html/2410.18647v1 ·
 RT-Affordance https://arxiv.org/html/2411.02704v1
+
+
+---
+
+## 2026-08-16 — Fresh literature refresh + HOW WE DIFFER (targeted web search, NOT exhaustive)
+Re-searched single-arm non-prehensile size frontier / scaling. Object-size limits ARE studied, but
+under DIFFERENT framings than ours:
+
+| Prior framing | Representative work | How OURS differs |
+|---|---|---|
+| Object too big to GRASP (aperture) -> non-prehensile / extrinsic dexterity | Ungraspable via Extrinsic Dexterity (2503.23120) | We study non-prehensile CONTROL vs size, not graspability; the arm CAN contact it, it just can't steer its pose |
+| Non-prehensile EXPANDS a simple arm's operational space | Multi-Joint Failure (2410.01102) | We measure the LIMIT of that expansion vs object size, with a crossover s* |
+| Geometry/shape-aware non-prehensile | DexNoMa | We quantify shape-beyond-size in a competence predictor (complementary) |
+| Robustness to size variation (DR) | many | We treat size as the independent AXIS and measure success-vs-size, not just robustness |
+| Data-quantity scaling laws | Data Scaling Laws (2410.18647) | Different axis: object physical size, not #demos/objects |
+| Dual-arm non-prehensile | DART (2604.17833), BiNoMaP (2509.21256) | Always-bimanual; never measure where SINGLE-arm fails nor decide arm-count |
+
+NOT FOUND (consistent with the 2026-06-20 pass): a measured single-arm non-prehensile success-vs-size
+FRONTIER with a crossover s* AND a mechanistic proof the cause is controllability (not reach/table/
+threshold/graspability). => that specific measurement + mechanism is our differentiator.
+CAVEAT: US-only web search, hard-to-query niche, NOT exhaustive; a full related-work pass is still
+required before any novelty claim. Differentiate explicitly from extrinsic-dexterity + geometry-aware.
+
+
+---
+
+## 2026-08-16 — Fresh literature refresh + HOW WE DIFFER (targeted web search, NOT exhaustive)
+Object-size limits ARE studied, but under DIFFERENT framings than ours:
+
+| Prior framing | Representative work | How OURS differs |
+|---|---|---|
+| Object too big to GRASP (aperture) -> non-prehensile / extrinsic dexterity | Ungraspable via Extrinsic Dexterity (2503.23120) | We study non-prehensile CONTROL vs size, not graspability; the arm CAN contact it, it just can't steer its pose |
+| Non-prehensile EXPANDS a simple arm's operational space | Multi-Joint Failure (2410.01102) | We measure the LIMIT of that expansion vs size, with a crossover s* |
+| Geometry/shape-aware non-prehensile | DexNoMa | We quantify shape-beyond-size in a competence predictor (complementary) |
+| Robustness to size variation (DR) | many | We treat size as the independent AXIS (success-vs-size), not just robustness |
+| Data-quantity scaling laws | Data Scaling Laws (2410.18647) | Different axis: object physical size, not #demos/objects |
+| Dual-arm non-prehensile | DART (2604.17833), BiNoMaP (2509.21256) | Always-bimanual; never measure where SINGLE-arm fails nor decide arm-count |
+
+NOT FOUND (consistent with 2026-06-20): a measured single-arm non-prehensile success-vs-size FRONTIER
+with a crossover s* AND a mechanistic proof the cause is controllability (not reach/table/threshold/
+graspability). => that measurement + mechanism is our differentiator.
+CAVEAT: US-only web search, hard-to-query niche, NOT exhaustive; a full related-work pass is still
+required before any novelty claim. Differentiate explicitly from extrinsic-dexterity + geometry-aware.

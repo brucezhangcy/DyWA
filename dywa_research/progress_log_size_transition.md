@@ -370,6 +370,36 @@ when it frees. Comparison plan (Deliverable E): overlay bimanual box success vs 
 matched bounding-radius; cross-sim => illustrative, clearly labeled.
 ---
 
+### 21. Headline conclusion (for the record) + generality note
+ONE-LINER: "For this single Trossen arm, objects beyond ~0.16 m bounding radius (~30 cm across)
+become too large for one contact to steer to a target pose -- success collapses from ~93%% to near
+zero, dominated by timeouts."
+Note: 0.16 m is the object BOUNDING RADIUS (object spans ~0.32 m across); it is where success crosses
+50%%. Failure = timeout (can't steer a large object's pose in time), i.e. a single-contact
+controllability limit -- NOT inability to nudge the object.
+GENERALITY (honest): this is currently NARROW -- one arm (small Trossen WidowX), one sim, one task,
+teacher policy; s*~=0.16 m is ARM-SPECIFIC, not universal. The general contribution is the METHOD
+(measure frontier + isolate cause) + the mechanistic finding, which transfer even though the number
+does not. For generality/publishability: add cross-robot (Franka), the necessity experiment, and the
+bimanual comparison. Added dywa_research/OVERVIEW.md (project structure + status + limitations) and a
+how-we-differ table in auto_research_log.
+---
+
+### 21. Headline conclusion (for the record) + generality note + how-we-differ
+ONE-LINER: "For this single Trossen arm, objects beyond ~0.16 m bounding radius (~30 cm across)
+become too large for one contact to steer to a target pose -- success collapses from ~93%% to near
+zero, dominated by timeouts."
+0.16 m = object BOUNDING RADIUS (spans ~0.32 m across); it is the 50%%-success crossover. Failure =
+timeout (can't steer a large object's pose in time) = single-contact controllability limit, NOT
+inability to nudge.
+GENERALITY (honest): currently NARROW -- one arm (small Trossen WidowX), one sim, one task, teacher
+policy; s*~=0.16 m is ARM-SPECIFIC, not universal. The general contribution is the METHOD (measure
+frontier + isolate cause) + the mechanistic finding, which transfer even though the number does not.
+For generality/publishability: add cross-robot (Franka), the necessity experiment, and the bimanual
+comparison. Literature how-we-differ table added to auto_research_log (2026-08-16): prior work frames
+large objects as GRASPABILITY; we measure single-arm CONTROL vs size + prove controllability.
+---
+
 ## 2026-07-20 — Session 1: reconnaissance, fact-verification, Phase-A harness build
 
 **Agent:** Claude (Opus 4.8), driving remotely over SSH into `coldbrew` (10.137.31.174).
