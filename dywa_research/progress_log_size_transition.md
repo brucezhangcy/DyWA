@@ -157,11 +157,11 @@ dywa_research/; run path.root now points into dywa_research/results.
 
 ---
 
-### 11. ANCHOR PASSES — eval VALIDATED (94.5%%), Phase-A UNBLOCKED
-anchor_eval.sh result: episode_count=615, success_count=581, **suc_rate=0.9447 (94.5%%)**,
-balanced_suc_rate=0.9355. Matches the reported ~93.1%% teacher. GATE 1 (0 mesh errs) + GATE 2
-(~93%%) both PASS. The eval pipeline is now legitimate and under our control, fully inside
-dywa_research/. Confirmed the 0%% was purely the ws_bound/filter config error.
+### 11. ANCHOR PASSES — eval VALIDATED (94.5%), Phase-A UNBLOCKED
+anchor_eval.sh result: episode_count=615, success_count=581, **suc_rate=0.9447 (94.5%)**,
+balanced_suc_rate=0.9355. Matches the reported ~93.1% teacher. GATE 1 (0 mesh errs) + GATE 2
+(~93%) both PASS. The eval pipeline is now legitimate and under our control, fully inside
+dywa_research/. Confirmed the 0% was purely the ws_bound/filter config error.
 Next: Phase-A scale sweep on held-out objects (test_set.json) with the validated command, pinning
 scale via min_scale==max_scale across {0.05..0.30}, goal_radius absolute 0.05 (+ size-relative pass),
 outputs under dywa_research/results/phase_a, then aggregate -> Deliverable A (scaling law + s*).
@@ -183,11 +183,11 @@ eval_step=1200, urdf_fixed, ws_bound x-max 0.6). Legitimate scaling law:
 | 0.30  | 0.001 | 0.020 | 5367 |
 
 Findings:
-- Plateau ~93-97%% across the training range [0.05,0.10] (held-out objects) -> teacher generalizes.
-- SHARP collapse between 0.15 (69%%) and 0.20 (12%%). **Crossover s* ~= 0.167 m** (50%%-success,
+- Plateau ~93-97% across the training range [0.05,0.10] (held-out objects) -> teacher generalizes.
+- SHARP collapse between 0.15 (69%) and 0.20 (12%). **Crossover s* ~= 0.167 m** (50%-success,
   linear interp). By 0.30, success ~= 0 -> single-arm non-prehensile control fails on large objects.
 - This is the Phase-A headline the prompt asked for: a measured single-arm size frontier with a
-  crossover, on the same simulator/teacher as the 93%% result. Figure:
+  crossover, on the same simulator/teacher as the 93% result. Figure:
   results/phase_a/deliverable_A_scaling_law.png ; data: results/phase_a/scale_sweep.csv .
 
 CAVEATS / next (per prompt guardrails, before this is paper-ready):
@@ -324,8 +324,8 @@ Results (interpretable): logistic & depth-3 tree both CV acc ~= 0.697.
 INTERPRETATION: single-arm competence is best predicted by the object's SHORTEST scaled extent
 (bulkiness), not overall size: one arm handles THIN/FLAT objects to larger sizes but fails on BULKY/
 chunky ones. This is the explicit, interpretable single-arm branch of a single-vs-bimanual trigger.
-CAVEATS: ~70%% acc is first-pass (single seed, 64 objects, and the fixed-table confound (#0) adds
-noise/leaks a size-fit signal); the +5%% shape term is the part least table-confounded.
+CAVEATS: ~70% acc is first-pass (single seed, 64 objects, and the fixed-table confound (#0) adds
+noise/leaks a size-fit signal); the +5% shape term is the part least table-confounded.
 NOT YET DONE (answering the user directly): this is only the SINGLE-ARM branch. A full single/double
 ADAPTIVE policy also needs (Phase D) a real bimanual 2-Trossen policy to compare against, which needs
 a dual-arm ENV (repo modification, conflicts with the 'keep to dywa_research' rule) and is gated on
@@ -370,26 +370,11 @@ when it frees. Comparison plan (Deliverable E): overlay bimanual box success vs 
 matched bounding-radius; cross-sim => illustrative, clearly labeled.
 ---
 
-### 21. Headline conclusion (for the record) + generality note
-ONE-LINER: "For this single Trossen arm, objects beyond ~0.16 m bounding radius (~30 cm across)
-become too large for one contact to steer to a target pose -- success collapses from ~93%% to near
-zero, dominated by timeouts."
-Note: 0.16 m is the object BOUNDING RADIUS (object spans ~0.32 m across); it is where success crosses
-50%%. Failure = timeout (can't steer a large object's pose in time), i.e. a single-contact
-controllability limit -- NOT inability to nudge the object.
-GENERALITY (honest): this is currently NARROW -- one arm (small Trossen WidowX), one sim, one task,
-teacher policy; s*~=0.16 m is ARM-SPECIFIC, not universal. The general contribution is the METHOD
-(measure frontier + isolate cause) + the mechanistic finding, which transfer even though the number
-does not. For generality/publishability: add cross-robot (Franka), the necessity experiment, and the
-bimanual comparison. Added dywa_research/OVERVIEW.md (project structure + status + limitations) and a
-how-we-differ table in auto_research_log.
----
-
 ### 21. Headline conclusion (for the record) + generality note + how-we-differ
 ONE-LINER: "For this single Trossen arm, objects beyond ~0.16 m bounding radius (~30 cm across)
-become too large for one contact to steer to a target pose -- success collapses from ~93%% to near
+become too large for one contact to steer to a target pose -- success collapses from ~93% to near
 zero, dominated by timeouts."
-0.16 m = object BOUNDING RADIUS (spans ~0.32 m across); it is the 50%%-success crossover. Failure =
+0.16 m = object BOUNDING RADIUS (spans ~0.32 m across); it is the 50%-success crossover. Failure =
 timeout (can't steer a large object's pose in time) = single-contact controllability limit, NOT
 inability to nudge.
 GENERALITY (honest): currently NARROW -- one arm (small Trossen WidowX), one sim, one task, teacher
@@ -491,27 +476,7 @@ volume?" is answered: **NO.** So:
 **Known-working invocation** (reconstructed from `dev_log.md:180-200`, official
 `eval_student_unseen_obj.sh` semantics):
 
-```bash
-cd /home/user/DyWA/dywa/exp/train   # inside pkm1:v0 container
-PYTORCH_JIT=0 python test_rma.py \
-  +platform=debug +env=abs_goal_1view +run=teacher_base +student=dywa/base \
-  ++name=dywa \
-  ++path.root=/home/user/DyWA/output/eval_official \
-  ++env.num_env=60 ++global_device=cuda:0 \
-  ++student.norm=ln \
-  ++add_teacher_state=1 '++student.decoder.film_mlp=1' \
-  +load_student=$PRETRAINED/ckpt/last.ckpt \
-  ++plot_pc=0 \
-  ++dagger_train_env.anneal_step=1 \
-  ++use_nvdr_record_episode=false \
-  ++monitor.num_env_record=60 \
-  ++env.single_object_scene.filter_file=/input/DGN/test_set.json \
-  ++env.single_object_scene.mode=valid \
-  ++log_categorical_results=True \
-  ++env.single_object_scene.dgn.data_path=/input/DGN/meta-v8 \
-  ++env.single_object_scene.dgn.pose_path=/input/DGN/meta-v8/unique_dgn_poses \
-  ++test_step=3000
-```
+_(Full reproduced command omitted — this Docker/`test_rma.py` student-eval path was abandoned for the bare-metal `valid_ppo_arm` route; command preserved in `dev_log.md:180-200`.)_
 
 **Override knobs the sweep needs** (all hydra `++`):
 - Scale (pin one point): `++env.single_object_scene.min_scale=S ++env.single_object_scene.max_scale=S`
