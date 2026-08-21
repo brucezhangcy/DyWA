@@ -8,6 +8,35 @@ Negative results and blockers are recorded honestly (per the prompt's mandate).
 
 ---
 
+## 2026-08-21 — Session 3: mjlab bimanual env RECONSTRUCTED; scripted bimanual eval running
+
+### Resume + environment reconstruction (Deliverable E prep)
+Resumed to run the cross-sim bimanual eval. GPU freed (hanwen's job done); the Aug-16 watcher had died
+on reboot (~Aug-17) without running the eval. Ran `bimanual_eval.sh` directly and cleared a chain of blockers:
+- **scipy** missing in mjlab_venv -> installed.
+- **Lost asset prep** (runbook's uncommitted working-tree changes, gone on reboot): `TROSSEN_OBJECTS_DIR`
+  (=`<trossen_wxai>/xmls/assets/meshes/objects`) didn't exist -> created symlink `objects -> objects_cat_box_obj`.
+  `DEFAULT_OBJECT_NAME='fridge_top_door'` (asset absent) -> set to a box object `Crayola_Crayons_120_crayons`
+  (1 line). Both are revertable Aloha_real changes matching the runbook's described prep.
+- Eval needs `--checkpoint` OR `--scales_manifest` even for `--scripted_only` -> wrote
+  `bimanual_scales.yaml` (10 box objects x scales 0.7/1.0/1.3 = 30 variants); rewrote `bimanual_eval.sh`
+  to use it (drops `--object_names`).
+- **ROOT version-rot**: mjlab was authored for mujoco-warp 3.5.0.2, but the earlier setup installed 3.11
+  (the pinned mujoco `3.7.1.dev` nightly had 404'd). 3.11 broke on multiccd/margin/`ls_parallel`/`wp.context`.
+  **RECONSTRUCTED the correct stack**: `mujoco==3.7.0` (stable PyPI, has `mjENBL_MULTICCD`) +
+  `warp-lang==1.12.0` + `mujoco-warp 3.5.0.2` (git rev 5a86ec2). All version errors vanished; physics is
+  authentic (no engine patches) -> trustworthy numbers.
+
+### Bimanual eval RUNNING (results pending at handoff)
+`bimanual_eval.sh` (scripted 2-arm push, 30 variants x 30 episodes) running on GPU. Confirmed a genuine
+bimanual env: `joint_pos (16,)`=2x8dof, `left/right_ee_to_object`, `actions (12,)`. Results print at the
+end -> `results/bimanual/eval.log`.
+NEXT: parse per-object success; map each box bbox -> bounding radius; overlay bimanual vs the single-arm
+frontier = Deliverable E (cross-sim, illustrative); then log + push.
+
+
+---
+
 ## 2026-08-10 — Session 2: bare-metal runtime, teacher-eval bring-up, TWO validity bugs caught
 
 **Agent:** Claude (Opus 4.8) over SSH to `coldbrew`. **Constraint honored:** only *write* inside
