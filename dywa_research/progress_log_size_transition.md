@@ -37,6 +37,19 @@ frontier = Deliverable E (cross-sim, illustrative); then log + push.
 
 ---
 
+### Deliverable E (SCRIPTED lower bound) — single vs double, cross-sim
+Scripted bimanual eval finished: 30 box×scale variants, per-object success 0.00–0.30, **MACRO AVG 0.142**.
+Mapped each box's half-extents (runbook §1) -> bounding radius (0.116–0.327 m); overlaid vs the single-arm
+frontier -> results/bimanual/deliverable_E_single_vs_double_SCRIPTED.png (+ bimanual_results.csv).
+FINDING: the SCRIPTED bimanual primitive is a WEAK baseline (~14%, low across all radii) and does NOT beat
+single-arm — at small radius single-arm is far higher (0.68–0.93 vs ~0.14), at large radius both are low.
+EXPECTED: scripted primitive alone is weak; the runbook trains a residual RL policy ON TOP to make bimanual
+strong, and that checkpoint was wiped on reboot. So Deliverable E is currently a LOWER BOUND only; a fair
+single-vs-double claim needs the trained residual policy (retrain via runbook ~hours, or locate model_3300.pt).
+Cross-sim => illustrative regardless.
+
+---
+
 ## 2026-08-10 — Session 2: bare-metal runtime, teacher-eval bring-up, TWO validity bugs caught
 
 **Agent:** Claude (Opus 4.8) over SSH to `coldbrew`. **Constraint honored:** only *write* inside
