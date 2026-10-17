@@ -278,19 +278,8 @@ sweep here is the correct, integrity-preserving call.
 - Config sane: `min_scale=max_scale=0.08`, `goal_radius=0.05`, `ws_bound` widened, `base_height=table`,
   `which_robot=trossen`, `use_icp_obs=True`, `use_6d_rel_goal=True`.
 
-**Leading hypotheses for the 0% (to test next, cheapest first):**
-1. **Deterministic vs stochastic action.** Eval used `sample_action=False`. The 93% was a
-   *training-time* `cur_suc_rate` (stochastic policy, possibly under a difficulty *curriculum* that
-   relaxes goal_radius/init). Queued a stochastic + longer run (`sample_action=True`,
-   `eval_step=2400`) → `results/smoke/smoke6_stoch.log`. [result pending]
-2. **Curriculum/goal-difficulty mismatch.** Training may have measured success under
-   `use_tune_goal_radius`/`use_tune_init_pos` (relaxed goal). Eval uses the full `goal_radius=0.05`.
-   Check the teacher run's TB scalars for the goal_radius schedule at the point 93% was logged.
-3. **`force_rad=0.05` / force-perturbation** semantics at reset — verify this isn't kicking objects
-   OOB every episode (need the MonitorEnv termination-cause breakdown; short run didn't emit it —
-   raise `monitor.num_env_record` / lengthen eval to force a log flush, or read oob vs timeout).
-4. **task.mode='train'** in the eval config (scene mode is 'valid' but task mode is 'train') — check
-   whether that changes goal sampling/termination.
+**Leading hypotheses for the 0%** (determinism, curriculum, force_rad, task.mode): condensed in Session 4. All were
+superseded by §9 (stochastic still 0%) and §10 (root cause: ws_bound x-max 0.25 and the wrong filter_file).
 
 **Decision:** Phase-A scale sweep stays BLOCKED until an in-distribution config reproduces ~90%+.
 Only then does `aggregate_scale_sweep.py` output count as Deliverable A. Everything built this
@@ -636,72 +625,13 @@ volume?" is answered: **NO.** So:
 `min_bound += radius` (`tabletop_with_object_scene.py:660-677`), `oob` termination (`dev_log:1378`),
 `push_task.py:754` goal-threshold logic. These are not blockers for Phase-A harness correctness.
 
-### 4. Eval entry point — how `test_rma.py` runs (reverse-engineered)
-
-- Entry: `dywa/exp/train/test_rma.py`, hydra `@hydra_cli(config_name='show')`, config path
-  `../../src/data/cfg/`. Imports `isaacgym` (GPU-required at import time).
-- Flow (`main`, lines 182–400): `load_env` → optionally wrap `CountCategoricalSuccess`
-  (per-object success counting, `++log_categorical_results=True`) → load teacher agent
-  (`load_agent`) unless training student → build `StudentAgentRMA`, optionally `+load_student` →
-  rollout `for step in range(test_step): env.step(...)` → on exit,
-  `CountCategoricalSuccess.save()` dumps results.
-- Success results are written under `output/test_rma/{name}/result/{base_set}/` (per `dev_log:1391`).
-
-**Known-working invocation** (reconstructed from `dev_log.md:180-200`, official
-`eval_student_unseen_obj.sh` semantics):
-
-_(Full reproduced command omitted — this Docker/`test_rma.py` student-eval path was abandoned for the bare-metal `valid_ppo_arm` route; command preserved in `dev_log.md:180-200`.)_
-
-**Override knobs the sweep needs** (all hydra `++`):
-- Scale (pin one point): `++env.single_object_scene.min_scale=S ++env.single_object_scene.max_scale=S`
-- Goal threshold: `++env.task.goal_radius=R`
-- Object set: `++env.single_object_scene.filter_file=/input/DGN/test_set.json`
-- Env count / rollout length: `++env.num_env=N ++test_step=T`
-
-**CRITICAL known-issue (dev_log:126-147, 200):** never pass `++load_ckpt=<teacher_ckpt>` at eval —
-it drives success to **0%** (OOB every ~3 steps) via the `AddTeacherState` interaction. The teacher
-is loaded implicitly; the student is loaded with `+load_student`. Harness must NOT set `load_ckpt`.
-
-**Caveat — teacher vs student eval.** The known-working command above evaluates a *distilled
-student* (`+student=dywa/base +load_student=.../last.ckpt`). The prompt's Phase A wants the *Trossen
-Stage-1 teacher* frontier. Two options, to resolve on first dry-run:
-1. **(Preferred, lowest-risk)** evaluate whatever pretrained checkpoint reproduces the 93% number
-   first, to validate the harness end-to-end, then switch object scale.
-2. Evaluate the teacher policy directly (`train_student_policy`/teacher-only path). Requires
-   confirming the teacher agent acts in the rollout loop without a student. Flagged for the dry-run.
-   The local checkpoint we *have* is the Trossen teacher, so this path is what Phase A ultimately
-   needs; the student flow may need a student ckpt we don't yet have locally.
-
-### 5. Phase-A harness (built, staged in dywa_research/)
-
-- `phase_a_scale_sweep.sh` — loops `scale ∈ {0.05,0.075,0.10,0.15,0.20,0.25,0.30}` ×
-  `goal_radius` regime ∈ {absolute 0.05; size-relative k·s for k∈{0.3,0.5,0.75}}; invokes
-  `test_rma.py` per cell with the overrides above; writes each cell's output to its own dir under
-  `dywa_research/results/phase_a/`. Designed to run inside `pkm1:v0`. Dry-run switch `DRYRUN=1`
-  prints commands without executing. **Not yet executed** (GPU blocked).
-- `aggregate_scale_sweep.py` — walks the per-cell result dirs, pulls success/termination-cause
-  counts, emits `scale_sweep.csv` and a first success-vs-scale plot, and locates the crossover `s*`.
-  Result-file schema to confirm on first real run (marked TODO in the script).
-
-Size-relative threshold assumption documented in-script: post-scale object radius ≈ `target_size`
-(since `scale = target_size/radius` ⇒ `new_radius = radius·scale = target_size`), so
-`goal_radius_relative = k · s`. Confirm against `push_task.py` on dry-run.
-
-### 6. Blockers & handoff
-
-1. **GPU contention (hard blocker for execution).** RTX 4090 at 22/24 GB, 100% util by another
-   user's job. Re-check with `nvidia-smi`; when free, run §5 harness. No safe way to run Isaac Gym
-   eval now.
-2. **Runtime = Docker.** Confirm `pkm1:v0` image is present (`docker images | grep pkm1`) and that
-   `docker/run.sh` data paths (`/data/bruce/DyWA/...`) exist on this host, or adapt them to the
-   local `data/` copy. Alternatively test whether bare-metal conda `dywa_render` can import
-   `isaacgym` + run `test_rma.py` (avoids Docker) — untested.
-3. **Teacher-vs-student eval path** (§4 caveat) — resolve on first dry-run.
-4. **Object radius semantics** for the size-relative threshold — confirm on dry-run.
-
-### Next actions (when GPU frees)
-1. `DRYRUN=1 ./phase_a_scale_sweep.sh` to print/validate commands; confirm container + paths.
-2. Single smoke cell at `s=0.05, goal_radius=0.05, num_env=16, test_step=200` to validate the
-   harness end-to-end and reproduce a sane in-distribution success number.
-3. Full sweep → `aggregate_scale_sweep.py` → **Deliverable A** (scaling-law + termination-cause
-   plots, crossover `s*`). Record numbers in a new dated entry here.
+### 4–6. Eval entry, Phase-A harness, blockers (condensed in Session 4; full text in git history before the S4 prune commit)
+- The Docker/`test_rma.py` student-eval path was reverse-engineered here and then **abandoned** for the bare-metal
+  teacher entry `valid_ppo_arm.py` (Session 2 §2). Its harness files (`phase_a_scale_sweep.sh`,
+  `aggregate_scale_sweep.py`) no longer exist; Deliverable A was produced by `phase_a_sweep.sh`.
+- Key fact kept: **never pass `++load_ckpt=<teacher>` when evaluating a distilled STUDENT with `test_rma.py`**
+  (`dev_log.md:126-147`, drives success to 0%). This does not apply to the teacher entry `valid_ppo_arm.py`.
+- Key fact kept: pin one eval scale with `min_scale == max_scale == s`; the goal tolerance knob is `++force_rad`
+  (it overrides `env.task.goal_radius`, Session 2 §13).
+- The Session-1 blockers (GPU contention, Docker runtime, teacher-vs-student path, radius semantics) were all
+  resolved in Session 2.
