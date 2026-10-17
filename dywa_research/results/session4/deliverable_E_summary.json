@@ -1,0 +1,103 @@
+{
+ "n_variants": 30,
+ "episodes": 900,
+ "successes": 128,
+ "macro_mean": 0.14223333333333335,
+ "radius_range": [
+  0.11647377387206098,
+  0.3265743866257732
+ ],
+ "macro_mean_object_bootstrap_95": [
+  0.10890000000000001,
+  0.17223333333333335
+ ],
+ "logit_success_vs_radius": {
+  "intercept": -1.0662981985048476,
+  "slope_per_m": -3.724415717398298,
+  "slope_object_bootstrap_95": [
+   -7.302139619749962,
+   1.0559376934619944
+  ]
+ },
+ "within_object_scale_effect": {
+  "mean_by_scale": {
+   "0.7": 0.1634,
+   "1.0": 0.11660000000000001,
+   "1.3": 0.1467
+  },
+  "paired_1p3_minus_0p7": {
+   "mean": -0.0167,
+   "n_up": 5,
+   "n_down": 5
+  }
+ },
+ "between_object_heterogeneity": {
+  "chi2": 19.272182642487046,
+  "dof": 9,
+  "p": 0.022975515449081784,
+  "per_object": {
+   "Crayola_Crayons_120_crayons": 0.222,
+   "Deskstar_Desk_Top_Hard_Drive_1_TB": 0.122,
+   "Granimals_20_Wooden_ABC_Blocks_Wagon_85VdSftGsLi": 0.022,
+   "Kotex_U_Barely_There_Liners_Thin_60_count": 0.111,
+   "Marc_Anthony_Strictly_Curls_Curl_Envy_Perfect_Curl_Cream_6_fl_oz_bottle": 0.156,
+   "Nestle_Pure_Life_Exotics_Sparkling_Water_Strawberry_Dragon_Fruit_8_count_12_fl_oz_can_aX0ygjh3bxi": 0.189,
+   "Office_Depot_Dell_Series_9_Ink_Cartridge_Black_MK992": 0.167,
+   "Office_Depot_HP_74XL75_Remanufactured_Ink_Cartridges_BlackTriColor_2_count": 0.122,
+   "Pepsi_Cola_Wild_Cherry_Diet_12_12_fl_oz_355_ml_cans_144_fl_oz_426_lt": 0.167,
+   "Whey_Protein_Chocolate_12_Packets": 0.144
+  }
+ },
+ "binned": [
+  {
+   "radius_bin": "(0.1, 0.15]",
+   "variants": 7,
+   "bimanual_scripted": 0.167,
+   "wilson_lo": 0.122,
+   "wilson_hi": 0.223,
+   "single raw (fixed table, 3 seeds)": 0.784,
+   "single feasible-only (fixed table, 3 seeds)": 0.784,
+   "single size-inv table v1 (seed0)": 0.722,
+   "single object-balanced (Phase A, seed0)": 0.721
+  },
+  {
+   "radius_bin": "(0.15, 0.2]",
+   "variants": 9,
+   "bimanual_scripted": 0.148,
+   "wilson_lo": 0.111,
+   "wilson_hi": 0.195,
+   "single raw (fixed table, 3 seeds)": 0.428,
+   "single feasible-only (fixed table, 3 seeds)": 0.476,
+   "single size-inv table v1 (seed0)": 0.333,
+   "single object-balanced (Phase A, seed0)": 0.429
+  },
+  {
+   "radius_bin": "(0.2, 0.25]",
+   "variants": 7,
+   "bimanual_scripted": 0.157,
+   "wilson_lo": 0.114,
+   "wilson_hi": 0.212,
+   "single raw (fixed table, 3 seeds)": 0.159,
+   "single feasible-only (fixed table, 3 seeds)": 0.228,
+   "single size-inv table v1 (seed0)": 0.068,
+   "single object-balanced (Phase A, seed0)": 0.176
+  },
+  {
+   "radius_bin": "(0.25, 0.35]",
+   "variants": 7,
+   "bimanual_scripted": 0.095,
+   "wilson_lo": 0.062,
+   "wilson_hi": 0.143,
+   "single raw (fixed table, 3 seeds)": 0.08,
+   "single feasible-only (fixed table, 3 seeds)": 0.118,
+   "single size-inv table v1 (seed0)": 0.009,
+   "single object-balanced (Phase A, seed0)": 0.055
+  }
+ ],
+ "radius_where_scripted_bimanual_fit_exceeds_single": {
+  "single raw (fixed table, 3 seeds)": 0.24150000000000002,
+  "single feasible-only (fixed table, 3 seeds)": 0.263,
+  "single size-inv table v1 (seed0)": 0.198,
+  "single object-balanced (Phase A, seed0)": 0.23650000000000002
+ }
+}
