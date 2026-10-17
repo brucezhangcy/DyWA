@@ -8,6 +8,135 @@ Negative results and blockers are recorded honestly (per the prompt's mandate).
 
 ---
 
+## 2026-10-17 — Session 4 (cloud): CPU re-analysis + code audit; the "decisive" size-invariant test is CONFOUNDED; GPU queue ready
+
+**Agent:** Claude (Opus 5.5) on a CPU-only machine (the user's MacBook, arm64, `nvidia-smi` not found). No coldbrew,
+no Isaac Gym, no checkpoints, no Aloha_real. **No simulation was run.** Every number below comes from the
+committed CSVs or a CPU computation run here (commands listed). Source files were read from git at `main`
+@ f9beecc. `dywa/` is untouched. Branch `cloud-session-4`.
+
+### 0. Headline (updated)
+- **Still true:** on the fixed table, single-arm success collapses steeply with object size under both raw and
+  feasible-only metrics. 50% crossover, binomial-logistic fit with a seed bootstrap: **s* = 0.167 [0.164, 0.171]
+  raw, 0.173 [0.171, 0.175] feasible-only** (3 seeds; `results/session4/frontier_stats.json`).
+- **No longer established:** "the frontier is a pure single-contact CONTROL limit" (Session 2 §19). The
+  size-invariant table v1 also grew the spawn and goal regions and pushed targets out of the arm's reach (§2).
+  CRITIQUES #0 is re-opened.
+- **Strengthened:** Deliverable C's shape-beyond-size signal survives leakage-free CV and is larger than first
+  reported. About two-thirds of it comes from the env's yaw-only-goal rule for thin objects, not from physics (§4).
+- **Clarified:** Deliverable E (scripted) shows a FLAT two-arm success of about 0.14 with no size trend. It
+  cannot support any necessity claim (§5).
+
+### 1. Seed statistics and the "immediate termination" mechanism
+`python3 dywa_research/analysis/s4_frontier_stats.py` → `results/session4/{frontier_seed_stats,immediate_loop_check,phaseB_vs_seed_noise}.csv`
+- At s = 0.20, the raw rate is over-dispersed **16×** relative to binomial; feasible-only is 1.5×. Raw 0.209 ± 0.079
+  (seed SD), t95 [0.01, 0.40]; feasible 0.298 ± 0.031, t95 [0.22, 0.38].
+- **Immediate terminations are ADDITIVE.** Non-immediate episode counts at s = 0.20 are 339 / 324 / 335 for seeds
+  0 / 1 / 2, while immediate counts are 596 / 2 / 76. A few envs replay one bad spawn and re-terminate every few
+  steps. In `mode=valid` each env gets ONE start pose for the whole eval (`num_valid_poses=1`, scene.py:256,
+  974-981, 1365-1377). Feasible-only is therefore the right fixed-table metric. CRITIQUES #3, #5, #13.
+- **Phase-B battery (§13-14 of Session 2):** every mass, reach and threshold delta at s = 0.20 is ≤ 0.69 seed-SD
+  (seed SD 0.079), and all cells are seed 0, the seed with 596 looping episodes. "Heavier hurts monotonically"
+  is **not supported**. "No knob recovers" still holds: even k/335 ≤ 0.33. ws 0.9 and 1.2 being byte-identical
+  matches the arm's physical reach of 0.768 m (FK), which binds before either clip value. CRITIQUES #15.
+
+### 2. Code audit: CORRECTIONS to earlier mechanism claims (read-only, cited)
+1. **Valid mode has no radius contraction.** `_valid_poses` uses `_get_xy(prevent_fall=False)`
+   (scene.py:1369-1376). So the Session-2 mechanism "placement = 0.5·margin·table − radius collapses at s ≈ 0.19"
+   (§16-17) describes TRAIN mode, not the evals. This also explains why `prevent_fall=False` was byte-identical
+   (§17 blamed `init_type=stable`; that was wrong).
+2. **The OOB bound was misidentified.** push_task.py:512 is the GOAL region (±0.5·0.8·table). OOB uses
+   `ws_lo/ws_hi` = table ± (0.5·dims + `ws_margin` 0.3) in xy, with z ≥ table centre (push_task.py:325-329,
+   684-698). In practice, OOB means the object fell off the table or went more than 0.3 m past an edge.
+3. **Robot base is hardcoded.** trossen.py:206-221 welds the base at x = −0.5 from a hardcoded table of 0.4.
+   `++table_dims` does not move it. `Trossen.reset` writes x = −0.5·table_x − 0.3 into the root tensor
+   (trossen.py:364-376), and the EE clip is centred on that tensor (trossen.py:418-426). With a non-default table
+   the clip may be off by up to 0.21 m. Unverified; `gpu_s5_diag.sh` checks it.
+4. **Possible valid-mode spawn-z bug (hypothesis).** `_valid_poses` is cloned in `create_assets`
+   (scene.py:1367) BEFORE `scene.setup` rescales stable-pose z (scene.py:615-620; call order base.py:391-422). Up-scaled
+   objects could therefore spawn inside the table, which is a candidate cause of the looping immediate
+   failures. Unverified.
+5. **Thin objects get yaw-only goals.** scene.py:68-70 + `use_yaw_only_logic: true`; push_task.py:779-808.
+
+**Geometry audit of the size-invariant table v1** (`python3 dywa_research/analysis/s4_geometry_audit.py` →
+`results/session4/geometry_audit.csv`). At s = 0.30, v1 gives a mean spawn-to-goal distance of 0.419 m (fixed table:
+0.238), and **13.9% of goals and 21.6% of spawn CoMs are beyond the 0.768 m EE reach** (fixed: 0%), with the
+table edge 0.09 m from the base. The v1 timeout flip is therefore confounded. The v1 drop at s = 0.15 (0.579 against
+0.681 ± 0.012 fixed, where there are 0 immediate terminations) shows the v1 change made the task harder by itself.
+Also, on the fixed table the EE can get behind an object, to its far side, for only 50% / 25% / 0% of spawns at
+s = 0.10 / 0.20 / 0.30. That reach-around limit (H1') is a candidate *single-arm-specific* mechanism, and the one a
+second, opposite arm would fix (CRITIQUES #16).
+
+### 3. Negative result recorded: the single-seed, single-table "control limit" conclusion was premature
+Session 2 §19 wrote "#0 RESOLVED; genuine controllability limit". In light of §2 that should read
+"collapse persists on a bigger table whose task is also longer and partly out of reach". The fix
+(`sizeinv_v2.sh`) holds the table and both regions constant and varies only the object.
+
+### 4. Deliverable C: leakage-free re-evaluation
+`python3 dywa_research/analysis/s4_predictor_cv.py` → `results/session4/predictor_*.{csv,json}`, `deliverable_C_grouped_cv_roc.png`
+- The original 5-fold `cross_val_score` used unshuffled row folds sorted by scale (scale-blocked) with each
+  object in both train and test.
+- Object-disjoint 5-fold, 50 reps (logistic): scale-only AUC **0.68** (acc 0.69 against a 0.667 majority baseline);
+  scale + shortest scaled extent AUC **0.82** (acc 0.79); original size + aspect/flatness AUC 0.82. Shortest
+  extent adds +0.19 AUC over scale-only [0.11, 0.27] (object bootstrap).
+- Within a fixed scale, flatness and aspect correlate with success at |ρ| = 0.50–0.58 (p < 0.001) at all three scales.
+- **Confound:** a yaw-only-goal proxy (AABB M/S ≥ 2.5; 23 of 64 objects) alone gives AUC 0.78. Thin objects succeed
+  +0.16 to +0.23 more often. Within the non-thin objects (full 6-D goals), bulkiness still predicts failure
+  (ρ = −0.40 / −0.54 / −0.73), and it adds +0.06 AUC [0.006, 0.117] beyond scale + the yaw-only flag. Per-object
+  labels average about 8 episodes from ONE spawn pose (#13). Cross-scale rank consistency is ρ ≈ 0.65.
+
+### 5. Deliverable E: what the scripted lower bound does and does not show
+`python3 dywa_research/analysis/s4_deliverable_e.py` → `results/session4/deliverable_E_{summary.json,matched_radius.csv,binned.csv,v2_scripted_ci.png}`
+- Macro 0.142, object-bootstrap 95% CI [0.109, 0.172]. Logistic slope versus radius is −3.7/m, 95% CI [−7.3, +1.1],
+  so there is **no detectable size trend**. Within each box, scale 1.3 versus 0.7 goes up for 5 boxes and down
+  for 5. Boxes differ (χ² p = 0.023; Granimals 0.02).
+- At matched radius, scripted two-arm success is far below single-arm for r ≤ 0.20 (0.17 against 0.72–0.78 in
+  0.10–0.15; 0.15 against 0.33–0.48 in 0.15–0.20). It is equal at 0.20–0.25 (0.157 against 0.07–0.23). Above 0.25 it is
+  0.095 [0.062, 0.143] against 0.009–0.118. The point-estimate crossover of the fit is r ≈ 0.20–0.26 depending
+  on the single-arm curve.
+- **Reading:** the scripted primitive fails for reasons unrelated to size (it is flat), so it cannot test
+  necessity. The fact that it does not decay with size is the only weakly encouraging signal. It is cross-sim,
+  with different objects and success criteria (the mjlab success definition was not checked this session).
+
+### 6. Bimanual-dywa scaffold review (read-only)
+`dywa_research/plans/bimanual_scaffold_review.md`: 8 defects. The blocking ones: both arms resolve to the same
+actor (`'robot'` name lookup, trossen.py:222-263); both are welded at the same hardcoded pose; DOF slicing
+`[:, :N_ARM]` is hardcoded; the DOF-target buffer has the wrong shape for 2 robots. Only T1 is (partly) done.
+The scaffold has not been shown to work.
+
+### 7. GPU queue prepared (coldbrew GPU reported free by the user, 2026-10-17). All NOT yet run.
+- `gpu_s5_queue.sh`: one command, stages 1–5:
+  - 1: `gpu_s5_diag.sh` re-runs 4 existing cells through `valid_ppo_arm_diag.py`, a read-only per-episode
+    dump generated by `patch_diag.py`. Its outputs must reproduce the existing CSVs (behaviour-neutral check).
+    `analysis/s5_diag_report.py` then tests H-loop, H-z, H-dist and H-base.
+  - 2: `sizeinv_v2.sh`: constant table T* = [0.821, 1.026], `margin_scale` 0.46285 / 0.38977 so the regions
+    equal the baseline. 8 scales × 3 seeds, plus a distance control (s = 0.10 on the v1 0.30 table).
+  - 3–4: `gpu_necessity_finetune.sh` (#1) first as a smoke run, then a 100k-iteration fine-tune with scale DR
+    [0.05, 0.30] on the v2 env. A matching in-distribution-DR control is available (SMAX=0.10).
+  - 5: evaluates the fine-tuned ckpt on v2.
+- `gpu_bimanual_residual.sh`: searches for a surviving residual checkpoint, then prints the runbook's training
+  section. It needs `TRAIN_CMD` from the runbook (not known here; the script does not guess). It then runs a
+  paired scripted vs trained eval on `bimanual_scales.yaml` and on the new matched-radius
+  `bimanual_scales_radius_grid.yaml` (`analysis/make_bimanual_radius_grid.py`).
+
+### 8. Pruned (separate commit "prune obsolete ..."; git history keeps everything)
+See the PR body: `bigregion.sh` + `results/phase_c_bigregion/` (duplicate of the taxonomy CSV; its null result is
+now explained by §2.1), `gpu_wait_bimanual.sh` (obsolete watcher), and the stale Session-1 test_rma/Docker
+harness detail in this log.
+
+### NEXT
+1. **[GPU]** `conda activate dywa_render && setsid bash dywa_research/gpu_s5_queue.sh > dywa_research/results/s5_queue.log 2>&1 < /dev/null &`
+   Stage 1 first: check the diag cells reproduce `multiseed.csv` seed 0, then read `results/s5_diag/diag_report.txt`.
+2. **[GPU]** If v2 still collapses at a similar s*: the control-limit claim is restored and the necessity
+   result (stage 4) becomes interpretable. If v2 recovers: the frontier was largely task geometry. Either way,
+   rewrite Deliverable D.
+3. **[GPU]** Bimanual: put the runbook's training command in `TRAIN_CMD` and run `gpu_bimanual_residual.sh`.
+4. **[CPU]** After 1–3: re-run `analysis/s4_*` on the new CSVs, condition success on goal direction (H1'), and
+   raise `num_valid_poses` for headline numbers (#13).
+5. **[GPU, longer]** In-DyWA bimanual: fix the Trossen actor_name / base-pose / dof_offset items in the scaffold review first.
+
+---
+
 ## 2026-08-21 — Session 3: mjlab bimanual env RECONSTRUCTED; scripted bimanual eval running
 
 ### Resume + environment reconstruction (Deliverable E prep)
@@ -314,6 +443,7 @@ CRITIQUES.md #3 updated to ADDRESSED. Remaining top-OPEN: #1 (train-test scale g
 ---
 
 ### 16. #4 multi-seed error bars + #3 feasibility mechanism (CONVERGING findings)
+> **[Session 4 correction]** The "usable_x = 0.38 − 2s" mechanism applies to TRAIN mode only. In the evals the immediate failures are an additive looping-env artifact (2026-10-17 entry §1–2).
 Multi-seed (3 seeds) frontier, force_rad=0.10, held-out:
   s=0.10: raw 0.934+-0.005   s=0.15: 0.681+-0.012   s=0.20: 0.209+-0.064   s=0.30: 0.001+-0.000
 KEY: the single-seed Deliverable-A point at s=0.20 (0.12) was a BAD-SEED OUTLIER; 3-seed mean is
@@ -335,6 +465,7 @@ genuine control limit. [result pending]
 ---
 
 ### 17. DECISIVE feasibility result — frontier is dominated by a FIXED-TABLE artifact; #1 GATED
+> **[Session 4 correction]** push_task:512 is the GOAL region, not the OOB bound. The valid-mode spawn has no radius contraction, so `prevent_fall` is hardcoded False there; that, not `init_type=stable`, is why the test was byte-identical (2026-10-17 entry §2).
 Traced the OOB bound: push_task.py:512 sets it from env.scene_cfg.table_dims * margin_scale (FIXED
 +-[0.16,0.20]); the table is a fixed small URDF (table-with-wall-small.urdf) — table_dims sets bounds
 only, not the physical mesh. Objects are scaled so radius ~= s, so at s=0.20 the object radius (0.20)
@@ -375,6 +506,7 @@ the table confound (#0). Deliverable_C_competence.png + competence_dataset.csv s
 ---
 
 ### 19. DECISIVE — size-invariant-table test: frontier is a REAL control limit (#0 RESOLVED)
+> **[Session 4 correction]** This test is confounded. It also grew the spawn and goal regions and put 14–22% of targets out of reach (see the 2026-10-17 entry §2). #0 is re-opened.
 Scaled the table WITH the object (table_dim=(usable_half_baseline+s)/0.475 per axis) so the
 placement/OOB region stays constant = the s=0.10 baseline. Pure config override (table is procedural
 gym.create_box; the URDF default is unused). Held-out, force_rad=0.10, seed0:
