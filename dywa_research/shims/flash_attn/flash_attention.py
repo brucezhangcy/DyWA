@@ -14,7 +14,7 @@ CORRECTNESS
     PyTorch, so results are numerically equivalent up to floating-point rounding — it
     is a faithful substitute, not an approximation. Class/submodule names (`Wqkv`,
     `inner_attn`, `out_proj`) match flash_attn v1 exactly so checkpoint state_dicts
-    load without remapping. See dywa_research/progress_log_size_transition.md.
+    load without remapping. See dywa_research/PROGRESS.md.
 
 Interfaces replicated (flash_attn v1.x):
   * FlashAttention(softmax_scale=None, attention_dropout=0.0)

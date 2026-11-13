@@ -1,9 +1,13 @@
 # DyWA research attempts
 
-Start with [REVIEW.md](REVIEW.md) for the current evidence, repairs, unresolved
-issues and approval-gated next steps. [CLEANUP.md](CLEANUP.md) lists removals.
-Historical logs remain historical; newer corrections take precedence over their
-superseded conclusions.
+Start with [STATUS.md](STATUS.md) for current evidence, blockers and the next
+useful action. Use [PROGRESS.md](PROGRESS.md) for the session history, newest first.
+The executable research brief is [research_prompt_size_transition.md](research_prompt_size_transition.md);
+[AGENTS.md](AGENTS.md) defines the scoped workflow for future agents.
+
+[REVIEW.md](REVIEW.md) preserves the detailed CPU audit and
+[CLEANUP.md](CLEANUP.md) explains the earlier removals. Historical conclusions
+may be superseded by newer evidence; do not reread or rerun everything on resume.
 
 - `results/phase_*` and `results/bimanual`: preserved raw historical measurements.
 - `results/session4`: preserved previous CPU re-analysis.

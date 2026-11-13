@@ -13,11 +13,12 @@ model, YAML files, experimental scale ranges, or raw measurements.
   `b234229f24308e1e93f30d962d43f1cbf92eeeb7`.
 - `main` is older (`f9beeccf11b47ffde1f2e1f1e165a4b1c7073a9b`). Applying this patch
   directly to main is not equivalent to continuing the current research branch.
-- Improvements are local on `research/session5-audit`; no remote branch was changed.
+- Audit improvements were published on `research/session5-audit` at `6c9a9f7`.
+  The owner subsequently authorized main publication; see `PROGRESS.md` for the workflow update.
 - Every tracked edit/addition/deletion is inside `dywa_research/`. No important
   filename was renamed. See [CLEANUP.md](CLEANUP.md) for the six obsolete files removed.
 - No GPU experiment was launched. The one read-only SSH availability check timed
-  out; no lab-machine file was changed. GitHub's stored CLI login is invalid.
+  out; no lab-machine file was changed. GitHub's HTTPS CLI login is invalid; publishing through the existing SSH key was subsequently verified.
 
 ## Findings and repairs
 

@@ -1,10 +1,46 @@
-# Progress Log — Object-Size Transition & Single-vs-Bimanual Triggering
+# Research progress
 
-Execution log for [research_prompt_size_transition.md](research_prompt_size_transition.md).
-Companion literature review: [auto_research_log_size_transition.md](auto_research_log_size_transition.md).
+Read [STATUS.md](STATUS.md) for the current state and next decision.
+This file records completed work and changes in understanding, newest session first.
+Older claims may be superseded; use the latest correction and cited evidence.
+Research plan: [research_prompt_size_transition.md](research_prompt_size_transition.md).
 
-**Convention:** newest entry on top. Every claim cites a repo file:line or a command actually run.
-Negative results and blockers are recorded honestly (per the prompt's mandate).
+## 2026-11-12 — Workflow update and publication preparation
+
+- **Goal:** make future research sessions resume quickly and test hypotheses rather
+  than pursue a predetermined bimanual-necessity conclusion.
+- **Changes:** renamed `progress_log_size_transition.md` to `PROGRESS.md` at the
+  owner's request, preserved historical entries, and moved the Session-5 entry
+  above Session 4. Added `STATUS.md` for current state and `AGENTS.md` for scoped
+  engineering rules. Rewrote the research prompt around evidence and decision gates.
+- **Decision:** workflow/documentation changes only; no hyperparameter, YAML,
+  simulator, dataset or checkpoint changes. Core edits still require a concrete
+  proposal. Owner authorized publishing the reviewed research work to `main`.
+- **Checks passed:** current workflow links resolve; newest-first session order is
+  verified; all 21 existing research CSV/YAML files are unchanged; the complete
+  publication diff stays inside `dywa_research/`; remote main is an ancestor.
+  The modified shim docstring parses. Previous code changes passed 20 CPU tests;
+  these documentation edits introduce no runtime behavior.
+- **GPU:** no experiment requested or launched; approval remains required.
+- **Next:** prepare a four-cell diagnostic proposal with exact command, expected
+  evidence, stopping conditions and compute budget; wait for owner approval to run.
+
+## 2026-11-12 — Session 5 CPU audit and research-folder cleanup
+
+Continued from PR #1 / cloud-session-4 b234229, not the older main-only teacher
+log. No GPU experiments launched; no lab-machine files changed. Core code,
+YAML configuration, raw measurements and important filenames preserved.
+
+See REVIEW.md for the current audit and CLEANUP.md for six obsolete files removed.
+Repaired delayed-reset diagnostics, stale per-object output handling and silent
+queue failures. Corrected paired seed bootstrap and legacy predictor CV leakage.
+20 CPU regression tests pass. All 242 tracked core Python files parse.
+New routing audit: score >=0.90 selects 45/192 object-scale rows, with 81.1%
+historical macro episode success versus 91.1% binary competence precision.
+These are not interchangeable. No certified 90% trigger established.
+The proposed v2 table does not guarantee support across radius-0.30 spawns;
+configuration unchanged and conservative gate added. All 14 research shell
+launchers now require explicit owner approval before GPU execution.
 
 ---
 
@@ -635,21 +671,3 @@ volume?" is answered: **NO.** So:
   (it overrides `env.task.goal_radius`, Session 2 §13).
 - The Session-1 blockers (GPU contention, Docker runtime, teacher-vs-student path, radius semantics) were all
   resolved in Session 2.
-
-
-## 2026-11-12 — Session 5 CPU audit and research-folder cleanup
-
-Continued from PR #1 / cloud-session-4 b234229, not the older main-only teacher
-log. No GPU experiments launched; no lab-machine files changed. Core code,
-YAML configuration, raw measurements and important filenames preserved.
-
-See REVIEW.md for the current audit and CLEANUP.md for six obsolete files removed.
-Repaired delayed-reset diagnostics, stale per-object output handling and silent
-queue failures. Corrected paired seed bootstrap and legacy predictor CV leakage.
-20 CPU regression tests pass. All 242 tracked core Python files parse.
-New routing audit: score >=0.90 selects 45/192 object-scale rows, with 81.1%
-historical macro episode success versus 91.1% binary competence precision.
-These are not interchangeable. No certified 90% trigger established.
-The proposed v2 table does not guarantee support across radius-0.30 spawns;
-configuration unchanged and conservative gate added. All 14 research shell
-launchers now require explicit owner approval before GPU execution.
