@@ -16,7 +16,7 @@ from scipy import stats, optimize
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 R = os.path.normpath(os.path.join(HERE, "..", "results"))
-OUT = os.path.join(R, "session4"); os.makedirs(OUT, exist_ok=True)
+OUT = os.environ.get("DYWA_ANALYSIS_OUT", os.path.join(R, "session4")); os.makedirs(OUT, exist_ok=True)
 
 
 def wilson(k, n, z=1.96):
@@ -36,7 +36,7 @@ def interp_cross(xs, ys, level=0.5):
 
 
 def logistic_fit(s, k, n):
-    """binomial MLE for p(s) = top / (1 + exp((s - s50)/w)); top fixed by the data's plateau ~ max.
+    """binomial MLE for p(s) = top / (1 + exp((s - s50)/w)); top estimated jointly from the data.
     Returns s_half (where p = 0.5) and w."""
     s, k, n = map(np.asarray, (s, k, n))
     def nll(th):
@@ -91,14 +91,13 @@ for metric, ncol in (("raw", "n"), ("feasible", "n_nonimm")):
         per_seed.append(interp_cross(list(g.scale), list(g.k / g[ncol])))
     mean_curve = [float((ms[ms.scale == s].k / ms[ms.scale == s][ncol]).mean()) for s in scales]
     fit = logistic_fit(ms.scale.values, ms.k.values, ms[ncol].values)
-    # parametric bootstrap of the logistic s_half, resampling SEEDS (cluster) within each scale
+    # Paired seed-cluster bootstrap: resample an entire scale curve per seed.
+    # Resampling independently within scales breaks the shared-seed dependence.
     rng = np.random.default_rng(0); boots = []
     for _ in range(400):
-        idx = []
-        for s in scales:
-            sub = ms[ms.scale == s].index.values
-            idx.extend(rng.choice(sub, size=len(sub), replace=True))
-        b = ms.loc[idx]
+        seeds = ms.seed.unique()
+        sampled_seeds = rng.choice(seeds, size=len(seeds), replace=True)
+        b = pd.concat([ms[ms.seed == seed] for seed in sampled_seeds], ignore_index=True)
         boots.append(logistic_fit(b.scale.values, b.k.values, b[ncol].values)["s_half"])
     boots = np.array([b for b in boots if np.isfinite(b)])
     sstar[metric] = dict(interp_seed_mean_curve=interp_cross(scales, mean_curve),
@@ -126,6 +125,7 @@ sstar["sizeinv_seed0"] = dict(interp=interp_cross(list(si.scale), list(si.frac_s
                               binomial_bootstrap_95=[float(np.percentile(bs, 2.5)), float(np.percentile(bs, 97.5))],
                               note="binomial-only CI: understates uncertainty (single seed; see overdispersion)")
 rep["s_star"] = sstar
+rep["bootstrap_unit"] = "whole seed curve (all scales together); only three seeds, exploratory interval"
 
 # ---------------------------------------------------------------- 4. Phase-B deltas vs seed noise @ s=0.20
 s20 = fs[(fs.scale == 0.20) & (fs.metric == "raw")].iloc[0]

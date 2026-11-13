@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # S5 step 4 (GPU): get a TRAINED bimanual number for Deliverable E (mjlab, cross-sim). The scripted lower
 # bound is 0.142 macro [0.109, 0.172] (results/session4/deliverable_E_summary.json).
 # Written in Session 4 WITHOUT access to Aloha_real. The eval CLI below is the one that was run in Session 3
@@ -12,7 +13,7 @@
 # Eval = the SAME 30-variant manifest as the scripted run (bimanual_scales.yaml: apples-to-apples with the
 # lower bound) AND the matched-radius grid (bimanual_scales_radius_grid.yaml: r = 0.10..0.30 like the
 # single-arm sweep), both scripted_only and checkpoint, so scripted vs trained is a paired comparison.
-set -uo pipefail; shopt -s globstar nullglob
+set -euo pipefail; shopt -s globstar nullglob
 R=/home/bruce/DyWA/dywa_research
 VP=$R/mjlab_venv
 REPO=/home/bruce/Aloha_real/sim_3d_bimanual-main
@@ -27,8 +28,8 @@ NUM_ENVS=${NUM_ENVS:-32}; EPPO=${EPPO:-30}
 # ---- stage 1: find a checkpoint (the residual policy model_3300.pt was lost; maybe a copy survived)
 if [ -z "${BI_CKPT:-}" ]; then
   echo "[bi] searching for residual checkpoints (model_*.pt) under /home/bruce ..."
-  find /home/bruce -name 'model_*.pt' -path '*resid*' 2>/dev/null | head -20 | tee "$OUT/found_ckpts.txt"
-  find /home/bruce -name 'model_3300.pt' 2>/dev/null | head -5 | tee -a "$OUT/found_ckpts.txt"
+  find /home/bruce -name 'model_*.pt' -path '*resid*' 2>/dev/null | head -20 | tee "$OUT/found_ckpts.txt" || true
+  find /home/bruce -name 'model_3300.pt' 2>/dev/null | head -5 | tee -a "$OUT/found_ckpts.txt" || true
 fi
 
 # ---- stage 2: train (only with an explicit TRAIN_CMD copied from the runbook)
@@ -39,6 +40,7 @@ if [ -z "${BI_CKPT:-}" ] && [ -z "${TRAIN_CMD:-}" ]; then
   exit 2
 fi
 if [ -z "${BI_CKPT:-}" ]; then
+  [ -n "${BI_CKPT_GLOB:-}" ] || { echo '[bi] set BI_CKPT_GLOB to this approved run only; refusing a repository-wide checkpoint guess' >&2; exit 2; }
   echo "[bi] TRAIN: $TRAIN_CMD  ($(date -u +%FT%TZ))" | tee "$OUT/train.info"
   ( cd "$REPO" && PYTHONPATH=src bash -c "$TRAIN_CMD" ) > "$OUT/train.log" 2>&1
   echo "[bi] train exit=$? $(date -u +%FT%TZ)" | tee -a "$OUT/train.info"

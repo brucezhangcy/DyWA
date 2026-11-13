@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # S5 step 1 (GPU, short): test the Session-4 code-reading hypotheses (CRITIQUES #13/#14) before
 # spending hours on new sweeps. Re-runs four EXISTING cells (seed 0, same args as multiseed/sizeinv) through
 # valid_ppo_arm_diag.py, which adds per-episode start/goal/outcome + spawn-z / robot-root dumps.
@@ -21,8 +22,8 @@ for c in "${CELLS[@]}"; do
   IFS='|' read -r tag scale extra <<< "$c"
   echo "[s5diag] $tag $(date -u +%T)"
   s5_eval_cell "$OUT/$tag" "s5diag_$tag" "$scale" 0 1200 $extra; st=$?
-  s5_row "$OUT/$tag/cell.log" "$tag,$scale,0" "$CSV" "$([ $st -eq 0 ] && echo OK || echo FAILED)"
-  s5_check_resolved "$OUT/$tag/cell.log" "table_dims" "goal_radius" "margin_scale"
+  s5_row "$OUT/$tag/cell.log" "$tag,$scale,0" "$CSV" "$([ $st -eq 0 ] && echo OK || echo FAILED)" || exit 1
+  s5_check_resolved "$OUT/$tag/cell.log" "table_dims" "goal_radius" "margin_scale" || exit 1
 done
-python3 "$R/analysis/s5_diag_report.py" "$OUT"/*/diag.npz | tee "$OUT/diag_report.txt"
+python3 "$R/analysis/s5_diag_report.py" "$OUT"/*/diag.npz | tee "$OUT/diag_report.txt" || exit 1
 echo "[s5diag] DONE $(date -u +%T)"; cat "$CSV"

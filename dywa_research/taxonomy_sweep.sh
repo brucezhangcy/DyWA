@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # Phase-B failure-mode taxonomy vs scale: HOW do episodes fail as objects grow?
 # success / oob (lost object) / timeout (tried, couldn't) / immediate (<=3 steps ~ infeasible spawn).
 # Distinguishes a genuine control limit (timeout/oob after real attempts) from infeasible setups (#3)

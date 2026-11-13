@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # Corrected threshold test: goal tolerance is set by force_rad (which overrides task.goal_radius
 # in __post_init__). Deliverable A inadvertently used force_rad=0.1 (default). Here we (a) recheck
 # the in-dist anchor at the stricter intended 0.05, and (b) sweep force_rad at the collapsed scale

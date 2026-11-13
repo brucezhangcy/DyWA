@@ -635,3 +635,21 @@ volume?" is answered: **NO.** So:
   (it overrides `env.task.goal_radius`, Session 2 §13).
 - The Session-1 blockers (GPU contention, Docker runtime, teacher-vs-student path, radius semantics) were all
   resolved in Session 2.
+
+
+## 2026-11-12 — Session 5 CPU audit and research-folder cleanup
+
+Continued from PR #1 / cloud-session-4 b234229, not the older main-only teacher
+log. No GPU experiments launched; no lab-machine files changed. Core code,
+YAML configuration, raw measurements and important filenames preserved.
+
+See REVIEW.md for the current audit and CLEANUP.md for six obsolete files removed.
+Repaired delayed-reset diagnostics, stale per-object output handling and silent
+queue failures. Corrected paired seed bootstrap and legacy predictor CV leakage.
+20 CPU regression tests pass. All 242 tracked core Python files parse.
+New routing audit: score >=0.90 selects 45/192 object-scale rows, with 81.1%
+historical macro episode success versus 91.1% binary competence precision.
+These are not interchangeable. No certified 90% trigger established.
+The proposed v2 table does not guarantee support across radius-0.30 spawns;
+configuration unchanged and conservative gate added. All 14 research shell
+launchers now require explicit owner approval before GPU execution.

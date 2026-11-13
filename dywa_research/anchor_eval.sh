@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # Phase-A sanity ANCHOR: reproduce the teacher's in-distribution success (~90%+).
 # Corrected knobs vs the 0% smoke: ws_bound x-max 0.6 (reach-the-table fix) + filter=yes.json.
 # All outputs stay inside dywa_research/. Repo + output/trossen_pipeline untouched.

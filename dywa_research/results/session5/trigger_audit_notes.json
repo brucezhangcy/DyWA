@@ -1,0 +1,101 @@
+{
+  "protocol": "One fixed five-fold object-disjoint split; thresholds prespecified; exploratory historical rates only",
+  "limitations": [
+    "Only one spawn/seed per object and scale; unknown per-object episode denominators.",
+    "succ is a historical point estimate; no certified 90% reliability claim is possible.",
+    "Binary competence score predicts rate>=0.5, not episode success.",
+    "No matched trained-bimanual outcomes; no upper-envelope/necessity claim."
+  ],
+  "rows": [
+    {
+      "model": "scale_only",
+      "threshold": 0.5,
+      "chosen_rows": 128,
+      "coverage": 0.6666666666666666,
+      "chosen_objects": 64,
+      "actual_macro_episode_success": 0.6897538555114797,
+      "binary_competence_precision": 0.7734375
+    },
+    {
+      "model": "scale_only",
+      "threshold": 0.7,
+      "chosen_rows": 76,
+      "coverage": 0.3958333333333333,
+      "chosen_objects": 64,
+      "actual_macro_episode_success": 0.7341713214705196,
+      "binary_competence_precision": 0.8157894736842105
+    },
+    {
+      "model": "scale_only",
+      "threshold": 0.8,
+      "chosen_rows": 64,
+      "coverage": 0.3333333333333333,
+      "chosen_objects": 64,
+      "actual_macro_episode_success": 0.7814527654659579,
+      "binary_competence_precision": 0.890625
+    },
+    {
+      "model": "scale_only",
+      "threshold": 0.9,
+      "chosen_rows": 0,
+      "coverage": 0.0,
+      "chosen_objects": 0,
+      "actual_macro_episode_success": null,
+      "binary_competence_precision": null
+    },
+    {
+      "model": "scale_only",
+      "threshold": 0.95,
+      "chosen_rows": 0,
+      "coverage": 0.0,
+      "chosen_objects": 0,
+      "actual_macro_episode_success": null,
+      "binary_competence_precision": null
+    },
+    {
+      "model": "scale_shortest_extent",
+      "threshold": 0.5,
+      "chosen_rows": 138,
+      "coverage": 0.71875,
+      "chosen_objects": 64,
+      "actual_macro_episode_success": 0.6940815529002188,
+      "binary_competence_precision": 0.8115942028985508
+    },
+    {
+      "model": "scale_shortest_extent",
+      "threshold": 0.7,
+      "chosen_rows": 115,
+      "coverage": 0.5989583333333334,
+      "chosen_objects": 62,
+      "actual_macro_episode_success": 0.7333123065027282,
+      "binary_competence_precision": 0.8608695652173913
+    },
+    {
+      "model": "scale_shortest_extent",
+      "threshold": 0.8,
+      "chosen_rows": 77,
+      "coverage": 0.4010416666666667,
+      "chosen_objects": 48,
+      "actual_macro_episode_success": 0.776326949717976,
+      "binary_competence_precision": 0.8961038961038961
+    },
+    {
+      "model": "scale_shortest_extent",
+      "threshold": 0.9,
+      "chosen_rows": 45,
+      "coverage": 0.234375,
+      "chosen_objects": 38,
+      "actual_macro_episode_success": 0.8111516649040537,
+      "binary_competence_precision": 0.9111111111111111
+    },
+    {
+      "model": "scale_shortest_extent",
+      "threshold": 0.95,
+      "chosen_rows": 18,
+      "coverage": 0.09375,
+      "chosen_objects": 18,
+      "actual_macro_episode_success": 0.8339398803468853,
+      "binary_competence_precision": 0.8888888888888888
+    }
+  ]
+}

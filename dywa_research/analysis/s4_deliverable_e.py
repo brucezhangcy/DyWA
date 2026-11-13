@@ -4,7 +4,7 @@
 Inputs (committed):  results/bimanual/bimanual_results.csv (mjlab, 10 boxes x scales {0.7,1.0,1.3} x 30 ep)
                      results/phase_c_multiseed/multiseed.csv, results/phase_d_sizeinv/sizeinv.csv,
                      results/phase_a/scale_sweep.csv (Isaac Gym single arm)
-Box half-extents: copied from plot_deliverable_e.py (source there: Aloha_real runbook
+Box half-extents: retained from the superseded plotter (original source: Aloha_real runbook
 cat_box_subset_10_residual_push.md section 1; NOT re-verified in this session).
 Outputs: results/session4/deliverable_E_*.{csv,json,png}
 """
@@ -14,8 +14,8 @@ from scipy import optimize
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 R = os.path.normpath(os.path.join(HERE, "..", "results"))
-OUT = os.path.join(R, "session4"); os.makedirs(OUT, exist_ok=True)
-HALF = {  # identical to plot_deliverable_e.py
+OUT = os.environ.get("DYWA_ANALYSIS_OUT", os.path.join(R, "session4")); os.makedirs(OUT, exist_ok=True)
+HALF = {  # preserved from the original research plotter; see CLEANUP.md
     "Crayola_Crayons_120_crayons": (0.151, 0.091, 0.045),
     "Deskstar_Desk_Top_Hard_Drive_1_TB": (0.118, 0.151, 0.058),
     "Granimals_20_Wooden_ABC_Blocks_Wagon": (0.145, 0.149, 0.141),
@@ -95,7 +95,7 @@ curves = {"single raw (fixed table, 3 seeds)": raw, "single feasible-only (fixed
 
 def at(curve, r):
     xs, ys = np.array(curve.index, float), np.array(curve.values, float)
-    return float(np.interp(r, xs, ys)) if r <= xs.max() else float("nan")  # no extrapolation past 0.30
+    return float(np.interp(r, xs, ys)) if xs.min() <= r <= xs.max() else float("nan")  # no extrapolation past 0.30
 
 
 cmp = b[["object", "scale", "radius", "success_rate", "wilson_lo", "wilson_hi"]].copy()

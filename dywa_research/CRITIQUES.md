@@ -1,5 +1,12 @@
 # Anticipated Critiques — Single-Arm Object-Size Frontier (Deliverable A + Phase-B)
 
+**2026-11-12 audit:** read [REVIEW.md](REVIEW.md) before using the older status
+labels below. The pending diagnostic had incorrect delayed-reset bookkeeping
+(now CPU-tested and repaired); v2 still fails a conservative full-support check at
+radius 0.30; GPU runs remain unapproved. Whole-seed-curve bootstrap intervals and
+the distinction between competence confidence and episode reliability are corrected
+in `results/session5/`. Historical text below is retained as provenance.
+
 Rigorous self-review, written to pre-empt a demanding reviewer/mentor. Each item: the criticism,
 its **status** (ADDRESSED / PARTIAL / OPEN), the evidence, and the experiment that would close it.
 Ordered by how badly it threatens the headline claim ("single-arm non-prehensile manipulation has a

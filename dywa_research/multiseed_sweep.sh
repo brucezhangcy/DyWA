@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # #4 Multi-seed frontier for error bars. Uses the taxonomy variant so each run yields raw success,
 # termination causes, and feasible-only in one pass. Scales span the transition/collapse region.
 set -uo pipefail

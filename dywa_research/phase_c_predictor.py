@@ -43,24 +43,28 @@ for j, k in enumerate(feat):
 try:
     from sklearn.linear_model import LogisticRegression
     from sklearn.tree import DecisionTreeClassifier, export_text
-    from sklearn.model_selection import cross_val_score
+    from sklearn.model_selection import cross_val_score, GroupKFold
+    from sklearn.pipeline import make_pipeline
+    groups = np.array([r["key"] for r in rows])
+    grouped_cv = GroupKFold(n_splits=5)
     from sklearn.preprocessing import StandardScaler
     Xs = StandardScaler().fit_transform(X)
     lr = LogisticRegression(max_iter=1000).fit(Xs, yb)
-    acc = cross_val_score(LogisticRegression(max_iter=1000), Xs, yb, cv=5).mean()
-    print(f"\n== Logistic regression (standardized) CV acc={acc:.3f} ==")
+    acc = cross_val_score(make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000)), X, yb, cv=grouped_cv, groups=groups).mean()
+    print("Target is object-scale success-rate >= 0.5, not per-episode success probability.")
+    print(f"\n== Logistic regression (standardized) object-disjoint CV acc={acc:.3f} ==")
     for k, co in sorted(zip(feat, lr.coef_[0]), key=lambda t: -abs(t[1])):
         print(f"  {k:10s} coef={co:+.3f}")
     dt = DecisionTreeClassifier(max_depth=3, min_samples_leaf=5).fit(X, yb)
-    dacc = cross_val_score(DecisionTreeClassifier(max_depth=3, min_samples_leaf=5), X, yb, cv=5).mean()
-    print(f"\n== Decision tree (depth 3) CV acc={dacc:.3f} ==")
+    dacc = cross_val_score(DecisionTreeClassifier(max_depth=3, min_samples_leaf=5), X, yb, cv=grouped_cv, groups=groups).mean()
+    print(f"\n== Decision tree (depth 3) object-disjoint CV acc={dacc:.3f} ==")
     print("  feature importances:", {k: round(float(i),3) for k,i in zip(feat, dt.feature_importances_)})
     print(export_text(dt, feature_names=feat))
     # shape-beyond-size test: does aspect/flatness add over size (scaled_L, scale)?
-    base = cross_val_score(LogisticRegression(max_iter=1000),
-                           StandardScaler().fit_transform(X[:, [0,1]]), yb, cv=5).mean()
-    full = cross_val_score(LogisticRegression(max_iter=1000),
-                           StandardScaler().fit_transform(X[:, [0,1,4,5]]), yb, cv=5).mean()
+    base = cross_val_score(make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000)),
+                           X[:, [0,1]], yb, cv=grouped_cv, groups=groups).mean()
+    full = cross_val_score(make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000)),
+                           X[:, [0,1,4,5]], yb, cv=grouped_cv, groups=groups).mean()
     print(f"\n== SHAPE-beyond-SIZE: size-only acc={base:.3f}  size+shape acc={full:.3f}  (delta={full-base:+.3f}) ==")
 except Exception as e:
     print("sklearn unavailable, correlations only:", e)

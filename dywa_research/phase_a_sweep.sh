@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # Phase-A scale sweep (VALIDATED eval; anchor reproduced 94.5% in-dist).
 # Measures single-arm teacher success vs object scale on HELD-OUT objects (test_set.json),
 # scales spanning in-distribution [0.05,0.10] and extrapolation up to 0.30.

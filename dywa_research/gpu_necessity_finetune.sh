@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # S5 step 3 (GPU, ~8 h per 100k PPO iters at the dev_log's ~3.7 it/s): the NECESSITY experiment
 # (CRITIQUES #1). Fine-tunes the single-arm Trossen teacher WITH large objects in the scale DR on the
 # v2 environment (constant big table T*, baseline spawn/goal regions; see sizeinv_v2.sh). If the
@@ -20,6 +21,7 @@ s5_preflight || exit 1
 SMAX=${SMAX:-0.30}; TAG=${TAG:-largeDR_s${SMAX}}
 STEPS=${STEPS:-100000}; NUM_ENV=${NUM_ENV:-1024}
 if [ "${SMOKE:-0}" = "1" ]; then STEPS=2048; NUM_ENV=64; TAG=smoke_$TAG; fi
+python3 "$R/analysis/s5_geometry_gate.py" --radius "$SMAX" || exit 1
 OUT=$R/results/necessity/$TAG; mkdir -p "$OUT"
 TSTAR="[0.821,1.026,0.4]"
 MS_SCENE=$(python3 -c "print(round(0.95*0.4/0.821,5))"); MS_TASK=$(python3 -c "print(round(0.8*0.4/0.821,5))")
@@ -42,6 +44,7 @@ PYTORCH_JIT=0 python train_ppo_arm.py \
   ++icp_obs.icp.ckpt='imm-unicorn/corn-public:512-32-balanced-SAM-wd-5e-05-920' \
   ++load_ckpt="$CKPT" ++agent.train.train_steps=$STEPS > "$OUT/train.log" 2>&1
 st=$?
+[ "$st" -eq 0 ] || { echo "[nec] training failed (exit=$st); see $OUT/train.log" >&2; exit "$st"; }
 echo "[nec] exit=$st $(date -u +%FT%TZ)" | tee -a "$OUT/run.info"
 s5_check_resolved "$OUT/train.log" "max_scale" "table_dims" "margin_scale" "prevent_fall" | tee -a "$OUT/run.info"
 grep -E "cur_suc_rate|suc_rate" "$OUT/train.log" | tail -3

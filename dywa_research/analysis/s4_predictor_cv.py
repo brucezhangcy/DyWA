@@ -5,7 +5,7 @@ The original phase_c_predictor.py used cross_val_score(cv=5) on 192 rows = 64 ob
 unshuffled StratifiedKFold over rows sorted by scale, with the SAME object in train and test folds
 (object-identity leakage). Here: GroupKFold by object (repeated with shuffled group assignment),
 AUC / Brier / accuracy, a majority baseline, a scale-only baseline, a within-scale (scale-fixed)
-shape test, and a paired permutation test of "shape adds beyond size".
+shape test, and a paired object bootstrap of "shape adds beyond size".
 Input: results/phase_c_predictor/competence_dataset.csv  Output: results/session4/predictor_*.{csv,json,png}
 """
 import json, os
@@ -19,7 +19,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 R = os.path.normpath(os.path.join(HERE, "..", "results"))
-OUT = os.path.join(R, "session4"); os.makedirs(OUT, exist_ok=True)
+OUT = os.environ.get("DYWA_ANALYSIS_OUT", os.path.join(R, "session4")); os.makedirs(OUT, exist_ok=True)
 d = pd.read_csv(f"{R}/phase_c_predictor/competence_dataset.csv")
 d["y"] = (d.succ >= 0.5).astype(int)
 d["log_aspect"] = np.log(d.aspect)
@@ -150,8 +150,8 @@ for (nm, key), col in ((("scale only", ("scale_only", "logistic")), "#8a8985"),
                        (("scale + shortest extent", ("scale+scaled_S", "logistic")), "#2a78d6"),
                        (("size + aspect/flatness (orig.)", ("size+shape(orig: +aspect,flatness)", "logistic")), "#eb6834")):
     fpr, tpr, _ = roc_curve(d.y, oof[key])
-    auc = res[(res.features == key[0]) & (res.model == "logistic")].auc_mean.iloc[0]
-    ax.plot(fpr, tpr, lw=2, color=col, label=f"{nm}  (AUC {auc:.2f})")
+    auc = roc_auc_score(d.y, oof[key])
+    ax.plot(fpr, tpr, lw=2, color=col, label=f"{nm}  (ensemble OOF AUC {auc:.2f})")
 ax.plot([0, 1], [0, 1], ls=":", lw=1, color="#b5b4ae")
 ax.set_xlabel("false-positive rate (predicted single-arm OK, actually failed)", color="#52514e")
 ax.set_ylabel("true-positive rate", color="#52514e")

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # S5 step 2 (GPU, hours): size-invariant table v2. Fixes the two confounds found in Session 4
 # (CRITIQUES #14, analysis/s4_geometry_audit.py) in the v1 test (sizeinv_table.sh):
 #   v1 scaled table_dims with s, which ALSO scaled the spawn region (0.475*table, valid mode has no radius
@@ -24,18 +25,22 @@ MS_TASK=$(python3 -c "print(round(0.8*0.4/0.821,5))")     # 0.38977
 V2="++env.single_object_scene.table_dims=$TSTAR ++env.single_object_scene.margin_scale=$MS_SCENE ++env.task.margin_scale=$MS_TASK"
 SCALES=${SCALES:-"0.05 0.10 0.125 0.15 0.175 0.20 0.25 0.30"}
 SEEDS=${SEEDS:-"0 1 2"}
+# CPU certificate gate before the first simulation. The saved v2 geometry is
+# intentionally unchanged; the default 0.30 grid currently fails this check.
+MAX_RADIUS=$(python3 -c 'import sys; print(max(map(float,sys.argv[1:])))' $SCALES) || exit 1
+python3 "$R/analysis/s5_geometry_gate.py" --radius "$MAX_RADIUS" || exit 1
 run() {  # tag scale seed extra...
   local tag=$1 scale=$2 seed=$3; shift 3
   local cell="$OUT/${tag}_seed${seed}"
-  if grep -q "^$tag,$scale,$seed,[0-9]" "$CSV"; then echo "[v2] skip done $tag seed$seed"; return; fi
+  if grep -q "^$tag,$scale,$seed,[0-9].*,OK$" "$CSV"; then echo "[v2] skip done $tag seed$seed"; return; fi
   echo "[v2] $tag seed=$seed $(date -u +%T)"
   s5_eval_cell "$cell" "s5v2_${tag}_seed${seed}" "$scale" "$seed" 1200 "$@"; local st=$?
-  s5_row "$cell/cell.log" "$tag,$scale,$seed" "$CSV" "$([ $st -eq 0 ] && echo OK || echo FAILED)"
-  s5_check_resolved "$cell/cell.log" "table_dims" "margin_scale"
+  s5_row "$cell/cell.log" "$tag,$scale,$seed" "$CSV" "$([ $st -eq 0 ] && echo OK || echo FAILED)" || return 1
+  s5_check_resolved "$cell/cell.log" "table_dims" "margin_scale" || return 1
 }
 for seed in $SEEDS; do
-  for s in $SCALES; do run "v2_s$s" "$s" "$seed" $V2; done
-  run "ctrlB_s0.10_v1table0.30" 0.10 "$seed" "++env.single_object_scene.table_dims=[0.821,0.921,0.4]"
+  for s in $SCALES; do run "v2_s$s" "$s" "$seed" $V2 || exit 1; done
+  run "ctrlB_s0.10_v1table0.30" 0.10 "$seed" "++env.single_object_scene.table_dims=[0.821,0.921,0.4]" || exit 1
 done
 echo "[v2] DONE $(date -u +%T)"; cat "$CSV"
 echo "next (CPU): python3 $R/analysis/s4_frontier_stats.py-style fit on $CSV; diag: python3 $R/analysis/s5_diag_report.py $OUT/*/diag.npz"

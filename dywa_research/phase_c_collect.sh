@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # Phase-C data collection: per-object single-arm success at transition scales (where objects
 # differentiate), to train an interpretable "can one arm do THIS object?" competence predictor.
 # Captures /tmp/per-cat-suc.pkl (object -> success rate) after each run.

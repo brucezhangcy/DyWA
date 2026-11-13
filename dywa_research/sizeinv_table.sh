@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-# DECISIVE table-confound test: scale the table WITH the object so the usable placement/OOB region
-# stays constant (= the s=0.10, table [0.4,0.5] baseline), isolating single-arm CONTROL from the
-# fixed-table placement-shrink artifact. If the frontier still collapses -> real control limit.
-# table_dim(s) = (usable_half_baseline + s)/(0.5*margin_scale=0.475), per axis. Pure config override.
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
+# HISTORICAL v1 experiment: confounded spawn/goal regions (CRITIQUES #14).
+# Retained for reproduction only; it does not isolate a physical control limit.
 set -uo pipefail
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:${LD_LIBRARY_PATH:-}
 export PYTHONPATH=/home/bruce/DyWA/dywa_research/shims:/home/bruce/DyWA/dywa/exp/train:/home/bruce/DyWA/dywa/src:${PYTHONPATH:-}

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # Bimanual (2-arm Trossen) non-prehensile PUSH eval — scripted primitive baseline on the box objects.
 # Reports per-object success; compare vs the DyWA single-arm frontier (cross-sim, illustrative).
 # Env: dywa_research/mjlab_venv. Objects/scales from bimanual_scales.yaml (10 boxes x scales 0.7/1.0/1.3).

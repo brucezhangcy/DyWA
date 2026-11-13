@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source "$(dirname "${BASH_SOURCE[0]}")/gpu_permission.sh" || exit $?
 # Phase-B mechanism battery: WHAT binds the single-arm size frontier at the collapse point?
 # At fixed collapsed scale s=0.20 (baseline ~12%), change exactly ONE physical knob and see which
 # recovers success. Isolates: reach/workspace (H1) vs inertia/mass (H2) vs threshold artifact.
