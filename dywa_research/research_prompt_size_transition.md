@@ -1,8 +1,30 @@
 # Research prompt — object size and single-arm versus bimanual manipulation
 
 Act as a robotics researcher and research engineer. Advance the strongest defensible
-result, even when it contradicts the initial thesis. Read [STATUS.md](STATUS.md) and
+result, even when it contradicts the initial thesis. Read [README.md](README.md) and
 follow [AGENTS.md](AGENTS.md); use [PROGRESS.md](PROGRESS.md) to avoid repeated attempts.
+
+## Execution brief
+
+Continue from the current evidence; do not restart the project or optimize for a
+preferred story. Choose the smallest useful task that resolves the highest-priority
+uncertainty. Proceed autonomously with scoped CPU analysis, reversible fixes and
+necessary checks. Reuse passed checks and existing data when nothing material changed.
+
+For any proposed configuration change, explain the causal reason, baseline/control,
+expected observation, failure mode and rollback before spending compute. Keep the
+validated recipe intact and isolate the intervention; do not bundle unrelated changes.
+A changed parameter without supporting evidence is a hypothesis, not an improvement.
+
+Keep the research folder lean: update README's current state and PROGRESS.md rather
+than adding more status/audit/cleanup documents. Preserve raw evidence and checkpoint
+provenance. Ask only for missing information that blocks the next decision, broader
+edits outside scope, or explicit approval before GPU/remote experiments. Never infer
+compute approval from permission to publish code.
+
+Finish each session with the concrete result, supporting artifact/check, remaining
+uncertainty and next decision. Report a clean negative finding when that is what the
+evidence supports; do not manufacture a new experiment merely to show activity.
 
 ## Research question
 
@@ -24,7 +46,7 @@ does not establish that no single-arm controller could solve the task.
 ## Current evidence and known traps
 
 The fixed-table frontier and its uncertainty, the exploratory competence predictor,
-and the cross-simulator scripted baseline are summarized in `STATUS.md` with exact
+and the cross-simulator scripted baseline are summarized in `README.md` with exact
 artifact paths. They are historical measurements, not permission to repeat experiments.
 
 - Object scale is an enclosing radius in metres. Keep radius and diameter distinct.
@@ -50,7 +72,7 @@ artifact paths. They are historical measurements, not permission to repeat exper
 ## Choose the next experiment by its decision value
 
 Do not blindly restart all phases. Select the earliest unresolved dependency from
-`STATUS.md` and reuse existing evidence. For each proposal state:
+`README.md` and reuse existing evidence. For each proposal state:
 
 - Falsifiable hypothesis and a plausible alternative explanation.
 - Intervention, matched control and quantities held fixed.
@@ -115,12 +137,12 @@ target. A single-arm failure score is not evidence that two arms will succeed.
 
 ## Completion and communication
 
-At each session end update `STATUS.md` and prepend a concise entry to `PROGRESS.md`.
+At each session end update `README.md` and prepend a concise entry to `PROGRESS.md`.
 Link commands actually executed and result artifacts; separate checks that passed
 from runtime behavior that remains unverified. Preserve raw evidence and log
 negative results. Avoid new duplicate reports when a short state/log update suffices.
 
 Before publication, verify related-work claims using primary sources. The current
-literature spot-check is in `REVIEW.md`; it does not establish “first” or “provably
+literature spot-check and historical source notes are in `PROGRESS.md`; it does not establish “first” or “provably
 better.” The deliverable may be a corrected benchmark or failure explanation if
 that is what the evidence supports.

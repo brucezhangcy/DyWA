@@ -1,11 +1,39 @@
 # Research progress
 
-Read [STATUS.md](STATUS.md) for the current state and next decision.
-This file records completed work and changes in understanding, newest session first.
-Older claims may be superseded; use the latest correction and cited evidence.
-Research plan: [research_prompt_size_transition.md](research_prompt_size_transition.md).
+Current evidence and next action: [README.md](README.md) ·
+Research plan: [research_prompt_size_transition.md](research_prompt_size_transition.md)
 
-## 2026-11-12 — Workflow update and publication preparation
+Newest entries come first. Historical notes are collapsed; their original claims
+may be superseded by later evidence. Open only the section needed for your task.
+
+## 2026-11-12 · Documentation consolidation
+
+**Goal:** reduce duplicated notes and make future sessions faster to resume.
+
+- Consolidated nine top-level Markdown files into five. Current state now lives
+  in `README.md`; audit details and literature notes live in this log. Removed the
+  standalone `STATUS.md`, `REVIEW.md`, `CLEANUP.md`, and literature-log files after
+  preserving their useful contents. Removed one duplicated literature refresh.
+- Standardized heading levels and session titles, collapsed historical detail, and
+  separated Markdown rules from paragraphs so prose cannot become oversized headings.
+- Refined the research prompt and agent workflow around one decision at a time,
+  explicit hypotheses, reproducible evidence and short handoffs. No new status/report
+  file is needed for routine sessions.
+- Preserved the earlier cleanup rationale: removed the superseded plotters
+  `plot_deliverable_a.py`, `plot_sizeinv.py`, `plot_deliverable_e.py` and their figures
+  `results/phase_a/deliverable_A_scaling_law.png`,
+  `results/phase_d_sizeinv/deliverable_D_control_limit.png`, and
+  `results/bimanual/deliverable_E_single_vs_double_SCRIPTED.png`.
+  Their raw CSVs remain; current multi-seed/caveated analyses replace those figures.
+  Generated caches and byte-identical re-analysis outputs were also removed.
+- **Scope:** documentation and one source comment only. Raw measurements, checkpoints,
+  YAML and training settings are unchanged. No GPU experiments ran.
+- **Validation passed:** one title per file, no unintended Setext headings, balanced
+  detail blocks, active links, protected-file comparison and research-only Git scope. See the latest Git commit for the published state.
+- **Next decision:** prepare the four-cell diagnostic proposal; obtain owner approval
+  before running it. Physical geometry and calibrated routing remain unresolved.
+
+## 2026-11-12 · Research workflow update
 
 - **Goal:** make future research sessions resume quickly and test hypotheses rather
   than pursue a predetermined bimanual-necessity conclusion.
@@ -25,13 +53,13 @@ Research plan: [research_prompt_size_transition.md](research_prompt_size_transit
 - **Next:** prepare a four-cell diagnostic proposal with exact command, expected
   evidence, stopping conditions and compute budget; wait for owner approval to run.
 
-## 2026-11-12 — Session 5 CPU audit and research-folder cleanup
+## 2026-11-12 · Session 5 — CPU audit
 
 Continued from PR #1 / cloud-session-4 b234229, not the older main-only teacher
 log. No GPU experiments launched; no lab-machine files changed. Core code,
 YAML configuration, raw measurements and important filenames preserved.
 
-See REVIEW.md for the current audit and CLEANUP.md for six obsolete files removed.
+The detailed audit is preserved below; the documentation-consolidation entry records cleanup.
 Repaired delayed-reset diagnostics, stale per-object output handling and silent
 queue failures. Corrected paired seed bootstrap and legacy predictor CV leakage.
 20 CPU regression tests pass. All 242 tracked core Python files parse.
@@ -42,9 +70,153 @@ The proposed v2 table does not guarantee support across radius-0.30 spawns;
 configuration unchanged and conservative gate added. All 14 research shell
 launchers now require explicit owner approval before GPU execution.
 
----
+<details>
+<summary>Detailed audit, evidence and sources</summary>
 
-## 2026-10-17 — Session 4 (cloud): CPU re-analysis + code audit; the "decisive" size-invariant test is CONFOUNDED; GPU queue ready
+The fixed-table size frontier remains a useful empirical result. The evidence does
+not yet establish that two arms are physically necessary, or a trigger with 90%
+per-episode reliability. This review improves the research tooling and corrects
+several routes to misleading conclusions without changing the core simulator,
+model, YAML files, experimental scale ranges, or raw measurements.
+
+### Scope and provenance
+
+- Repository: `brucezhangcy/DyWA`.
+- Research base: open PR #1, branch `cloud-session-4`, commit
+  `b234229f24308e1e93f30d962d43f1cbf92eeeb7`.
+- `main` is older (`f9beeccf11b47ffde1f2e1f1e165a4b1c7073a9b`). Applying this patch
+  directly to main is not equivalent to continuing the current research branch.
+- Audit improvements were published on `research/session5-audit` at `6c9a9f7`.
+  The owner subsequently authorized main publication; see `PROGRESS.md` for the workflow update.
+- Every tracked edit/addition/deletion is inside `dywa_research/`. No important
+  filename was renamed. See the documentation-consolidation entry for the six obsolete files removed.
+- No GPU experiment was launched. The one read-only SSH availability check timed
+  out; no lab-machine file was changed. GitHub's HTTPS CLI login is invalid; publishing through the existing SSH key was subsequently verified.
+
+### Findings and repairs
+
+| Priority | Finding | Action and remaining limit |
+|---|---|---|
+| High | The pending diagnostic reads a terminal root/goal as the next episode's start. `EnvBase` resets at the beginning of the following step. | Replaced that assumption with an observational `reset_indexed` hook, after pose assignment and before physics. Tracks exact starts/goals, asynchronous resets, lengths, incomplete episodes and errors. CPU trajectory equivalence verified; Isaac Gym verification still pending. |
+| High | A failed run can be followed by more cells, the necessity script can return success after training fails, and final queue eval failure can be hidden by `queue DONE`. | Propagate failures, validate NPZ against taxonomy counts, reject missing/corrupt/nonfinite outputs, skip only `OK` cells, and preserve prior attempts before retrying. |
+| High | Copying the global `/tmp/per-cat-suc.pkl` can attach another run's or an earlier run's labels. | Diagnostic entry now writes a cell-local pickle using `PER_OBJECT_OUT`; the S5 helper no longer copies the shared file. Historical launchers remain historical protocols. |
+| High | The v2 table is insufficient to guarantee full support of radius-0.30 objects over the baseline spawn region. | Added a conservative CPU geometry gate. Kept all table/margin/scale settings unchanged; default large-radius v2 and fine-tune are intentionally blocked pending geometry review. This is a failed support guarantee, not proof that every such shape falls. |
+| High | Binary competence confidence is interpreted as per-episode success probability. | Added object-disjoint routing audit. At score ≥0.90: 45/192 object-scale cases (38 objects), historical macro episode success **81.1%**, binary competence precision **91.1%**. These are distinct quantities. Not a calibrated deployable trigger. |
+| Medium | The original predictor used row CV and globally fitted preprocessing; object identity crossed folds. | Its CV now uses object-disjoint folds and fold-local scaling. The newer S4 grouped analysis was already object-disjoint and was rerun. |
+| Medium | The S4 frontier bootstrap resampled seeds separately within every scale, breaking paired seed-curve dependence. | Resample complete seed curves together. Point estimates unchanged; updated intervals below. Three seeds still give weak uncertainty estimates. |
+| Medium | A bimanual plotting interpolation silently clamps radii below its observed support. | Return missing outside either end of the observed range. No simulator or configuration changed. |
+| Medium | The displayed ROC's AUC label referred to a different aggregation of predictions. | Label now uses the actual plotted ensemble out-of-fold predictions. Ensemble OOF metrics remain descriptive; training sets overlap across folds. |
+| Medium | Radius-grid generation parses Python values with `eval`. | Use AST + `literal_eval`; optional `--output` allows non-destructive verification. Generated YAML is semantically identical to the committed file; YAML was not changed. |
+| Medium | GPU queue automatically defaults to all long experiments and guesses the first checkpoint directory. | All 14 research shell entry points require a human-supplied approval flag; queue defaults to diagnostics only; final eval requires an exact `FINETUNED_CKPT`. Bimanual training requires an explicit output glob. |
+
+The approval flag is a launch interlock, not proof that permission was given. An
+agent must still obtain the owner's explicit approval for the particular GPU
+experiment and budget before using it. Direct Python entries also remain subject
+to that instruction. No approval flag was supplied to a real GPU command here.
+
+### Geometry: what the CPU calculation actually establishes
+
+The pending v2 script uses table dimensions `[0.821, 1.026]` m and baseline spawn
+half-extents approximately `[0.190, 0.23744]` m. With an enclosing radius of 0.30 m,
+worst-case full-support clearances are **−0.0795 m in x** and **−0.02444 m in y**.
+A sufficient table size, preserving those centres, is at least
+`[0.980, 1.07488]` m before any additional clearance.
+
+About **47.8%** of uniformly sampled spawn centres fail this enclosing-sphere
+support certificate; **30.9%** of goal centres fail it. These are analytical
+certificate fractions, **not measured failure/fall rates**. Real object footprint
+and orientation can be much smaller than its enclosing sphere. The numbers do
+not authorize a configuration change: table size also affects root-tensor and
+software-clip interactions, which need inspection in the approved diagnostic.
+
+The valid-pose clone also occurs before stable-pose z is rescaled. The code path
+can leave a stale reset height when scale differs from one. Its actual penetration
+and outcome effects have not been established by simulation here.
+
+### What the historical data support
+
+Whole-seed-curve bootstrap of the same binomial-logistic fit:
+
+| Metric | 50% crossover radius | Exploratory 95% bootstrap interval |
+|---|---:|---:|
+| Raw episode-weighted success | 0.16707 m | [0.16498, 0.16998] m |
+| Legacy immediate-filter sensitivity | 0.17294 m | [0.17003, 0.17563] m |
+
+The second metric historically removes all ≤3-step episodes from its denominator
+but retains their successes in its numerator. It should not be called exact
+physical feasibility. The new NPZ report filters both numerator and denominator
+and reports immediate successes explicitly. Existing raw tables were preserved.
+
+The 64-object/192-row competence dataset has one recorded spawn/seed per
+object-scale case and lacks episode denominators. The 81.1% routing result is a
+mean of historical per-object rates, not an independently measured deployment
+rate or a confidence bound. It does not test bimanual routing success.
+
+The scripted bimanual number remains **14.2% macro**, from a different simulator,
+objects and criteria. The CPU re-analysis reproduces the existing result; it is
+not a matched experiment, trained-bimanual result, or a necessity proof. A failed
+finite-budget single-arm fine-tune would also not prove physical impossibility.
+
+### Checks completed
+
+- Static parse of **all 242 tracked core Python files**, and `bash -n` on six core
+  shell files. No syntax errors; no core source edited.
+- Parse and shell syntax checks for the research folder; see the generated
+  `results/session5/repository_audit.json` for current counts.
+- **20 CPU regression tests pass**: delayed and partial reset handling, exact
+  start/goal association, unchanged mock rollout, immutable snapshots, error
+  detection, cell consistency, missing/corrupt results, all 14 shell launch locks,
+  queue failure propagation, support gate, and configuration-preserving radius grid.
+- S4 frontier, grouped predictor, and scripted bimanual re-analyses run to
+  completion. Original Session-4 outputs remain unchanged. Byte-identical
+  regenerated outputs were removed instead of accumulating duplicate results.
+- New held-out trigger audit runs on CPU; its plot was visually inspected.
+- Historical Phase-A/B/C/D CSVs pass structural/range/status/key checks and have
+  SHA-256 fingerprints in the audit report. This does not establish data authenticity
+  or recover omitted per-episode information.
+- The separate `bimanual-dywa` scaffold remains unready: duplicate actor lookup,
+  overlapping bases, shared configuration, hardcoded DOF slices and target-buffer
+  layout remain unresolved. Existing `plans/bimanual_scaffold_review.md` is still
+  applicable; no core edits were made to disguise these as solved.
+
+### Literature spot-check
+
+Primary arXiv records confirm the identities of
+[DyWA](https://arxiv.org/abs/2503.16806),
+[BiNoMaP](https://arxiv.org/abs/2509.21256), and
+[DART](https://arxiv.org/abs/2604.17833). BiNoMaP's current record describes RL-free,
+geometry-parameterized bimanual primitives; DART concerns objects on a tray.
+[RT-Affordance](https://arxiv.org/abs/2411.02704) describes affordance-plan-conditioned
+policies; citing it as direct evidence of a calibrated arm-count success predictor
+is too strong. This was a source-identity/abstract spot-check, not an exhaustive
+novelty search. “First”, “provably better”, and “bimanual necessity” remain proposed
+claims, not established results.
+
+### Next work, requiring owner approval before any GPU execution
+
+1. Approve only the four-cell diagnostic first. Check that the repaired recorder
+   reproduces historical baseline outcomes and that raw camera/tensor readings
+   agree about spawn heights and robot base/clip coordinates. No long queue yet.
+2. Review actual object footprints, fixed spawn/goal regions, table clearance and
+   base placement together. Agree on the geometry change before editing core
+   configuration. Compare a small-object anchor in the proposed environment.
+3. Use a fixed episode budget per object and multiple spawn poses/seeds, plus
+   exact start and outcome records. Report right-censoring and immediate outcomes.
+4. Only after those gates: approve the controlled scale sweep, small-DR versus
+   large-DR training, and matched trained bimanual comparison as separate budgets.
+5. Fit a per-episode or count-weighted capability model; calibrate and select its
+   routing threshold on separate object groups, then evaluate on untouched groups.
+   Define a fallback when neither controller reaches the reliability target.
+
+Until then, use: “This fixed teacher loses generalization at increasing object
+scale in the tested setup.” Keep the physical-cause and arm-necessity questions open.
+
+</details>
+
+## 2026-10-17 · Session 4 — Re-analysis and validity corrections
+
+<details>
+<summary>Read historical session notes</summary>
 
 **Agent:** Claude (Opus 5.5) on a CPU-only machine (the user's MacBook, arm64, `nvidia-smi` not found). No coldbrew,
 no Isaac Gym, no checkpoints, no Aloha_real. **No simulation was run.** Every number below comes from the
@@ -76,7 +248,7 @@ committed CSVs or a CPU computation run here (commands listed). Source files wer
   is **not supported**. "No knob recovers" still holds: even k/335 ≤ 0.33. ws 0.9 and 1.2 being byte-identical
   matches the arm's physical reach of 0.768 m (FK), which binds before either clip value. CRITIQUES #15.
 
-### 2. Code audit: CORRECTIONS to earlier mechanism claims (read-only, cited)
+### 2. Corrections from the code audit
 1. **Valid mode has no radius contraction.** `_valid_poses` uses `_get_xy(prevent_fall=False)`
    (scene.py:1369-1376). So the Session-2 mechanism "placement = 0.5·margin·table − radius collapses at s ≈ 0.19"
    (§16-17) describes TRAIN mode, not the evals. This also explains why `prevent_fall=False` was byte-identical
@@ -160,7 +332,7 @@ See the PR body: `bigregion.sh` + `results/phase_c_bigregion/` (duplicate of the
 now explained by §2.1), `gpu_wait_bimanual.sh` (obsolete watcher), and the stale Session-1 test_rma/Docker
 harness detail in this log.
 
-### NEXT
+### Next steps at the time
 1. **[GPU]** `conda activate dywa_render && setsid bash dywa_research/gpu_s5_queue.sh > dywa_research/results/s5_queue.log 2>&1 < /dev/null &`
    Stage 1 first: check the diag cells reproduce `multiseed.csv` seed 0, then read `results/s5_diag/diag_report.txt`.
 2. **[GPU]** If v2 still collapses at a similar s*: the control-limit claim is restored and the necessity
@@ -171,11 +343,14 @@ harness detail in this log.
    raise `num_valid_poses` for headline numbers (#13).
 5. **[GPU, longer]** In-DyWA bimanual: fix the Trossen actor_name / base-pose / dof_offset items in the scaffold review first.
 
----
+</details>
 
-## 2026-08-21 — Session 3: mjlab bimanual env RECONSTRUCTED; scripted bimanual eval running
+## 2026-08-21 · Session 3 — Bimanual runtime and scripted evaluation
 
-### Resume + environment reconstruction (Deliverable E prep)
+<details>
+<summary>Read historical session notes</summary>
+
+### Runtime reconstruction
 Resumed to run the cross-sim bimanual eval. GPU freed (hanwen's job done); the Aug-16 watcher had died
 on reboot (~Aug-17) without running the eval. Ran `bimanual_eval.sh` directly and cleared a chain of blockers:
 - **scipy** missing in mjlab_venv -> installed.
@@ -192,7 +367,7 @@ on reboot (~Aug-17) without running the eval. Ran `bimanual_eval.sh` directly an
   `warp-lang==1.12.0` + `mujoco-warp 3.5.0.2` (git rev 5a86ec2). All version errors vanished; physics is
   authentic (no engine patches) -> trustworthy numbers.
 
-### Bimanual eval RUNNING (results pending at handoff)
+### Bimanual evaluation at handoff
 `bimanual_eval.sh` (scripted 2-arm push, 30 variants x 30 episodes) running on GPU. Confirmed a genuine
 bimanual env: `joint_pos (16,)`=2x8dof, `left/right_ee_to_object`, `actions (12,)`. Results print at the
 end -> `results/bimanual/eval.log`.
@@ -202,7 +377,8 @@ frontier = Deliverable E (cross-sim, illustrative); then log + push.
 
 ---
 
-### Deliverable E (SCRIPTED lower bound) — single vs double, cross-sim
+
+### Scripted bimanual baseline across simulators
 Scripted bimanual eval finished: 30 box×scale variants, per-object success 0.00–0.30, **MACRO AVG 0.142**.
 Mapped each box's half-extents (runbook §1) -> bounding radius (0.116–0.327 m); overlaid vs the single-arm
 frontier -> results/bimanual/deliverable_E_single_vs_double_SCRIPTED.png (+ bimanual_results.csv).
@@ -213,9 +389,12 @@ strong, and that checkpoint was wiped on reboot. So Deliverable E is currently a
 single-vs-double claim needs the trained residual policy (retrain via runbook ~hours, or locate model_3300.pt).
 Cross-sim => illustrative regardless.
 
----
+</details>
 
-## 2026-08-10 — Session 2: bare-metal runtime, teacher-eval bring-up, TWO validity bugs caught
+## 2026-08-10 · Session 2 — Evaluation setup and size frontier
+
+<details>
+<summary>Read historical session notes</summary>
 
 **Agent:** Claude (Opus 4.8) over SSH to `coldbrew`. **Constraint honored:** only *write* inside
 `dywa_research/`; repo files read-only (fixes done via patched copies / config overrides, never by
@@ -243,7 +422,7 @@ Smoke config: `+env=trossen_icra_base +run=trossen_icra_ours_abs_rel`, `num_env=
 `ws_bound=[[-0.25,-0.35,-0.1],[0.25,0.35,0.4]]` (the Session-1 "widen ws_bound" lesson),
 `force_rad=0.05`, in-dist `scale=0.08`.
 
-### 3. BUG #1 (code) — `load_env() got multiple values for 'freeze_env'`
+### 3. Environment-loading argument bug
 `valid_ppo_arm.py:87` calls `load_env(cfg, None, None, freeze_env=False, ...)` but the current
 signature is `load_env(cfg, path, freeze_env=False, **kwds)` — the 3rd positional `None` collides
 with the `freeze_env` keyword. **Fix (no repo edit):** patched copy
@@ -252,7 +431,7 @@ resolve because `hydra_cli` finds them via `importlib.resources.path('data','cfg
 not script-relative). Run it with `dywa/exp/train` added to `PYTHONPATH` so its sibling imports
 (`train_ppo_arm`, `envs`) resolve. Verified: eval now proceeds past this point into Isaac Gym.
 
-### 4. BUG #2 (data, CRITICAL for legitimacy) — stale hardcoded mesh paths
+### 4. Stale mesh paths
 All **26,737** object URDFs in `data/meta-v8/urdf/` hardcode absolute mesh paths
 `/home/brucezhang/Downloads/DyWA/data/coacd/…` (a different user/machine that does not exist here).
 Isaac Gym logged `Failed to resolve collision/visual mesh` for every object and **loaded objects
@@ -265,7 +444,7 @@ are present at `data/coacd/`; the referenced files exist there.
   will pass `++env.single_object_scene.dgn.urdf_path=/home/bruce/DyWA/dywa_research/urdf_fixed`.
   Everything else still reads the real `meta-v8` (cloud/hull/pose/normal/metadata).
 
-### 5. Legitimacy gates (enforced before ANY number is treated as a finding)
+### 5. Measurement-validity gates
 1. **Assets resolve** — zero "Failed to resolve mesh" lines in the log.
 2. **Sanity anchor** — in-distribution scale (0.05–0.10) must reproduce the known **~93%** teacher
    success. A wrong pipeline that "runs" is not a result.
@@ -289,7 +468,8 @@ and matching `/proc/PID/cmdline` (the bash SSH shell is excluded). Always launch
 
 ---
 
-### 8. Smoke result — pipeline RUNS end-to-end, but FAILS the sanity anchor (do not sweep yet)
+
+### 8. Smoke run fails the reference check
 
 After fixing BUG#1 (load_env args + tuple unpack) and BUG#2 (urdf_fixed), the teacher eval now
 runs fully and emits per-object success telemetry:
@@ -323,7 +503,8 @@ session (patched entry, urdf_fixed, harness) is reusable as-is once the anchor i
 
 ---
 
-### 9. Stochastic run — hypothesis #1 RULED OUT
+
+### 9. Stochastic-action control
 smoke6_stoch (sample_action=True, eval_step=2400): still **0%** (256 ep, 0 succ), and
 avg_true_return=-0.134 (negative). Both deterministic and stochastic → exactly 0% with negative
 return ⇒ NOT a determinism/curriculum-difficulty gap. The loaded policy is making no progress in
@@ -334,7 +515,8 @@ inspect MonitorEnv oob-vs-timeout breakdown). Sweep remains BLOCKED (correctly).
 
 ---
 
-### 10. ROOT CAUSE of 0% found — wrong ws_bound + filter (recovered from prior transcripts)
+
+### 10. Zero-success diagnosis: workspace and object filter
 Recovered the known-good teacher reproduction from ~/.claude/projects transcripts + dev_log: the
 2026-06-21 local repro hit 62/64 (~97%). Diffing it against my 0% smoke, TWO knobs were wrong:
   * ws_bound x-max: mine 0.25 vs known-good **0.6** — the "widen ws_bound so the EE reaches the
@@ -353,7 +535,8 @@ dywa_research/; run path.root now points into dywa_research/results.
 
 ---
 
-### 11. ANCHOR PASSES — eval VALIDATED (94.5%), Phase-A UNBLOCKED
+
+### 11. Reference evaluation: 94.5% success
 anchor_eval.sh result: episode_count=615, success_count=581, **suc_rate=0.9447 (94.5%)**,
 balanced_suc_rate=0.9355. Matches the reported ~93.1% teacher. GATE 1 (0 mesh errs) + GATE 2
 (~93%) both PASS. The eval pipeline is now legitimate and under our control, fully inside
@@ -364,7 +547,8 @@ outputs under dywa_research/results/phase_a, then aggregate -> Deliverable A (sc
 
 ---
 
-### 12. DELIVERABLE A COMPLETE — single-arm size frontier measured, s* ~= 0.167 m
+
+### 12. Initial size frontier: crossover near 0.167 m
 Phase-A scale sweep (validated eval, held-out test_set.json, goal_radius=0.05 absolute, 64 envs,
 eval_step=1200, urdf_fixed, ws_bound x-max 0.6). Legitimate scaling law:
 
@@ -397,6 +581,7 @@ CAVEATS / next (per prompt guardrails, before this is paper-ready):
 
 ---
 
+
 ### 13. Phase-B mechanism battery + a measurement-validity correction (force_rad)
 Ran a single-knob intervention battery at the collapsed scale s=0.20 (baseline suc_rate 0.120):
 
@@ -426,6 +611,7 @@ s* stay valid (tolerance was a constant 0.10 across all scales), but:
 
 ---
 
+
 ### 14. Threshold control (proper force_rad knob) + strict anchor + CRITIQUES.md
 Threshold-artifact test at s=0.20 (force_rad = goal tolerance):
   force_rad 0.05->0.157, 0.10->0.120, 0.15->0.106, 0.20->0.142 suc_rate. No systematic recovery even
@@ -439,9 +625,11 @@ Wrote dywa_research/CRITIQUES.md — a rigorous anticipated-critique / red-team 
 threat, each with status + the experiment that closes it). Top OPEN before any bimanual-necessity
 claim: (#1) train-test scale gap [necessity experiment], (#3) per-object feasibility audit at scale,
 (#4) multi-seed error bars.
+
 ---
 
-### 15. DELIVERABLE B — failure-mode taxonomy vs scale (+ feasible-only frontier correction)
+
+### 15. Failure taxonomy and sensitivity correction
 Instrumented a termination-cause wrapper (valid_ppo_arm_taxonomy.py, separate from the validated
 eval) and swept scale. force_rad=0.10 (matches Del A). Fractions of episodes:
 
@@ -465,9 +653,11 @@ Findings:
    between raw and feasible-only. Figure: results/phase_b_taxonomy/deliverable_B_taxonomy.png.
 CRITIQUES.md #3 updated to ADDRESSED. Remaining top-OPEN: #1 (train-test scale gap / necessity),
 #4 (multi-seed error bars). A per-object bbox-vs-workspace admissibility filter would sharpen #3.
+
 ---
 
-### 16. #4 multi-seed error bars + #3 feasibility mechanism (CONVERGING findings)
+
+### 16. Multi-seed uncertainty and feasibility
 > **[Session 4 correction]** The "usable_x = 0.38 − 2s" mechanism applies to TRAIN mode only. In the evals the immediate failures are an additive looping-env artifact (2026-10-17 entry §1–2).
 Multi-seed (3 seeds) frontier, force_rad=0.10, held-out:
   s=0.10: raw 0.934+-0.005   s=0.15: 0.681+-0.012   s=0.20: 0.209+-0.064   s=0.30: 0.001+-0.000
@@ -487,9 +677,11 @@ control limit. This is the single most important caveat on Deliverable A.
 Decisive test launched: prevent_fall=False (removes the radius-contraction, gives objects the full
 table region) at s={0.15,0.20,0.30}. If success recovers => placement artifact dominates; if not =>
 genuine control limit. [result pending]
+
 ---
 
-### 17. DECISIVE feasibility result — frontier is dominated by a FIXED-TABLE artifact; #1 GATED
+
+### 17. Historical table-artifact interpretation — later corrected
 > **[Session 4 correction]** push_task:512 is the GOAL region, not the OOB bound. The valid-mode spawn has no radius contraction, so `prevent_fall` is hardcoded False there; that, not `init_type=stable`, is why the test was byte-identical (2026-10-17 entry §2).
 Traced the OOB bound: push_task.py:512 sets it from env.scene_cfg.table_dims * margin_scale (FIXED
 +-[0.16,0.20]); the table is a fixed small URDF (table-with-wall-small.urdf) — table_dims sets bounds
@@ -508,9 +700,11 @@ LARGER TABLE ASSET so the object-to-table ratio stays constant across scales; th
 frontier and, if the collapse persists, run necessity. This is the rigorous ordering.
 Deliverable A v2 (multi-seed, error bars) plotted: results/phase_c_multiseed/deliverable_A_v2_multiseed.png.
 CRITIQUES.md updated: added #0 (fixed-table artifact, dominant) and marked #1 gated on it.
+
 ---
 
-### 18. DELIVERABLE C (partial) - single-arm COMPETENCE predictor = the trigger's single-arm branch
+
+### 18. Initial single-arm competence predictor
 Built the decision module 'can ONE arm do THIS object?' from per-object success (64 objects x 3
 transition scales 0.125/0.15/0.175 = 192 points) vs object geometry (from clouds).
 Results (interpretable): logistic & depth-3 tree both CV acc ~= 0.697.
@@ -528,9 +722,11 @@ NOT YET DONE (answering the user directly): this is only the SINGLE-ARM branch. 
 ADAPTIVE policy also needs (Phase D) a real bimanual 2-Trossen policy to compare against, which needs
 a dual-arm ENV (repo modification, conflicts with the 'keep to dywa_research' rule) and is gated on
 the table confound (#0). Deliverable_C_competence.png + competence_dataset.csv saved.
+
 ---
 
-### 19. DECISIVE — size-invariant-table test: frontier is a REAL control limit (#0 RESOLVED)
+
+### 19. Historical control-limit interpretation — later withdrawn
 > **[Session 4 correction]** This test is confounded. It also grew the spawn and goal regions and put 14–22% of targets out of reach (see the 2026-10-17 entry §2). #0 is re-opened.
 Scaled the table WITH the object (table_dim=(usable_half_baseline+s)/0.475 per axis) so the
 placement/OOB region stays constant = the s=0.10 baseline. Pure config override (table is procedural
@@ -552,9 +748,11 @@ artifact. #0 RESOLVED; bimanual-necessity direction re-validated. Failure is now
 UNBLOCKED: #1 necessity fine-tuning is now scientifically valid (run it on the size-invariant table
 with extended scale DR). Residual control worth one check: does a longer episode timeout help?
 Figure: results/phase_d_sizeinv/deliverable_D_control_limit.png. CRITIQUES #0 -> RESOLVED.
+
 ---
 
-### 20. Bimanual mjlab env FIXED (dependency hell resolved); eval ready
+
+### 20. Bimanual runtime repaired
 Resumed the single-vs-double thread. The user has a dual-arm non-prehensile Trossen PUSH env (mjlab):
 /home/bruce/Aloha_real/sim_3d_bimanual-main. Fixed the broken bring-up (their uv.lock pinned a 404'd
 mujoco nightly + mujoco-warp git rev; driver is CUDA 12.9 so torch cu130 gave cuda=False):
@@ -567,9 +765,11 @@ Eval ready (dywa_research/bimanual_eval.sh): scripted bimanual push primitive on
 --scripted_only, per-object success. BLOCKED only on GPU (another user's job at 100%/22GB); will run
 when it frees. Comparison plan (Deliverable E): overlay bimanual box success vs single-arm frontier at
 matched bounding-radius; cross-sim => illustrative, clearly labeled.
+
 ---
 
-### 21. Headline conclusion (for the record) + generality note + how-we-differ
+
+### 21. Historical conclusion and scope caveats
 ONE-LINER: "For this single Trossen arm, objects beyond ~0.16 m bounding radius (~30 cm across)
 become too large for one contact to steer to a target pose -- success collapses from ~93% to near
 zero, dominated by timeouts."
@@ -582,9 +782,13 @@ frontier + isolate cause) + the mechanistic finding, which transfer even though 
 For generality/publishability: add cross-robot (Franka), the necessity experiment, and the bimanual
 comparison. Literature how-we-differ table added to auto_research_log (2026-08-16): prior work frames
 large objects as GRASPABILITY; we measure single-arm CONTROL vs size + prove controllability.
----
 
-## 2026-07-20 — Session 1: reconnaissance, fact-verification, Phase-A harness build
+</details>
+
+## 2026-07-20 · Session 1 — Initial investigation
+
+<details>
+<summary>Read historical session notes</summary>
 
 **Agent:** Claude (Opus 4.8), driving remotely over SSH into `coldbrew` (10.137.31.174).
 **Working dir:** `/home/bruce/DyWA`. **Constraint honored:** read/inspect anywhere in the repo,
@@ -671,3 +875,171 @@ volume?" is answered: **NO.** So:
   (it overrides `env.task.goal_radius`, Session 2 §13).
 - The Session-1 blockers (GPU contention, Docker runtime, teacher-vs-student path, radius semantics) were all
   resolved in Session 2.
+
+</details>
+
+## Literature notes
+
+<details>
+<summary>Historical searches and related-work notes</summary>
+
+These notes preserve the earlier literature investigation, not a new or exhaustive
+search. Novelty statements and controller recommendations below are historical
+hypotheses. Use the corrected research prompt and later audit when framing claims.
+
+**Date:** 2026-06-20
+**Method:** Web search + primary-source abstract fetches (arXiv / proceedings), run from the main
+thread. Every arXiv ID below was returned by search and/or confirmed by fetching the abstract.
+Companion to [research_prompt_size_transition.md](research_prompt_size_transition.md) (the current plan has since been revised).
+
+> **Scope.** Five threads tied to the proposal: (1) non-prehensile manipulation SOTA/baselines,
+> (2) object-size/scale scaling, (3) single-vs-bimanual arm-count decision (the core novelty),
+> (4) bimanual non-prehensile / large-object manipulation, (5) feasibility/affordance prediction.
+
+---
+
+
+### TL;DR
+
+- **Both core claims are open.** No prior work (a) measures the *single-arm non-prehensile size
+  frontier / crossover*, or (b) provides an *explicit, interpretable one-vs-two-arm trigger* driven
+  by object physics.
+- **One paper sits close and must be addressed: BiNoMaP (2509.21256).** Dual-arm non-prehensile,
+  size-parameterized — but *always bimanual*, demo-based, and it never decides whether two arms are
+  needed. It is also already present in your repos (`Aloha_real/binomap/`, `portfolio/BiNoMaP/`).
+- **Biggest practical takeaway:** reuse BiNoMaP's bimanual primitives as the Phase-D bimanual
+  controller instead of training dual-arm RL from scratch — spend novelty budget on the trigger and
+  the frontier, which is where the contribution actually is.
+
+---
+
+
+### Thread 1 — Non-prehensile manipulation (base system + baselines)
+
+| Paper | ID / venue | One-line | Role |
+|---|---|---|---|
+| **DyWA** | 2503.16806 · ICCV 2025 | Dynamics-adaptive world+action model; 1-view unseen success 75% sim / 68% real | **Base system being extended** |
+| **CORN** | 2403.10760 · ICLR 2024 | Contact-based patch-transformer object representation, pretrained encoder | Predecessor; supplies the reused ICP/point encoder; baseline |
+| **HACMan** | 2305.03942 · CoRL 2023 | Hybrid actor-critic maps; pick contact point + motion params; 89% sim-unseen, 50% real | Non-prehensile RL baseline |
+| **HACMan++** | 2407.08585 | Spatially-grounded motion primitives, follow-up to HACMan | Baseline / primitive design reference |
+| **Hierarchical & Modular Non-prehensile** | 2502.20843 · 2025 | Non-prehensile in general environments via modular nets | Recent follow-up |
+
+**Note:** DyWA, CORN, HACMan are all **single-arm**. The published evaluation protocol the field
+expects is *1-view, unknown-state, unseen objects* — report your single-arm frontier numbers on it
+for direct comparability.
+
+### Thread 2 — Object-size / scale scaling
+
+- **Data Scaling Laws in Imitation Learning** (2410.18647, ICLR 2025): success follows a power law in
+  *number of training objects/environments*; diversity matters more than demo count; gains saturate
+  past ~200 objects. **This is data-quantity scaling, not object-physical-size scaling** — a useful
+  contrast, not a precedent.
+- General practice (ADR, "test at 0.5×–3× scale") randomizes/perturbs object size for robustness, but
+  **no source characterizes a capability-vs-size frontier with a crossover** for non-prehensile
+  manipulation. → **Phase A is novel.**
+
+### Thread 3 — Single-vs-bimanual arm-count decision (CORE NOVELTY)
+
+This is the scoop-check thread. Findings:
+- Dual-hand *selection* work decides **which** hand executes a **grasp** (left/right), not **how
+  many** arms. Different problem (prehensile, laterality).
+- "Mixed coordination" / base-residual multi-arm work decides **when arms must coordinate** during a
+  task, not whether the task needs one or two effectors.
+- Bimanual taxonomies (Krebs & Asfour 2022) catalogue *types* of two-handed tasks but prescribe no
+  learned trigger.
+- **MonoDuo** (2605.29298) and **You-Only-Teach-Once** (2501.14208) transfer/learn bimanual policies
+  but assume bimanual from the start.
+
+→ **No work provides an explicit, interpretable trigger that decides one-vs-two arms from object
+size/mass for non-prehensile manipulation.** The novelty holds.
+
+### Thread 4 — Bimanual non-prehensile / large-object manipulation
+
+| Paper | ID | Key facts | Threat |
+|---|---|---|---|
+| **BiNoMaP** | 2509.21256 (Zhou & Jia; under review, rev. Mar 2026) | Dual-arm non-prehensile primitives (push/poke/pivot/wrap); RL-free, learns from video demos; **parameterized primarily by object size**; cross-embodiment to two real dual-arm platforms | **CLOSEST.** But *always bimanual*, no arm-count decision, no single-arm frontier |
+| **DART** | 2604.17833 (Apr 2026) | Dual-arm non-prehensile tray transport; NMPC + impedance + (analytic/regression/RL) dynamics; varies object mass/geometry/friction | Always-dual, no decision, different task |
+| **PerAct2** | 2407.00278 | Bimanual manipulation benchmark + multi-task agent | Benchmark reference |
+| **DA-VIL** | 2410.19712 | Adaptive dual-arm RL + variable impedance | Dual-arm control reference |
+
+**On BiNoMaP being in your repos:** `Aloha_real/binomap/` and
+`portfolio/BiNoMaP/BiNoMaP_03_aloha_trossen_box_flip_SUCCESS.mp4` indicate you already have a working
+bimanual non-prehensile primitive stack on Trossen hardware. This is the natural Phase-D bimanual
+controller.
+
+### Thread 5 — Feasibility / affordance prediction (mechanism for the trigger)
+
+- **RT-Affordance** (2411.02704): affordances as intermediate representations for manipulation
+  reasoning.
+- Grasp/push **feasibility models** predict P(success) of an action before executing it (used for
+  action selection). This is precisely the abstraction the **Phase-C capability predictor**
+  instantiates — but applied to *arm-count* choice rather than grasp-pose choice. Cite this line as
+  the methodological precedent for "predict success before acting."
+
+---
+
+
+### Defending novelty — the three threats and the rebuttals
+
+1. **BiNoMaP (2509.21256).** *Overlap:* bimanual non-prehensile + object-size parameterization.
+   *Defense:* always-bimanual and demo-based; no trigger, no frontier, no necessity result. Your
+   contribution is the decision + the measured crossover + the "two arms are *necessary* above `s*`"
+   evidence. Cite prominently; reuse its primitives.
+2. **DART (2604.17833).** *Overlap:* dual-arm non-prehensile, varies object physics. *Defense:*
+   always-dual MPC for tray balancing; no arm-count decision; different task and objective.
+3. **Data Scaling Laws (2410.18647).** *Overlap:* the phrase "scaling law." *Defense:* their axis is
+   data quantity; yours is object physical scale with a mechanistic (controllability/stability)
+   explanation and a crossover. Orthogonal.
+
+### Recommended edits already applied to the proposal (§8)
+
+- Added a verified Related-Work / positioning section (must-cites + threats + rebuttals).
+- Phase D now recommends **reusing BiNoMaP primitives** as the bimanual controller (de-risk).
+- Added field-expected experiments: report on the standard 1-view-unseen protocol; include a
+  sim-to-real argument; add a **"necessity" experiment** (retrain single-arm above `s*`, show it
+  still fails); add **BiNoMaP-style size-only parameterization as a Phase-C baseline** to beat.
+
+### Caveats
+
+- BiNoMaP is under review (not yet a finalized venue); track its status before submission.
+- A few IDs are early-2026 preprints (DART 2604.17833, MonoDuo 2605.29298) — re-verify versions near
+  submission.
+- This pass used targeted search, not an exhaustive sweep; a second pass focused narrowly on
+  "effector-count / morphology selection" outside manipulation (e.g., task-and-motion planning,
+  multi-robot task allocation) may surface additional adjacent prior art worth pre-empting.
+
+---
+
+
+#### Verified source links
+DyWA https://arxiv.org/abs/2503.16806 · CORN https://arxiv.org/abs/2403.10760 ·
+HACMan https://arxiv.org/abs/2305.03942 · HACMan++ https://arxiv.org/html/2407.08585 ·
+Hierarchical/Modular https://arxiv.org/abs/2502.20843 · BiNoMaP https://arxiv.org/abs/2509.21256 ·
+DART https://arxiv.org/abs/2604.17833 · PerAct2 https://arxiv.org/pdf/2407.00278 ·
+DA-VIL https://arxiv.org/pdf/2410.19712 · Data Scaling Laws https://arxiv.org/html/2410.18647v1 ·
+RT-Affordance https://arxiv.org/html/2411.02704v1
+
+
+---
+
+
+### 2026-08-16 — Fresh literature refresh + HOW WE DIFFER (targeted web search, NOT exhaustive)
+Re-searched single-arm non-prehensile size frontier / scaling. Object-size limits ARE studied, but
+under DIFFERENT framings than ours:
+
+| Prior framing | Representative work | How OURS differs |
+|---|---|---|
+| Object too big to GRASP (aperture) -> non-prehensile / extrinsic dexterity | Ungraspable via Extrinsic Dexterity (2503.23120) | We study non-prehensile CONTROL vs size, not graspability; the arm CAN contact it, it just can't steer its pose |
+| Non-prehensile EXPANDS a simple arm's operational space | Multi-Joint Failure (2410.01102) | We measure the LIMIT of that expansion vs object size, with a crossover s* |
+| Geometry/shape-aware non-prehensile | DexNoMa | We quantify shape-beyond-size in a competence predictor (complementary) |
+| Robustness to size variation (DR) | many | We treat size as the independent AXIS and measure success-vs-size, not just robustness |
+| Data-quantity scaling laws | Data Scaling Laws (2410.18647) | Different axis: object physical size, not #demos/objects |
+| Dual-arm non-prehensile | DART (2604.17833), BiNoMaP (2509.21256) | Always-bimanual; never measure where SINGLE-arm fails nor decide arm-count |
+
+NOT FOUND (consistent with the 2026-06-20 pass): a measured single-arm non-prehensile success-vs-size
+FRONTIER with a crossover s* AND a mechanistic proof the cause is controllability (not reach/table/
+threshold/graspability). => that specific measurement + mechanism is our differentiator.
+CAVEAT: US-only web search, hard-to-query niche, NOT exhaustive; a full related-work pass is still
+required before any novelty claim. Differentiate explicitly from extrinsic-dexterity + geometry-aware.
+
+</details>

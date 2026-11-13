@@ -1,6 +1,6 @@
 # Anticipated Critiques — Single-Arm Object-Size Frontier (Deliverable A + Phase-B)
 
-**2026-11-12 audit:** read [REVIEW.md](REVIEW.md) before using the older status
+**2026-11-12 audit:** read [PROGRESS.md](PROGRESS.md) before using the older status
 labels below. The pending diagnostic had incorrect delayed-reset bookkeeping
 (now CPU-tested and repaired); v2 still fails a conservative full-support check at
 radius 0.30; GPU runs remain unapproved. Whole-seed-curve bootstrap intervals and
@@ -15,6 +15,7 @@ capability frontier that collapses at object scale s* ≈ 0.17 m").
 Legend: 🔴 could invalidate the claim · 🟠 weakens/qualifies · 🟢 hygiene.
 
 ---
+
 
 ## 0. 🔴 FIXED-TABLE geometry artifact — **RE-OPENED (Session 4): the "decisive" size-invariant test is itself confounded**
 **SESSION-4 UPDATE (code reading + geometry, no new sim; details in #13/#14).** The v1 size-invariant table did NOT
@@ -239,6 +240,7 @@ scale + yaw-only flag gives +0.06 AUC [0.006, 0.117]. Net: "shape beyond size" i
 is the goal-type rule rather than physics. Report both.
 
 ---
+
 
 ## Status summary (updated Session 4, 2026-10-17)
 - **Holds:** a steep single-arm frontier exists on the fixed table under both raw and feasible-only metrics

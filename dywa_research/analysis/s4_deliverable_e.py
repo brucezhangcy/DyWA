@@ -15,7 +15,7 @@ from scipy import optimize
 HERE = os.path.dirname(os.path.abspath(__file__))
 R = os.path.normpath(os.path.join(HERE, "..", "results"))
 OUT = os.environ.get("DYWA_ANALYSIS_OUT", os.path.join(R, "session4")); os.makedirs(OUT, exist_ok=True)
-HALF = {  # preserved from the original research plotter; see CLEANUP.md
+HALF = {  # preserved from the original research plotter; see cleanup history in PROGRESS.md
     "Crayola_Crayons_120_crayons": (0.151, 0.091, 0.045),
     "Deskstar_Desk_Top_Hard_Drive_1_TB": (0.118, 0.151, 0.058),
     "Granimals_20_Wooden_ABC_Blocks_Wagon": (0.145, 0.149, 0.141),

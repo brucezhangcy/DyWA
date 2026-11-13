@@ -4,9 +4,9 @@ These rules apply to `dywa_research/`. Explicit current user instructions take p
 
 ## Resume efficiently
 
-1. Read `STATUS.md`, then `research_prompt_size_transition.md`.
+1. Read `README.md`, then `research_prompt_size_transition.md`.
 2. Inspect Git status and the newest `PROGRESS.md` entry. Read older history,
-   `REVIEW.md`, `CRITIQUES.md` and result files only for the question being resolved.
+   `CRITIQUES.md`, archived log details and result files only for the question being resolved.
 3. Check whether the proposed task has already been attempted. Reuse recorded
    results and passed checks unless new changes or unresolved evidence justify a rerun.
 4. Pick one uncertainty whose resolution changes the next decision. State the
@@ -42,7 +42,7 @@ These rules apply to `dywa_research/`. Explicit current user instructions take p
 
 ## Leave a useful handoff
 
-Update `STATUS.md` in place and prepend one concise session entry to `PROGRESS.md`:
+Update `README.md` in place and prepend one concise session entry to `PROGRESS.md`:
 
 - Date, goal and experiment/task ID.
 - Files/decisions changed and the reason.
@@ -51,5 +51,10 @@ Update `STATUS.md` in place and prepend one concise session entry to `PROGRESS.m
 - Compute used and approval scope; explicitly say when no simulation ran.
 - Next decision/action, its stop condition, and any required owner input.
 
-Keep the status page compact; keep historical results in the log and artifacts.
+Keep README's current-state section compact; keep historical results in the log
+and artifacts. Maintain only the five top-level Markdown files already present.
+For routine work, fold cleanup decisions, audit findings and session notes into
+PROGRESS.md instead of creating more reports. Use one H1 per file, H2 for sessions
+or major sections, and H3 for subsections; keep historical detail collapsible.
+Separate `---` rules from prose with blank lines to avoid unintended Setext headings.
 Do not mark proposed or queued work as completed.
